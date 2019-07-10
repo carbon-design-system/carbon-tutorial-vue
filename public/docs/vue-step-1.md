@@ -117,16 +117,22 @@ Even though we installed existing dependencies, we've yet to install the Carbon 
 Stop your development server with `CTRL-C` and install Carbon dependencies with:
 
 ```bash
-$ yarn add carbon-components carbon-components-react @carbon/icons-react
+$ yarn add carbon-components @carbon/vue @carbon/icons-vue
 ```
 
-## Install and build Sass
+## Other dependencies
 
-We need to run a Sass build as the Carbon styles are authored in Sass, so run the following command to install `node-sass` as a dependency.
+If you checkout the file package.vueon you'll notice a few dependencies beyond those listed above. These were installed as part of the project creation using the Vue CLI. These include:
 
-```bash
-$ yarn add node-sass
-```
+- vue-router: Used to make routing in Vue apps simpler
+- @vue/cli-plugin-babel: To ensure we produce well supported code.
+- @vue/cli-plugin-eslint: To allow us to catch potential errors.
+- @vue/cli-plugin-unit-jest: To allow us to unit test our code.
+- node-sass: To allow us to use the sass css precompiler.
+
+NOTE: We could have installed these seperately but using the CLI to set this up for us ensures a good base config for these dependencies.
+
+Then, start the app again. If your app's currently running, you'll need to restart it for the new environment variable to be used.
 
 To avoid having to add the `~` prefix when importing SCSS files from `node_modules`, create a `.env` file at the project root that contains:
 
@@ -152,41 +158,66 @@ $ yarn serve
 
 The app looks as it did before. Next, let's prepare our app for a Sass build.
 
-In the `src` directory, rename `index.css` as `index.scss`. Then in `index.js` update the `index.css` import to `index.scss`.
+In the `src` directory, create the file `styles/_carbon.scss`. Then in `App.vue` edit the style tag to import it.
+
+```html
+<style lang="scss">
+  @import "./styles/carbon";
+</style>
+```
 
 ### Import carbon-component styles
 
-In `index.scss`, import the Carbon styles by adding the following at the top of the file:
+In `styles/_carbon.scss`, import the Carbon styles by adding the following at the top of the file:
 
-##### src/index.scss
+##### src/\_carbon.scss
 
 ```scss
-@import "carbon-components/scss/globals/scss/styles.scss";
+@import "carbon-components/scss/globals/scss/styles";
 ```
 
 This will take a moment for the Sass to compile. Once compiled, you'll notice that the Carbon base styling is applied (IBM Plex Sans font family, font size, weight, colors, etc.)
 
-Because any change to `index.scss` will re-compile all of the Carbon Sass, create an `app.scss` file in the `src` directory and in `App.js`, import that new file.
+Because any change to `_carbon.scss` will re-compile all of the Carbon Sass, avoid making changes here unless instructed to do so. it is better to make them in the component files or a seperate file if needed.
 
-##### src/App.js
+Next we'll create a Carbon `Button` to test that our dependencies are working properly.
 
-```javascript
-import "./app.scss";
+#### src/main.vue
+
+After the other imports in main.vue add the following.
+
+<!-- prettier-ignore-start -->
+```js
+import CarbonComponentsVue from "@carbon/vue/src/index";
+Vue.use(CarbonComponentsVue);
+```
+<!-- prettier-ignore-end -->
+
+This is a quick way to pull in all @carbon/vue components and register them for use in your project. Individual components can be imported to project or components.
+
+e.g Instead of modifying src/main.vue we could have added the following to src/App.vue
+
+##### src/App.vue
+
+```js
+<script>
+import { CvButton } from '@carbon/vue';
+
+export default {
+  components: {
+    CvButton,
+  }
+};
+</script>
 ```
 
-_Note: To optimize our Sass compile time, we'll be adding app-specific styling to_ `app.scss` _and only modifying_ `index.scss` _when necessary._
+See [here](https://github.com/carbon-design-system/carbon-components-vue/blob/master/packages/core/README.md#using-the-components-directly-or-individually) for other ways to load components from @carbon/vue.
 
-Next we'll import a `Button` from Carbon to test that our dependencies are working properly. At the top of `App.js`, import the `Button` by adding the following:
+In this tutorial we will stick to importing all of the components at once so we can focus on our use of @carbon/vue.
 
-##### src/App.js
+Now open the `App.vue` component and replace:
 
-```javascript
-import { Button } from "carbon-components-react";
-```
-
-In the `App` component return, you can now replace:
-
-##### src/App.js
+##### src/App.vue
 
 <!-- prettier-ignore-start -->
 ```html
@@ -198,49 +229,32 @@ In the `App` component return, you can now replace:
 
 with:
 
-##### src/App.js
+##### src/App.vue
 
 <!-- prettier-ignore-start -->
 ```html
-<Button>Button</Button>
+<CvButton>Button</CvButton>
+```
+
+or
+
+```html
+<cv-button>Button</cv-button>
 ```
 <!-- prettier-ignore-end -->
 
 Congratulations, you've imported your first component! You should see a Carbon styled button on the page.
 
+NOTE: In this tutorial you can use either tag format. The [Vue style guide](https://vuejs.org/v2/style-guide/) recommend sticking to either Pascal or kebab case. The examples from here will use Pascal case for file and component names with kebab case in the HTML.
+
 ## Add UI Shell
 
-_Note: The UI Shell has experimental status at the moment. We do not recommend using it for production until it is stable, but if doing so, know that there may be breaking changes in the future._
-
-Next we're going to create a React component called `TutorialHeader` to use with the UI Shell Carbon component. In the `src` directory, create a `components` directory and inside of that, a `TutorialHeader` directory. Create the following files inside `src/components/TutorialHeader`:
+Next we're going to create a Vue component called `TutorialHeader` to use with the UI Shell Carbon component. In the `src/components` directory, create `TutorialHeader` directory. Create the following files inside `src/components/TutorialHeader`:
 
 ```bash
 src/components/TutorialHeader
-├──_tutorial-header.scss
 ├──index.js
-└──TutorialHeader.js
-```
-
-### Add UI Shell Sass
-
-In `index.scss` add the following feature-flag **above** the Carbon styles import like so:
-
-##### src/index.scss
-
-```scss
-$feature-flags: (
-  ui-shell: true
-);
-```
-
-This is because our UI Shell is in experimental mode and the styles need to be manually imported.
-
-Next, in `app.scss`, we'll import our `TutorialHeader` styles. Your file should now look like this:
-
-##### src/app.scss
-
-```scss
-@import "./components/TutorialHeader/tutorial-header.scss";
+└──TutorialHeader.vue
 ```
 
 ### Import and export the header
@@ -254,302 +268,257 @@ import TutorialHeader from "./TutorialHeader";
 export default TutorialHeader;
 ```
 
-Next we'll import our Carbon UI Shell components into `TutorialHeader.js`. Set up the file like so:
+\_Note: This index.js files import/export is simply a convenience to shorten the path used to import the component and potentially import multiple components from one folder. The folder also provides us a handy location to add tests or documentation for the component.
 
-##### src/components/TutorialHeader/TutorialHeader.js
+\_Note: We could have simply created a file src/components/TutorialHeader.vue.
 
-```javascript
-import React from "react";
-import {
-  Header,
-  HeaderName,
-  HeaderNavigation,
-  HeaderMenuItem,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
-  SkipToContent
-} from "carbon-components-react/lib/components/UIShell";
+Next we'll make use of our Carbon UI Shell components in `TutorialHeader.vue`. Set up the file like so:
 
-const TutorialHeader = () => (
-  <Header aria-label="Carbon Tutorial">
-    <SkipToContent />
-    <HeaderName href="/" prefix="IBM">
-      Carbon Tutorial
-    </HeaderName>
-    <HeaderNavigation aria-label="Carbon Tutorial">
-      <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
-    </HeaderNavigation>
-    <HeaderGlobalBar />
-  </Header>
-);
+##### src/components/TutorialHeader/TutorialHeader.vue
 
-export default TutorialHeader;
+```html
+<cv-header aria-label="Carbon tutorial">
+  <cv-skip-to-content href="#main-content">Skip to content</cv-skip-to-content>
+
+  <cv-header-name href="/" prefix="IBM">Carbon Tutorial</cv-header-name>
+
+  <cv-header-nav aria-label="Carbon tutorial nav">
+    <cv-header-menu-item href="/repos">Repositories</cv-header-menu-item>
+  </cv-header-nav>
+
+  <template slot="header-global" />
+</cv-header>
 ```
 
-_Note: you can find a description of the different components used UI Shell in our [carbon-componets-react](https://github.com/carbon-design-system/carbon/tree/master/packages/react/src/components/UIShell) package._
+_Note: you can find a description of the different components used UI Shell in our [carbon-componets-vue](http://vue.carbondesignsystem.com/?path=/story/components-cvuishell-header) package._
 
 _Note: When creating navigation headers, it's important to have a_ `Skip to content` _link so keyboard users can skip the navigation items and go straight to the main content._
 
-_Note: It's important that the_ `TutorialHeader` _returns the Carbon_ `Header` _as it's containing element, as we'll later be rendering_ `TutorialHeader` _in_ `App.js` _as a preceeding sibling of_ `Content`_, another UI Shell component. Those components need to live one after another for the UI Shell to properly render._
+_Note: It's important that the_ `TutorialHeader` _returns the Carbon_ `CvHeader` _as it's containing element, as we'll later be rendering_ `TutorialHeader` _in_ `App.vue` _as a preceeding sibling of_ `Content`_, another UI Shell component. Those components need to live one after another for the UI Shell to properly render._
 
 ### Import icons
 
-Now let's import the icons from our `@carbon/icons-react` elements package. In the `TutorialHeader.js` file, we need to import each individual icon we will use.
+Now let's import the icons from our `@carbon/icons-vue` elements package. In the `TutorialHeader.vue` file, we need to import each individual icon we will use.
 
-##### src/components/TutorialHeader/TutorialHeader.js
+##### src/components/TutorialHeader/TutorialHeader.vue
 
+<!-- prettier-ignore-start -->
 ```javascript
-import Notification20 from "@carbon/icons-react/lib/notification/20";
-import UserAvatar20 from "@carbon/icons-react/lib/user--avatar/20";
-import AppSwitcher20 from "@carbon/icons-react/lib/app-switcher/20";
+<script>
+import Notification20 from "@carbon/icons-vue/es/notification/20";
+import UserAvatar20 from "@carbon/icons-vue/es/user--avatar/20";
+import AppSwitcher20 from "@carbon/icons-vue/es/app-switcher/20";
+
+export default {
+  name: "TutorialHeader",
+  components: { Notification20, UserAvatar20, AppSwitcher20 }
+};
+</script>
 ```
+<!-- prettier-ignore-end -->
 
-Then we need to add the `HeaderGlobalAction` component inside of the `HeaderGlobalBar` where we will add our icons. These represent actions in the header a user can make. Replace:
+\_Note: We've given our component a name here as part of the default export. This is optional in Vue but very useful in the [Vue developer tools](https://github.com/vuejs/vue-devtools).
 
-##### src/components/TutorialHeader/TutorialHeader.js
+Then we need to add contnet to the 'header-global' slot where we will use our icons. These represent actions in the header a user can make. Replace:
+
+##### src/components/TutorialHeader/TutorialHeader.vue
 
 ```html
-<HeaderGlobalBar />
+<template slot="header-global" />
 ```
 
 With:
 
-##### src/components/TutorialHeader/TutorialHeader.js
+##### src/components/TutorialHeader/TutorialHeader.vue
 
 ```html
-<HeaderGlobalBar>
-  <HeaderGlobalAction aria-label="Notifications">
+<template slot="header-global">
+  <cv-header-global-action aria-label="Notifications">
     <Notification20 />
-  </HeaderGlobalAction>
-  <HeaderGlobalAction aria-label="User Avatar">
+  </cv-header-global-action>
+  <cv-header-global-action aria-label="User avatar">
     <UserAvatar20 />
-  </HeaderGlobalAction>
-  <HeaderGlobalAction aria-label="App Switcher">
+  </cv-header-global-action>
+  <cv-header-global-action aria-label="App switcher">
     <AppSwitcher20 />
-  </HeaderGlobalAction>
-</HeaderGlobalBar>
+  </cv-header-global-action>
+</template>
 ```
 
 ### Render the header
 
-Next we'll render our UI Shell by importing our `TutorialHeader` component and `Content` into `App.js`. Your imports should look like this:
+Next we'll render our UI Shell by importing our `TutorialHeader` component and `CvContent` into `App.vue`. Your script section should look like this:
 
-##### src/App.js
+##### src/App.vue
 
 ```javascript
-import React, { Component } from "react";
-import "./app.scss";
-import { Button } from "carbon-components-react";
-import { Content } from "carbon-components-react/lib/components/UIShell";
+<script>
 import TutorialHeader from "./components/TutorialHeader";
+
+export default {
+  name: "App",
+  components: {
+    TutorialHeader
+  }
+};
+</script>
 ```
 
-Our `return` currently just contains a `Button`. Let's update that to include our imported components. This should look like the following:
+Our template currently just contains a `Button`. Let's update that to include our imported components. This should look like the following:
 
-##### src/App.js
+##### src/App.vue
 
-```javascript
-class App extends Component {
-  render() {
-    return (
-      <>
-        <TutorialHeader />
-        <Content>
-          <Button>Button</Button>
-        </Content>
-      </>
-    );
-  }
-}
+```html
+<template>
+  <div id="app">
+    <tutorial-header />
+    <cv-content id="#main-content">
+      <cv-button>Button</cv-button>
+    </cv-content>
+  </div>
+</template>
 ```
 
 You should now see a styled UI Shell header and a button below it.
 
 ## Create pages
 
-Next thing we need to do is create the files for our content. Start by creating a folder called `content` in `src`. This should be a sibling of `src/components`.
+Next thing we need to do is create the files for our views.
 
-Since our app will have two pages, we'll create two folders in `src/content`.
+Since our app will have two pages, we'll create two folders in `src/views`. Clear out the files currently in the views folder and add the following folders.
 
 ```bash
-src/content
+src/views
 ├── LandingPage
 └── RepoPage
 ```
 
-Next we'll set up these folders the same way we set up `src/components/TutorialHeader`.
+\_Note: We could adopt the same folder + index.js layout we did for the TutorialHeader component. However as our views only consist of a single component we'll proceed with the simpler structure above.
 
 Create the following files in the `LandingPage` folder:
 
 ```bash
-src/content/LandingPage
-├── _landing-page.scss
+src/view/LandingPage
 ├── index.js
-└── LandingPage.js
+└── LandingPage.vue
 ```
 
 Create the following files in the `RepoPage` folder:
 
 ```bash
-src/content/RepoPage
-├── _repo-page.scss
+src/view/RepoPage
 ├── index.js
-└── RepoPage.js
-```
-
-### Set up content Sass
-
-Next, we'll import our content Sass files in `app.scss`, like so:
-
-##### src/app.scss
-
-```scss
-@import "./components/TutorialHeader/tutorial-header.scss";
-@import "./content/LandingPage/landing-page.scss";
-@import "./content/RepoPage/repo-page.scss";
+└── RepoPage.vue
 ```
 
 ### Import and export content pages
 
-Now that our stylesheets are set up, we need to create our pages' components. Starting with `LandingPage`, just like with our header, we need to export the component in `src/content/LandingPage/index.js` by adding:
+Starting with `LandingPage`, just like with our header, we need to export the component in `src/view/LandingPage/index.js` by adding:
 
-##### src/content/LandingPage/index.js
+##### src/view/LandingPage/index.js
 
 ```javascript
 import LandingPage from "./LandingPage";
 export default LandingPage;
 ```
 
-Next in `LandingPage.js` we'll create our component.
+Next in `LandingPage.vue` we'll create our component.
 
-##### src/content/LandingPage/LandingPage.js
+##### src/view/LandingPage/LandingPage.vue
 
-```javascript
-import React from "react";
-
-const LandingPage = () => {
-  return <div>LANDING PAGE</div>;
-};
-
-export default LandingPage;
+```html
+<template>
+  <div>LANDING PAGE</div>
+</template>
 ```
 
 We'll repeat this process with `RepoPage`.
 
-In `src/content/RepoPage/index.js`, import and export the `RepoPage` component like so:
+In `src/view/RepoPage/index.js`, import and export the `RepoPage` component like so:
 
-##### src/content/RepoPage/index.js
+##### src/view/RepoPage/index.js
 
 ```javascript
 import RepoPage from "./RepoPage";
 export default RepoPage;
 ```
 
-Then in `RepoPage.js` create the component.
+Then in `RepoPage.vue` create the component.
 
-##### src/content/RepoPage/RepoPage.js
+##### src/view/RepoPage/RepoPage.vue
 
-```javascript
-import React from "react";
-
-const RepoPage = () => {
-  return <div>REPO PAGE</div>;
-};
-
-export default RepoPage;
+```html
+<template>
+  <div>REPO PAGE</div>
+</template>
 ```
 
 Awesome! We've just created our content pages. Next thing we need to do is render them with our router.
 
 ## Add routing
 
-<router-view />
+OK. So as part of the Vue CLI project set up we added vue-router. This created the views folder and also added, `src/router.js` and imported that into `src/main.js` for us.
 
-We've updated our app to render our header, but now we need to add routing functionality. To do this we need to install `react-router-dom`. Go ahead and stop your development server (with `CTRL-C`) and then:
+First in `src/router.js` we replace the reference to home and about as follows:
 
-```bash
-$ yarn add react-router-dom
-$ yarn serve
+- `Home` with `LandingPage`
+- `home` with `landing-page`
+- `About` with `RepoPage`
+- `/about` with `repos`
+- `about` with `repo-page`
+
+This should give you a file that looks like the following:
+
+```js
+import Vue from "vue";
+import Router from "vue-router";
+import LandingPage from "./views/LandingPage";
+
+Vue.use(Router);
+
+export default new Router({
+  routes: [
+    {
+      path: "/",
+      name: "landing-page",
+      component: LandingPage
+    },
+    {
+      path: "/repos",
+      name: "repo-page",
+      // route level code-splitting
+      // this generates a separate chunk (repo-page.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "repo-page" */ "./views/RepoPage")
+    }
+  ]
+});
 ```
 
-First, we need to wrap our app in the `Router` component. In the root `index.js`, add the import:
+Next we need to update `src/App.vue` to render these views.
 
-##### src/index.js
+In the template section remove the <cv-button /> and replace it with <router-vue /> as follows
 
-```javascript
-import { HashRouter as Router } from "react-router-dom";
-```
-
-_Note: We're using_ `HashRouter` _instead of_ `BrowserRouter` _to simplify deployments in upcoming tutorial steps. Learn more about the React Router [here](https://reacttraining.com/react-router/web/api/BrowserRouter)._
-
-Then, update the `render()` function to include the `Router`.
-
-##### src/index.js
-
-```javascript
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
-);
-```
-
-In order to render our content pages, we need to add the following imports in `App.js` below our existing imports.
-
-##### src/App.js
-
-```javascript
-import { Route, Switch } from "react-router-dom";
-import LandingPage from "./content/LandingPage";
-import RepoPage from "./content/RepoPage";
-```
-
-This allows us to use our page content components and routing components from `react-router-dom`.
-
-Next thing we need to is update what we're returning in `App.js` . We currently just have a button in our content. In order to render our pages correctly, we need to delete the `Button` component within `Content` (and remove the Button import).
-
-Now inside `Content` we'll add the following:
-
-##### src/App.js
-
-<!-- prettier-ignore-start -->
 ```html
-<Switch>
-  <Route exact path="/" component={LandingPage} />
-  <Route path="/repos" component={RepoPage} />
-</Switch>
-```
-<!-- prettier-ignore-end -->
-
-After that we need to do a couple quick fixes to the UI Shell to have it work with the React router.
-
-Add the `Link` import in `TutorialHeader.js`:
-
-##### src/components/TutorialHeader/TutorialHeader.js
-
-```javascript
-import { Link } from "react-router-dom";
+<cv-content id="#main-content">
+  <router-view />
+</cv-content>
 ```
 
-We need to use the `Link` component instead of the default anchor elements to prevent full page reload when navigating to different pages with React Router. To use `Link`, update the `HeaderName` component to use the `element` prop and replace the `href` with `to`:
+After that we need to do a couple quick fixes to the UI Shell to have it work with the vue-router.
 
-##### src/components/TutorialHeader/TutorialHeader.js
+##### src/components/TutorialHeader/TutorialHeader.vue
 
-```javascript
-<HeaderName element={Link} to="/" prefix="IBM">
-  Carbon Tutorial
-</HeaderName>
+In `src/components/TuturialHeader/TutorialHeader.vue` simpmly replace the `href` attributes used in the `cv-header-name` and `cv-header-menu-item` components with `to`. @carbon/vue will under the covers switch from use of an `a` tag to `router-link`.
+
+```html
+<cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 ```
 
-Do the same with the component that contains `href="/repos"`, updating to:
+and
 
-##### src/components/TutorialHeader/TutorialHeader.js
-
-```javascript
-<HeaderMenuItem element={Link} to="/repos">
-  Repositories
-</HeaderMenuItem>
+```html
+<cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
 ```
 
 You should now have a working header that routes to different pages without full page reload!
@@ -560,7 +529,7 @@ We're going to submit a pull request to verify completion of this tutorial step 
 
 ### Continuous integration (CI) check
 
-We have a `ci-check` script defined in `package.json` that verifies file formatting for files that have been touched since the last Git commit with a tool called [Prettier](https://prettier.io). You'd typically also have that script run your test suite as part of your CI build. Go ahead and make sure everything looks good with:
+We have a `ci-check` script defined in `package.vueon` that verifies file formatting for files that have been touched since the last Git commit with a tool called [Prettier](https://prettier.io). You'd typically also have that script run your test suite as part of your CI build. Go ahead and make sure everything looks good with:
 
 ```bash
 $ yarn ci-check
