@@ -1,6 +1,11 @@
+---
+title: 1. Installing Carbon
+internal: false
+---
+
 ### Starting with our Vue CLI generated app, let's install Carbon and begin using Carbon components. By the end you will have a Vue app that uses the UI Shell to navigate between pages.
 
-<!-- <AnchorLinks> -->
+<AnchorLinks>
 
 - [Fork, clone and branch](#fork-clone-and-branch)
 - [Build and start](#build-and-start)
@@ -11,27 +16,25 @@
 - [Add routing](#add-routing)
 - [Submit pull request](#submit-pull-request)
 
-<!-- </AnchorLinks> -->
+</AnchorLinks>
 
 ## Preview
 
-A [preview](https://react-step-2--carbon-tutorial.netlify.com) of what you will build:
+A [preview](https://vue-step-2--carbon-tutorial.netlify.com) of what you will build:
 
-<!-- <Row>
-  <Column offsetLg="4"> -->
-
+<Row>
+  <Column offsetLg="4">
     <iframe
       height="200"
       title="Carbon Tutorial Step 1"
-      src="https://react-step-2--carbon-tutorial.netlify.com"
+      src="https://vue-step-2--carbon-tutorial.netlify.com"
       frameborder="no"
       allowtransparency="true"
       allowfullscreen="true"
       class="bx--iframe bx--iframe--border"
     />
-
-  <!-- </Column>
-</Row> -->
+  </Column>
+</Row>
 
 ## Fork, clone and branch
 
@@ -90,7 +93,7 @@ $ git checkout -b vue-step-1 upstream/vue-step-1
 
 ## Build and start
 
-We have the repository forked to your GitHub account, cloned down to your machine, and the starting branch checked out. Next, install the React app's dependencies with:
+We have the repository forked to your GitHub account, cloned down to your machine, and the starting branch checked out. Next, install the Vue app's dependencies with:
 
 ```bash
 $ yarn
@@ -550,15 +553,15 @@ _Note: You'll notice that your commit includes binaries in the _`.yarn-offline-m
 Then, push to your repository:
 
 ```bash
-$ git push origin react-step-1
+$ git push origin vue-step-1
 ```
 
 _Note: If your Git remote protocol is HTTPS instead of SSH, you may be prompted to authenticate with GitHub when you push changes. If your GitHub account has two-factor authentication enabled, we recommend that you follow these instructions to [create a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). That lets you use your token instead of password when performing Git operations over HTTPS._
 
-_Note: If you receive a_ `non-fast-forward` _error, it's likely that your forked repository is behind the original repository and needs updated. This can happen if the tutorial was updated after you began working on it. To fix, run_ `git pull upstream react-step-1` _to merge the changes into your branch, then you can try pushing again. Or, you can [manually merge](https://help.github.com/en/articles/syncing-a-fork) in the upstream changes._
+_Note: If you receive a_ `non-fast-forward` _error, it's likely that your forked repository is behind the original repository and needs updated. This can happen if the tutorial was updated after you began working on it. To fix, run_ `git pull upstream vue-step-1` _to merge the changes into your branch, then you can try pushing again. Or, you can [manually merge](https://help.github.com/en/articles/syncing-a-fork) in the upstream changes._
 
 ### Pull request (PR)
 
-Finally, visit [carbon-tutorial-vue](https://github.com/carbon-design-system/carbon-tutorial-vue) to "Compare & pull request". In doing so, make sure that you are comparing to `react-step-1` into `base: react-step-1`. Take notice of the [Netlify](https://www.netlify.com) bot that deploys a preview of your PR every time that you push new commits. These previews can be shared and viewed by anybody to assist the PR review process.
+Finally, visit [carbon-tutorial-vue](https://github.com/carbon-design-system/carbon-tutorial-vue) to "Compare & pull request". In doing so, make sure that you are comparing to `vue-step-1` into `base: vue-step-1`. Take notice of the [Netlify](https://www.netlify.com) bot that deploys a preview of your PR every time that you push new commits. These previews can be shared and viewed by anybody to assist the PR review process.
 
 _Note: Expect your tutorial step PRs to be reviewed by the Carbon team but not merged. We'll close your PR so we can keep the repository's remote branches pristine and ready for the next person!_
