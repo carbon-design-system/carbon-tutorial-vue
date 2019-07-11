@@ -508,7 +508,7 @@ export default new Router({
 
 Next we need to update `src/App.vue` to render these views.
 
-In the template section remove the <cv-button /> and replace it with <router-vue /> as follows
+In the template section remove the `<cv-button />` and replace it with `<router-vue />` as follows
 
 #### src/App.vue
 
@@ -542,7 +542,7 @@ We're going to submit a pull request to verify completion of this tutorial step 
 
 ### Continuous integration (CI) check
 
-We have a `ci-check` script defined in `package.vueon` that verifies file formatting for files that have been touched since the last Git commit with a tool called [Prettier](https://prettier.io). You'd typically also have that script run your test suite as part of your CI build. Go ahead and make sure everything looks good with:
+We have a `ci-check` script defined in `package.json` that verifies file formatting for files that have been touched since the last Git commit with a tool called [Prettier](https://prettier.io). You'd typically also have that script run your test suite as part of your CI build. Go ahead and make sure everything looks good with:
 
 ```bash
 $ yarn ci-check
