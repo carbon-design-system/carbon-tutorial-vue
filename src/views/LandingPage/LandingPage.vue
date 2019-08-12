@@ -83,13 +83,13 @@
 </template>
 
 <script>
-import { InfoSection, InfoCard } from "../../components/InfoSection";
-import Globe32 from "@carbon/icons-vue/lib/globe/32";
-import PersonFavorite32 from "@carbon/icons-vue/lib/person--favorite/32";
-import Application32 from "@carbon/icons-vue/lib/application/32";
+import { InfoSection, InfoCard } from '../../components/InfoSection';
+import Globe32 from '@carbon/icons-vue/lib/globe/32';
+import PersonFavorite32 from '@carbon/icons-vue/lib/person--favorite/32';
+import Application32 from '@carbon/icons-vue/lib/application/32';
 
 export default {
-  name: "LandingPage",
+  name: 'LandingPage',
   components: { InfoSection, InfoCard },
   created() {
     // Add icons to this
@@ -103,9 +103,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
-@import "./carbon-overrides";
-@import "./mixins";
+@import '../../styles/carbon-utils';
+@import './carbon-overrides';
+@import './mixins';
 
 .landing-page__illo {
   max-width: 100%;
@@ -118,7 +118,7 @@ export default {
 }
 
 .landing-page__heading {
-  @include carbon--type-style("productive-heading-05");
+  @include carbon--type-style('productive-heading-05');
 }
 
 .landing-page__r2 {
@@ -131,12 +131,12 @@ export default {
 }
 
 .landing-page__subheading {
-  @include carbon--type-style("productive-heading-03");
-  @include carbon--font-weight("semibold");
+  @include carbon--type-style('productive-heading-03');
+  @include carbon--font-weight('semibold');
 }
 
 .landing-page__p {
-  @include carbon--type-style("productive-heading-03");
+  @include carbon--type-style('productive-heading-03');
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
 
@@ -152,6 +152,6 @@ export default {
 }
 
 .landing-page__label {
-  @include carbon--type-style("heading-01");
+  @include carbon--type-style('heading-01');
 }
 </style>

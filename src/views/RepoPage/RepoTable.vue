@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import LinkList from "./LinkList";
+import LinkList from './LinkList';
 
 export default {
-  name: "RepoTable",
+  name: 'RepoTable',
   components: { LinkList },
   props: {
     headers: Array,

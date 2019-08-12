@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "InfoCard",
+  name: 'InfoCard',
   props: {
     heading: String,
     body: String,
@@ -22,16 +22,16 @@ export default {
   computed: {
     // Take in a phrase and separate the third word in an array
     splitHeading() {
-      const splitHeading = this.heading.split(" ");
+      const splitHeading = this.heading.split(' ');
       const finalWord = splitHeading.pop();
-      return [splitHeading.join(" "), finalWord];
+      return [splitHeading.join(' '), finalWord];
     }
   }
 };
 </script>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
+@import '../../styles/carbon-utils';
 
 .info-card {
   margin-top: $spacing-09;
@@ -69,13 +69,13 @@ export default {
 }
 
 .info-card__heading {
-  @include carbon--type-style("productive-heading-03");
+  @include carbon--type-style('productive-heading-03');
 }
 
 .info-card__body {
   margin-top: $spacing-06;
   flex-grow: 1; // fill space so icons are bottom aligned
-  @include type-style("body-long-01");
+  @include type-style('body-long-01');
 
   // prevent large line lengths between small and medium viewports
   @include carbon--breakpoint-between(321px, md) {
