@@ -17,33 +17,33 @@
 </template>
 
 <script>
-import RepoTable from "./RepoTable";
-import gql from "graphql-tag";
+import RepoTable from './RepoTable';
+import gql from 'graphql-tag';
 
 const headers = [
   {
-    key: "name",
-    header: "Name"
+    key: 'name',
+    header: 'Name'
   },
   {
-    key: "createdAt",
-    header: "Created"
+    key: 'createdAt',
+    header: 'Created'
   },
   {
-    key: "updatedAt",
-    header: "Updated"
+    key: 'updatedAt',
+    header: 'Updated'
   },
   {
-    key: "issueCount",
-    header: "Open Issues"
+    key: 'issueCount',
+    header: 'Open Issues'
   },
   {
-    key: "stars",
-    header: "Stars"
+    key: 'stars',
+    header: 'Stars'
   },
   {
-    key: "links",
-    header: "Links"
+    key: 'links',
+    header: 'Links'
   }
 ];
 
@@ -82,7 +82,7 @@ const REPO_QUERY = gql`
 `;
 
 export default {
-  name: "RepoPage",
+  name: 'RepoPage',
   components: { RepoTable },
   apollo: {
     organization: REPO_QUERY
@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
+@import '../../styles/carbon-utils';
 
 .repo-page .bx--row {
   padding-top: $spacing-05;
