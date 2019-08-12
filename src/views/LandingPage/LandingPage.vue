@@ -74,9 +74,9 @@
 </template>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
-@import "./carbon-overrides";
-@import "./mixins";
+@import '../../styles/carbon-utils';
+@import './carbon-overrides';
+@import './mixins';
 
 .landing-page__illo {
   max-width: 100%;
@@ -89,7 +89,7 @@
 }
 
 .landing-page__heading {
-  @include carbon--type-style("productive-heading-05");
+  @include carbon--type-style('productive-heading-05');
 }
 
 .landing-page__r2 {
@@ -102,12 +102,12 @@
 }
 
 .landing-page__subheading {
-  @include carbon--type-style("productive-heading-03");
-  @include carbon--font-weight("semibold");
+  @include carbon--type-style('productive-heading-03');
+  @include carbon--font-weight('semibold');
 }
 
 .landing-page__p {
-  @include carbon--type-style("productive-heading-03");
+  @include carbon--type-style('productive-heading-03');
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
 
@@ -123,6 +123,6 @@
 }
 
 .landing-page__label {
-  @include carbon--type-style("heading-01");
+  @include carbon--type-style('heading-01');
 }
 </style>

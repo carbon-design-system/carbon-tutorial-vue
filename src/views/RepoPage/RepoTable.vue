@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "RepoTable",
+  name: 'RepoTable',
   props: {
     headers: Array,
     rows: Array,
@@ -36,7 +36,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: "Row description"
+        description: 'Row description'
       }));
     }
   }
