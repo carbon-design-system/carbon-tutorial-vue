@@ -32,6 +32,9 @@
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "eslintConfig": {
     "root": true,
     "env": {
