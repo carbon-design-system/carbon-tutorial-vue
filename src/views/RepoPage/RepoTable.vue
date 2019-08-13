@@ -17,8 +17,8 @@
     <template slot="data">
       <cv-data-table-row v-for="row in data" :key="`${row.key}`">
         <cv-data-table-cell
-          v-for="cell in row.data"
-          :key="`${row.key}-${cell.url}`"
+          v-for="(cell, cellIndex) in row.data"
+          :key="`${cellIndex}`"
         >
           <template v-if="!cell.url">{{ cell }}</template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
