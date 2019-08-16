@@ -6,23 +6,23 @@
           Carbon Developer Essentials Hall of Fame
         </h1>
       </div>
-      <div class="bx--col-lg-4">
+      <cv-tile class="bx--col-lg-4 bx--offset-lg-4">
         <p>These folks got one of these...</p>
         <img
           class="page-image"
           src="../../assets/carbon-badge.png"
           title="Carbon developer essentials react badge"
         />
-      </div>
-      <div class="bx--col-lg-4">
+      </cv-tile>
+      <cv-tile class="bx--col-lg-4">
         <img
           class="page-image"
           src="../../assets/carbon-tee.png"
           title="Carbon t-shirt"
         />
         <p>...and one of these.</p>
-      </div>
-      <div class="bx--col-lg-8">
+      </cv-tile>
+      <div class="bx--col-lg-8 bx--offset-lg-4">
         <cv-dropdown
           placeholder="Select a branch"
           helper-text="Which branch are you intereted in"
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="bx--row hof-page__r1">
+    <div class="bx--row hof-page__content">
       <cv-tile
         v-for="edge in search.edges"
         :key="edge.node.author"
@@ -128,6 +128,14 @@ export default {
 
 <style lang="scss">
 @import '../../styles/carbon-utils';
+
+.hof-page__banner {
+  background-color: $ui-01;
+}
+
+.hof-page__content {
+  background-color: $ui-02;
+}
 
 .page-image {
   width: 100%;
