@@ -1,8 +1,8 @@
 <template>
-  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
-    <div class="bx--row landing-page__banner">
+  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter hof-page">
+    <div class="bx--row hof-page__banner">
       <div class="bx--col-lg-16">
-        <h1 class="landing-page__heading">
+        <h1 class="hof-page__heading">
           Carbon Developer Essentials Hall of Fame
         </h1>
       </div>
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="bx--row repo-page__r1">
+    <div class="bx--row hof-page__r1">
       <cv-tile
         v-for="edge in search.edges"
         :key="edge.node.author"
