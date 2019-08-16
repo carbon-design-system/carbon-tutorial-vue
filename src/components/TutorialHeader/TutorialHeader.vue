@@ -8,6 +8,7 @@
 
     <cv-header-nav aria-label="Carbon tutorial nav">
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
+      <cv-header-menu-item to="/hof">Hall of Fame</cv-header-menu-item>
     </cv-header-nav>
 
     <template slot="header-global">

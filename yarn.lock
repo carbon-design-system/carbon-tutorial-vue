@@ -722,6 +722,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/colors@10.4.0":
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.4.0.tgz#8c21127926bc389dcb4d415b55d4eae278f3d525"
+  integrity sha512-UERU07hWXAjsaWu6JPJDyJnwVLkJr+8wTvFrbCkubCfl/MZjKoyLgz0CNypu8hSg8ZaDUzl/NfXMgRpprzuSjQ==
+
 "@carbon/icon-helpers@10.2.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
@@ -746,10 +751,17 @@
   dependencies:
     "@carbon/icon-helpers" "10.3.0"
 
-"@carbon/vue@^2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.0.tgz#7c17c4ebd48919e1f28bf9f0d17974e8a78589f7"
-  integrity sha512-UhtQZltByEWShbjs2VVi3LX+rFRE196BqEv6V93rEqwfLq2HuwcUDIkmcn//O/Qefzv3YswOO7DXMmTtM0ejKg==
+"@carbon/themes@^10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.5.0.tgz#44c14b49e2c8288a9310ecbe8e2d91500e892882"
+  integrity sha512-7HGd7HCmn9sLE7d/oIugQ3Rb4CmTtCE3RoiQnZ7+JktqaXtFcTF5V3JGAAWaNzEi9+GstNjUQIgNo4N232453w==
+  dependencies:
+    "@carbon/colors" "10.4.0"
+
+"@carbon/vue@^2.12.6":
+  version "2.12.6"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.6.tgz#ec1c994099d3f44d9979b987973bbc31d7c9a459"
+  integrity sha512-jhfMxU0Sm+HMAY03nE3p/cicGEoljW1jkP6y4du3dj58GpK/t5a3XPYiyPqDRNQp1KmKITmHETY541hR0PFdUA==
   dependencies:
     "@carbon/icons-vue" "10.3.0"
     carbon-components "10.3.1"
@@ -7828,20 +7840,6 @@ lodash@4.x, lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lod
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-log-symbols@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
-  integrity sha1-N2/3tY6jCGoPCfrMdGF+ylAeGhg=
-  dependencies:
-    chalk "^1.0.0"
-
-log-symbols@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
-  integrity sha1-N2/3tY6jCGoPCfrMdGF+ylAeGhg=
-  dependencies:
-    chalk "^1.0.0"
 
 log-symbols@^1.0.2:
   version "1.0.2"

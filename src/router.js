@@ -19,6 +19,15 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "repo-page" */ './views/RepoPage')
+    },
+    {
+      path: '/hof',
+      name: 'hall-of-fame-page',
+      // route level code-splitting
+      // this generates a separate chunk (repo-page.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "repo-page" */ './views/HallOfFamePage')
     }
   ]
 });
