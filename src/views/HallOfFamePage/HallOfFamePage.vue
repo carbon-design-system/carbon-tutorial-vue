@@ -23,7 +23,9 @@
             src="../../assets/carbon-tee.png"
             title="Carbon t-shirt"
           />
-          <p class="hof-page__banner-text hof-page__right">...and one of these.</p>
+          <p class="hof-page__banner-text hof-page__right">
+            ...and one of these.
+          </p>
         </cv-tile>
       </div>
       <div class="bx--row">
@@ -78,6 +80,7 @@
 </template>
 
 <script>
+// nudge for a PR.
 import gql from 'graphql-tag';
 
 export default {
