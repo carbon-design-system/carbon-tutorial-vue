@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="bx--row hof-page__r1">
+    <div class="bx--row hof-page__content">
       <cv-tile
         v-for="edge in search.edges"
         :key="edge.node.author"
