@@ -6,22 +6,22 @@
           Carbon Developer Essentials Hall of Fame
         </h1>
       </div>
-      <div class="bx--col-lg-4">
+      <cv-tile class="bx--col-lg-4">
         <p>These folks got one of these...</p>
         <img
           class="page-image"
           src="../../assets/carbon-badge.png"
           title="Carbon developer essentials react badge"
         />
-      </div>
-      <div class="bx--col-lg-4">
+      </cv-tile>
+      <cv-tile class="bx--col-lg-4">
         <img
           class="page-image"
           src="../../assets/carbon-tee.png"
           title="Carbon t-shirt"
         />
         <p>...and one of these.</p>
-      </div>
+      </cv-tile>
       <div class="bx--col-lg-8">
         <cv-dropdown
           placeholder="Select a branch"
