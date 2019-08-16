@@ -1,5 +1,5 @@
 <template>
-  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter hof-page">
+  <div class="bx--grid bx--grid--full-width">
     <div class="bx--row hof-page__banner">
       <div class="bx--col-lg-16">
         <h1 class="hof-page__heading">
