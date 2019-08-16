@@ -12,14 +12,14 @@
         <cv-tile class="bx--col-lg-4 bx--offset-lg-4">
           <p>These folks got one of these...</p>
           <img
-            class="page-image"
+            class="hof-page__image"
             src="../../assets/carbon-badge.png"
             title="Carbon developer essentials react badge"
           />
         </cv-tile>
         <cv-tile class="bx--col-lg-4">
           <img
-            class="page-image"
+            class="hof-page__image"
             src="../../assets/carbon-tee.png"
             title="Carbon t-shirt"
           />
@@ -51,16 +51,28 @@
     </div>
 
     <div class="bx--row hof-page__content">
-      <cv-tile
-        v-for="edge in search.edges"
-        :key="edge.node.author"
-        kind="clickable"
-        :href="edge.node.url"
-      >
-        <h2>{{ edge.node.author.login }}</h2>
-        <p>{{ edge.node.closedAt }}</p>
-        <img :src="edge.node.author.avatarUrl" />
-      </cv-tile>
+      <div class="bx--col-lg-8 bx--offset-lg-4">
+        <ul class="hof-page__list">
+          <li
+            class="hof-page__list-item"
+            v-for="edge in search.edges"
+            :key="edge.node.author"
+          >
+            <cv-tile
+              class="hof-page__tile"
+              kind="clickable"
+              :href="edge.node.url"
+            >
+              <h2>{{ edge.node.author.login }}</h2>
+              <p>{{ edge.node.closedAt }}</p>
+              <img
+                :src="edge.node.author.avatarUrl"
+                class="hof-page__tile-image"
+              />
+            </cv-tile>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -156,16 +168,31 @@ export default {
   background-color: $ui-02;
 }
 
-.page-image {
+.hof-page__image {
   width: 100%;
 }
 
-.landing-page__r2 {
-  margin-top: rem(-40px);
+.hof-page__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.landing-page__tab-content {
-  padding-top: $layout-05;
-  padding-bottom: $layout-05;
+.hof-page__list-item {
+  width: 256px;
+  margin-top: 16px;
+}
+
+.hof-page__tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $ui-01;
+}
+
+.hof-page__tile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 </style>
