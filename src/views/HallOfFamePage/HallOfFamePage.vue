@@ -78,6 +78,7 @@
 </template>
 
 <script>
+// nudge for a PR.
 import gql from 'graphql-tag';
 
 export default {
