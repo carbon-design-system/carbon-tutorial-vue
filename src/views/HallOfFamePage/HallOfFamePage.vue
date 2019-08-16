@@ -1,42 +1,52 @@
 <template>
   <div class="bx--grid bx--grid--full-width">
-    <div class="bx--row hof-page__banner">
-      <div class="bx--col-lg-16">
-        <h1 class="hof-page__heading">
-          Carbon Developer Essentials Hall of Fame
-        </h1>
+    <div class="hof-page__banner">
+      <div class="bx--row">
+        <div class="bx--col-lg-16">
+          <h1 class="hof-page__heading">
+            Carbon Developer Essentials Hall of Fame
+          </h1>
+        </div>
       </div>
-      <cv-tile class="bx--col-lg-4">
-        <p>These folks got one of these...</p>
-        <img
-          class="page-image"
-          src="../../assets/carbon-badge.png"
-          title="Carbon developer essentials react badge"
-        />
-      </cv-tile>
-      <cv-tile class="bx--col-lg-4">
-        <img
-          class="page-image"
-          src="../../assets/carbon-tee.png"
-          title="Carbon t-shirt"
-        />
-        <p>...and one of these.</p>
-      </cv-tile>
-      <div class="bx--col-lg-8">
-        <cv-dropdown
-          placeholder="Select a branch"
-          helper-text="Which branch are you intereted in"
-          label="Select your branch"
-          v-model="branch"
-        >
-          <cv-dropdown-item
-            v-for="branch in branches"
-            :key="branch.value"
-            :value="branch.value"
-            >{{ branch.label }}</cv-dropdown-item
+      <div class="bx--row">
+        <cv-tile class="bx--col-lg-4">
+          <p>These folks got one of these...</p>
+          <img
+            class="page-image"
+            src="../../assets/carbon-badge.png"
+            title="Carbon developer essentials react badge"
+          />
+        </cv-tile>
+        <cv-tile class="bx--col-lg-4">
+          <img
+            class="page-image"
+            src="../../assets/carbon-tee.png"
+            title="Carbon t-shirt"
+          />
+          <p>...and one of these.</p>
+        </cv-tile>
+      </div>
+      <div class="bx--row">
+        <div class="bx--col-lg-8">
+          <cv-dropdown
+            placeholder="Select a branch"
+            helper-text="Which branch are you intereted in"
+            label="Select your branch"
+            v-model="branch"
           >
-        </cv-dropdown>
-        <cv-text-input v-model="author" label="Author:" />
+            <cv-dropdown-item
+              v-for="branch in branches"
+              :key="branch.value"
+              :value="branch.value"
+              >{{ branch.label }}</cv-dropdown-item
+            >
+          </cv-dropdown>
+        </div>
+      </div>
+      <div class="bx--row">
+        <div class="bx--col-lg-8">
+          <cv-text-input v-model="author" label="Author:" />
+        </div>
       </div>
     </div>
 
