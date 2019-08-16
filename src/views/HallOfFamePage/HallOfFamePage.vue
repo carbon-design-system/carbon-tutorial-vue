@@ -10,7 +10,7 @@
       </div>
       <div class="bx--row">
         <cv-tile class="bx--col-lg-4 bx--offset-lg-4">
-          <p>These folks got one of these...</p>
+          <p class="hof-page__banner-text">These folks got one of these...</p>
           <img
             class="hof-page__image"
             src="../../assets/carbon-badge.png"
@@ -23,7 +23,7 @@
             src="../../assets/carbon-tee.png"
             title="Carbon t-shirt"
           />
-          <p>...and one of these.</p>
+          <p class="hof-page__banner-text hof-page__right">...and one of these.</p>
         </cv-tile>
       </div>
       <div class="bx--row">
@@ -179,8 +179,8 @@ export default {
 }
 
 .hof-page__list-item {
-  width: 256px;
-  margin-top: 16px;
+  width: $spacing-07 * 8;
+  margin-top: $spacing-05;
 }
 
 .hof-page__tile {
@@ -191,8 +191,16 @@ export default {
 }
 
 .hof-page__tile-image {
-  width: 100px;
-  height: 100px;
+  width: $spacing-09 * 2;
+  height: $spacing-09 * 2;
   border-radius: 50%;
+}
+
+.hof-page__right {
+  float: right;
+}
+
+.hof-page__banner-text {
+  @include carbon--type-style('productive-heading-03');
 }
 </style>
