@@ -76,6 +76,12 @@
 @import './carbon-overrides';
 @import './mixins';
 
+.landing-page__banner {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-07 * 4;
+  @include landing-page-background;
+}
+
 .landing-page__illo {
   max-width: 100%;
 }
@@ -86,12 +92,6 @@
 
 .landing-page__heading {
   @include carbon--type-style('productive-heading-05');
-}
-
-.landing-page__banner {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-07 * 4;
-  @include landing-page-background;
 }
 
 .landing-page__tab-content {
