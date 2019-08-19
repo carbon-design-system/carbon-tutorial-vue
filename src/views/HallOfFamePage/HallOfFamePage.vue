@@ -87,7 +87,7 @@ export default {
     // Query with parameters
     search: {
       query: gql`
-        query REPO_QUERY($query: String!) {
+        query HOF_QUERY($query: String!) {
           search(query: $query, type: ISSUE, first: 100) {
             edges {
               node {
