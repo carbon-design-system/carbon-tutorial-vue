@@ -4,7 +4,7 @@ SASS_PATH="node_modules"
   <div id="app">
     <tutorial-header />
     <cv-content id="#main-content">
-      <cv-button>Button</cv-button>
+      <router-view />
     </cv-content>
   </div>
 </template>
