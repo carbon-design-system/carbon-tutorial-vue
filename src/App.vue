@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <tutorial-header />
-    <cv-content id="#main-content">
+    <cv-content id="main-content">
       <router-view />
     </cv-content>
   </div>
@@ -20,4 +20,8 @@ export default {
 
 <style lang="scss">
 @import './styles/carbon';
+
+#main-content {
+  padding: 0;
+}
 </style>
