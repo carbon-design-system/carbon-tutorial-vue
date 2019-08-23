@@ -1,6 +1,14 @@
 <!-- Styling -->
 <style lang="scss">
-@import "./carbon-overrides";
+  @import "./carbon-overrides";
+  @import '../../styles/carbon-utils';
+  .landing-page__banner {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-07 * 4;
+  }
+  .landing-page__illo {
+    max-width: 100%;
+  }
 </style>
 
 <!-- Content -->
