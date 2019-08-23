@@ -1,11 +1,18 @@
-<style lang="scss">
-@import '../../styles/_carbon-utils';
+<template>
+  <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
+    <template slot="data">
+      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+        <cv-data-table-cell
+          v-for="(cell, cellIndex) in row.data"
+          :key="`${cellIndex}`"
+          >{{ cell }}</cv-data-table-cell
+        >
+        <template slot="expandedContent">{{ row.description }}</template>
+      </cv-data-table-row>
+    </template>
+  </cv-data-table>
+</template>
 
-.repo-page .bx--row {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
-}
-</style>
 <script>
 export default {
   name: 'RepoTable',
@@ -35,18 +42,5 @@ export default {
   }
 };
 </script>
-<template>
-  <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
-    <template slot="data">
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
-        <cv-data-table-cell
-          v-for="(cell, cellIndex) in row.data"
-          :key="`${cellIndex}`"
-          ><template slot="expandedContent">
-            {{ row.description }}
-          </template></cv-data-table-cell
-        >
-      </cv-data-table-row>
-    </template>
-  </cv-data-table>
-</template>
+
+<style lang="scss"></style>
