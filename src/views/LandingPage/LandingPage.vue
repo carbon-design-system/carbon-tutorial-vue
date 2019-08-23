@@ -1,7 +1,9 @@
 <!-- Styling -->
 <style lang="scss">
-  @import "./carbon-overrides";
   @import '../../styles/carbon-utils';
+  @import './carbon-overrides';
+  @import './mixins';
+
   .landing-page__banner {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
