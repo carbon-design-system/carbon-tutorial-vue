@@ -1,3 +1,9 @@
+<!-- Styling -->
+<style lang="scss">
+@import "./carbon-overrides";
+</style>
+
+<!-- Content -->
 <template>
   <div class="bx--grid bx--grid--full-width landing-page">
     <!--Banner with breadcrumb-->
