@@ -69,13 +69,14 @@
         </cv-tabs>
       </div>
     </div>
-
     <!--Footer-->
     <div class="bx--row landing-page__r3">
-      <div class="bx--col-md-4 bx--col-lg-4">1/4</div>
-      <div class="bx--col-md-4 bx--col-lg-4">1/4</div>
-      <div class="bx--col-md-4 bx--col-lg-4">1/4</div>
-      <div class="bx--col-md-4 bx--col-lg-4">1/4</div>
+      <div class="bx--col-md-4 bx--col-lg-4">
+        <h3 class="landing-page__label">The Principles</h3>
+      </div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
     </div>
   </div>
 </template>
