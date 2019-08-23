@@ -13,10 +13,6 @@
     </div>
     <!--Content-->
     <div class="bx--row landing-page__r2">
-      <div class="bx--col-md-4 bx--col-lg-7">7/16</div>
-      <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">8/16</div>
-    </div>
-    <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
         <cv-tabs selected="0" aria-label="Tab navigation">
           <cv-tab label="About">
