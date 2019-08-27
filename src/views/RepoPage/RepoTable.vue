@@ -1,12 +1,12 @@
 <template>
   <div v-if="loading">
-	<cv-data-table-skeleton
-	  v-if="loading"
-	  :columns="columns"
-	  :title="title"
-	  :helper-text="helperText"
-	  :rows="10"
-	/>
+    <cv-data-table-skeleton
+      v-if="loading"
+      :columns="columns"
+      :title="title"
+      :helper-text="helperText"
+      :rows="10"
+    />
   </div>
   <cv-data-table v-else :columns="columns"
     :title="title"
@@ -14,14 +14,14 @@
     :pagination="{ numberOfItems: this.totalRows }"
     @pagination="$emit('pagination', $event)">
     <template slot="data">
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+      <cv-data-table-row v-for="row in data" :key="`${row.key}`">
 
-		<cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
-		  <template v-if="!cell.url">
-			{{cell}}
-		  </template>
-		  <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
-		</cv-data-table-cell>
+        <cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
+          <template v-if="!cell.url">
+            {{cell}}
+          </template>
+          <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
+        </cv-data-table-cell>
 
         <template slot="expandedContent">{{ row.description }}</template>
       </cv-data-table-row>
@@ -41,7 +41,7 @@ export default {
     title: String,
     helperText: String,
     loading: Boolean,
-	totalRows: Number,
+    totalRows: Number,
   },
   
   components: { LinkList },
@@ -60,10 +60,19 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description
+        description: row.description,
+        key: row.key
       }));
     }
-  }
+  },
+  watch: {
+        data() {
+          if (this.rows){
+            // console.log("RepoTable:watch:data");
+            // console.dir(this.rows);
+          }
+        }
+      }
 };
 </script>
 
