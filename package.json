@@ -6,11 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "ci-check": "yarn format:diff",
+    "format": "prettier --write \"**/*.{js,vue,scss}\"",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/grid": "^10.5.0",
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
     "carbon-components": "^10.4.1",
