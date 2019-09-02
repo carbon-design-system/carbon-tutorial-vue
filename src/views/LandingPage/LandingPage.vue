@@ -82,6 +82,7 @@
   </div>
 </template>
 
+
 <script>
 import { InfoSection, InfoCard } from '../../components/InfoSection';
 import Globe32 from '@carbon/icons-vue/lib/globe/32';
@@ -91,7 +92,7 @@ import Application32 from '@carbon/icons-vue/lib/application/32';
 export default {
   name: 'LandingPage',
   components: { InfoSection, InfoCard },
-  created() {
+    created() {
     // Add icons to this
     Object.assign(this, {
       Globe32,
