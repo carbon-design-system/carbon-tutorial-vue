@@ -2,6 +2,7 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
+      {{ this.organization }}
         <RepoTable
           :headers="headers"
           :rows="rows"
@@ -15,7 +16,41 @@
 
 <script>
 import RepoTable from './RepoTable';
+import gql from 'graphql-tag';
 
+const REPO_QUERY = gql`
+  query REPO_QUERY {
+    # Let's use carbon as our organization
+    organization(login: "carbon-design-system") {
+      # We'll grab all the repositories in one go. To load more resources
+      # continuously, see the advanced topics.
+      repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+        totalCount
+        nodes {
+          url
+          homepageUrl
+          issues(filterBy: { states: OPEN }) {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+          releases(first: 1) {
+            totalCount
+            nodes {
+              name
+            }
+          }
+          name
+          updatedAt
+          createdAt
+          description
+          id
+        }
+      }
+    }
+  }
+`;
 const headers = [
   {
     key: 'name',
@@ -81,7 +116,10 @@ export default {
       headers,
       rows
     };
-  }
+  },
+  apollo: {
+    organization: REPO_QUERY
+  },  
 };
 </script>
 
