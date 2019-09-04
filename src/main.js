@@ -5,7 +5,7 @@ import CarbonComponentsVue from '@carbon/vue';
 Vue.use(CarbonComponentsVue);
 Vue.config.productionTip = false;
 
-import { createProvider } from 'vue-apollo';
+import { createProvider } from './vue-apollo';
 
 new Vue({
   router,
