@@ -25,7 +25,7 @@
                     tools and resources, human interface guidelines, and a
                     vibrant community of contributors.
                   </p>
-                  <cv-button>Learn more</cv-button>
+                  <cv-button>Learn more!</cv-button>
                 </div>
                 <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <img
