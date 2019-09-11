@@ -13,9 +13,17 @@
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
+    "apollo-boost": "^0.4.4",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.13",
+    "apollo-link-http": "^1.5.16",
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
+    "graphql": "^14.5.4",
+    "graphql-tag": "^2.10.1",
     "vue": "^2.6.10",
+    "vue-apollo": "^3.0.0-rc.2",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
@@ -32,6 +40,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-apollo": "^0.21.0",
     "vue-template-compiler": "^2.6.10"
   },
   "prettier": {
