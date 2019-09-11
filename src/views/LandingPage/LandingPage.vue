@@ -2,7 +2,7 @@
 @import "./carbon-overrides";
 @import '../../styles/carbon-utils';
 @import './mixins';
-</style>
+
 .landing-page__illo {
   max-width: 100%;
 }
@@ -45,6 +45,7 @@
 .landing-page__label {
   @include carbon--type-style('heading-01');
 }
+</style>
 <template>
   <div class="bx--grid bx--grid--full-width landing-page">
     <div class="bx--row landing-page__banner">
