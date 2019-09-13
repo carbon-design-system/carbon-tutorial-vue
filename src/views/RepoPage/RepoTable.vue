@@ -15,7 +15,7 @@
     @pagination="$emit('pagination', $event)"
   >
     <template slot="data">
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+      <cv-data-table-row v-for="row in data" :key="`${row.key}`">
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
@@ -61,7 +61,8 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description
+        description: row.description,
+        key: row.key
       }));
     }
   }
