@@ -670,6 +670,28 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/icon-helpers@10.2.0":
+  version "10.2.0"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2F%40carbon%2Ficon-helpers%2F-%2Ficon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
+  integrity sha1-9Yqx0UuLY9SF0x59eF0lBX6sVAk=
+
+"@carbon/icons-vue@10.3.0":
+  version "10.3.0"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/@carbon/icons-vue/-/icons-vue-10.3.0.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2F%40carbon%2Ficons-vue%2F-%2Ficons-vue-10.3.0.tgz#537e707c679bd69f8b61ce97691b742d6dfaa643"
+  integrity sha1-U35wfGeb1p+LYc6XaRt0LW36pkM=
+  dependencies:
+    "@carbon/icon-helpers" "10.2.0"
+
+"@carbon/vue@^2.12.7-canary.5":
+  version "2.12.7-canary.5"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/@carbon/vue/-/vue-2.12.7-canary.5.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2F%40carbon%2Fvue%2F-%2Fvue-2.12.7-canary.5.tgz#5c5e69083ad983d6a98790ef12905be2178b3348"
+  integrity sha1-XF5pCDrZg9aph5DvEpBb4heLM0g=
+  dependencies:
+    "@carbon/icons-vue" "10.3.0"
+    carbon-components "10.3.1"
+    flatpickr "4.6.1"
+    vue "^2.6.10"
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
@@ -2231,6 +2253,21 @@ capture-exit@^1.2.0:
   integrity sha1-HF/MSJ/QqwDU8ax64QcuMXP7q28=
   dependencies:
     rsvp "^3.3.3"
+
+carbon-components@10.3.1:
+  version "10.3.1"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/carbon-components/-/carbon-components-10.3.1.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2Fcarbon-components%2F-%2Fcarbon-components-10.3.1.tgz#c150dff410c9ada83d44bfda1a23b6a5f2ced0b1"
+  integrity sha1-wVDf9BDJrag9RL/aGiO2pfLO0LE=
+  dependencies:
+    carbon-icons "^7.0.7"
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/carbon-icons/-/carbon-icons-7.0.7.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2Fcarbon-icons%2F-%2Fcarbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha1-66/j6fol35c3lqjsoG2KfFAcxhA=
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
@@ -4153,6 +4190,11 @@ flat-cache@^2.0.1:
     flatted "^2.0.0"
     rimraf "2.6.3"
     write "1.0.3"
+
+flatpickr@4.6.1:
+  version "4.6.1"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/flatpickr/-/flatpickr-4.6.1.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2Fflatpickr%2F-%2Fflatpickr-4.6.1.tgz#9eb498ab805dd27f5ae02e1ac6ac6c099ce45e94"
+  integrity sha1-nrSYq4Bd0n9a4C4axqxsCZzkXpQ=
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -6081,6 +6123,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/lodash.debounce/-/lodash.debounce-4.0.8.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2Flodash.debounce%2F-%2Flodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.defaultsdeep@^4.6.0:
   version "4.6.1"
@@ -9777,6 +9824,13 @@ walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://na.artifactory.swg-devops.com:443/artifactory/api/npm/appconnect-npm/warning/-/warning-3.0.0.tgz?dl=https%3A%2F%2Fregistry.npmjs.org%2Fwarning%2F-%2Fwarning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"
