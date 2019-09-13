@@ -14,33 +14,33 @@
 </template>
 
 <script>
-import RepoTable from './RepoTable';
+import RepoTable from "./RepoTable";
 
 const headers = [
   {
     key: 'name',
-    header: 'Name'
+    header: 'Name',
   },
   {
     key: 'createdAt',
-    header: 'Created'
+    header: 'Created',
   },
   {
     key: 'updatedAt',
-    header: 'Updated'
+    header: 'Updated',
   },
   {
     key: 'issueCount',
-    header: 'Open Issues'
+    header: 'Open Issues',
   },
   {
     key: 'stars',
-    header: 'Stars'
+    header: 'Stars',
   },
   {
     key: 'links',
-    header: 'Links'
-  }
+    header: 'Links',
+  },
 ];
 
 const rows = [
@@ -51,7 +51,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
+    links: 'Links',
   },
   {
     id: '2',
@@ -60,7 +60,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
+    links: 'Links',
   },
   {
     id: '3',
@@ -69,29 +69,18 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
-  }
+    links: 'Links',
+  },
 ];
 
 export default {
   name: 'RepoPage',
-  components: {
-    RepoTable
-  },
+  components: { RepoTable },
   data() {
     return {
       headers,
-      rows
+      rows,
     };
-  }
+  },
 };
 </script>
-
-<style lang="scss">
-@import '../../styles/carbon-utils';
-
-.repo-page .bx--row {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
-}
-</style>
