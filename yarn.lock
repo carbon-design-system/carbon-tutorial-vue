@@ -675,10 +675,10 @@
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
   integrity sha512-PAxu8KMuSrifF4VCW7N7bgu/QKG/Q4T9ojWUEqI0zKjTCkJnzEZTYgK1FrWAdE1uAdAwLlbPIjzIS/QzP15Uvw==
 
-"@carbon/icon-helpers@10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.3.0.tgz#b0a772a7be9c10d5633cf78034c5c988ce998982"
-  integrity sha512-vQegj82Y3hC17cA0g0bQUwYfcmhJD/3HyJVE/biyUXImTu82TcLrcRDTZoO9bOleEMEztMXTTDlMKTU9rrhRTw==
+"@carbon/icon-helpers@10.4.0":
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.4.0.tgz#771ba51efcaa9d2be03800f8e0f50c7aa779febf"
+  integrity sha512-52H97nT0Hv3mneNaDXBELt/shrO9AUZIpX5TuxRUcdva0xqLNnjhsLw0PTytjQRw3yNCLmDw8hOutzlReXCleQ==
 
 "@carbon/icons-vue@10.3.0":
   version "10.3.0"
@@ -688,16 +688,16 @@
     "@carbon/icon-helpers" "10.2.0"
 
 "@carbon/icons-vue@^10.4.0":
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.4.0.tgz#4880550373d69350972fd23cff4bb8ac70d439d1"
-  integrity sha512-QzIx7WrPhM93tYsl0lnoA/LTWxnjgqyo7Sb6W1L27/bu3LNV4lzzWZOBAMm381R0RafeFCwsQtqBFJvj1zpx2Q==
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.6.0.tgz#050b960c2cc121e725a23e1d4cdbd776fe09a51b"
+  integrity sha512-QOwuW2A/F/HbSbePYJ8GTc51HSFT3/4fa3f9YulSeGWYwPP2rnkaS6JF64Dgs5ctDYDQQ9F8sGGFegLqci15fg==
   dependencies:
-    "@carbon/icon-helpers" "10.3.0"
+    "@carbon/icon-helpers" "10.4.0"
 
-"@carbon/vue@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.11.0.tgz#d7fa4e571bfd3d406e51da7c1f35896a07dc1015"
-  integrity sha512-PADkSljNU8CJw7mMirztbb13+voJSQs3gK86GcqSlpH69M7jV6Qpdpz0oTz5RYd9QJsswsfQjkII80Ye3LhhTw==
+"@carbon/vue@^2.12.0":
+  version "2.12.7"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.7.tgz#b39ce0e6d1d3a60c04b1121cecffefa803fb12a9"
+  integrity sha512-a0Sd/qcvPCIdt8TRGxTakILz5RekLzhlvCzoxOHQt1XeiODYpWb9g6ULRiu7lAjM+bQtgF5FDOIUNbGJMrD/3Q==
   dependencies:
     "@carbon/icons-vue" "10.3.0"
     carbon-components "10.3.1"
