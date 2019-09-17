@@ -1,3 +1,3 @@
 <template>
-    <div>REPO PAGE</div>
+  <div>REPO PAGE</div>
 </template>
