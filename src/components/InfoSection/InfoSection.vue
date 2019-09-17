@@ -1,9 +1,9 @@
 <style lang="scss">
-    @import "../../styles/_carbon-utils";
+  @import '../../styles/_carbon-utils';
 
-    .info-section__heading {
-        @include carbon--type-style('heading-01');
-    }
+  .info-section__heading {
+    @include carbon--type-style('heading-01');
+  }
 </style>
 
 <template>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-    export default {
-        name: "InfoSection",
-        props: {
-            heading: String
-        }
-    };
+  export default {
+    name: 'InfoSection',
+    props: {
+      heading: String
+    }
+  };
 </script>
