@@ -47,6 +47,16 @@
               </div>
             </div>
           </cv-tab>
+          <cv-tab label="Develop">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
+              <div class="bx--row landing-page__tab-content">
+                <div class="bx--col-lg-16">
+                  Carbon provides styles and components in Vanilla, Vue, Angular,
+                  and Vue for anyone building on the web.
+                </div>
+              </div>
+            </div>
+          </cv-tab>
         </cv-tabs>
       </div>
     </div>
