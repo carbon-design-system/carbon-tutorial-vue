@@ -13,6 +13,7 @@
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
+    "apollo": "^2.18.3",
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
