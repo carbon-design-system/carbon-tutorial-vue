@@ -15,8 +15,10 @@
   </cv-data-table>
 </template>
 <script>
+import LinkList from './LinkList';
 export default {
   name: 'RepoTable',
+  components: { LinkList },
   props: {
     headers: Array,
     rows: Array,
@@ -25,7 +27,6 @@ export default {
     loading:Boolean,
     totalRows: Number,
   },
-  components: { LinkList },
   computed: {
     columns() {
       return this.headers.map(header => header.header);
@@ -45,6 +46,5 @@ export default {
     }
   }
 };
-import LinkList from './LinkList';
 </script>
 <style lang="scss"></style>

@@ -1,3 +1,4 @@
+<template>
 <ul class="link-list">
   <li>
     <cv-link :href="url">GitHub</cv-link>
@@ -8,6 +9,8 @@
     <cv-link :href="homepageUrl">Homepage</cv-link>
   </li>
 </ul>
+</template>
+<script>
 export default {
   name: 'LinkList',
   props: {
@@ -15,6 +18,7 @@ export default {
     homepageUrl: String,
   },
 };
+</script>
 .link-list {
   display: flex;
 }
