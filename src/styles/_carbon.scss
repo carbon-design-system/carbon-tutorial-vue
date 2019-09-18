@@ -1,6 +1,9 @@
 $feature-flags: (
-  grid-columns-16: true,
+  grid-columns-16: true
 );
+
+@import 'carbon-components/scss/globals/scss/styles';
+@import './carbon-fixes';
 
 // Feature flags
 $css--font-face: true;
