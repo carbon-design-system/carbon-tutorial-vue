@@ -139,4 +139,7 @@ export default {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
 }
+.bx--col-lg-16{
+  width:100%;
+}
 </style>

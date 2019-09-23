@@ -31,6 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import '../../styles/carbon-utils';
 
 .info-card {
@@ -82,4 +83,16 @@ export default {
     max-width: 75%;
   }
 }
+
+@media (min-width: 82rem){
+  .bx--col-xlg-3 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+      flex: 0 0 17.8%;
+      max-width: 25%;
+  }
+}
+
+
+
 </style>
