@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'InfoSeciton',
+  name: 'InfoSection',
   props: {
     heading: String
   }
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/carbon-utils';
+@import '../../styles/_carbon-utils';
 
 .info-section__heading {
   @include carbon--type-style('heading-01');
