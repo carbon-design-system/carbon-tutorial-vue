@@ -11,9 +11,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/grid": "^10.6.0",
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
     "carbon-components": "^10.4.1",
+    "ci-check": "^1.0.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
@@ -31,6 +33,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
+    "prettier": "1.18.2",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   },
