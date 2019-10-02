@@ -5,6 +5,7 @@ node_modules
 # local env files
 .env.local
 .env.*.local
+VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN=618ef380d4edb5457e942b283623df47486adc23
 
 # Log files
 npm-debug.log*
