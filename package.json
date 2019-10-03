@@ -6,9 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "ci-check": "yarn format:diff",
+    "format": "prettier --write \"src/**/*.{js,vue,scss}\"",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml"
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
