@@ -10,7 +10,6 @@
     <component :is="icon" />
   </div>
 </template>
-
 <script>
 export default {
   name: 'InfoCard',
