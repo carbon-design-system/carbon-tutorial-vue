@@ -1,0 +1,15 @@
+@mixin challenge-page-background() {
+    background-color: $ui-01;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -$spacing-05 * 3;
+      top: -$spacing-05 * 3;
+      right: -$spacing-05 * 3;
+      bottom: 0;
+      background: $ui-01;
+      z-index: -1;
+    }
+  }

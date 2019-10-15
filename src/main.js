@@ -4,6 +4,9 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+import CarbonComponentsVue from '@carbon/vue';
+Vue.use(CarbonComponentsVue);
+
 new Vue({
   router,
   render: h => h(App)
