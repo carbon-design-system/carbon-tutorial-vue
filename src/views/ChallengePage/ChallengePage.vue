@@ -14,7 +14,7 @@
     <div class="bx--row challenge-page__r2">
       <div class="bx--col bx--no-gutter">
         <cv-tabs @tab-selected="deactivate_t">
-          <cv-tab label="And... We're Live!" :selected="t1_selected">
+          <cv-tab label="And... We're Live!" :selected="t1_selected" :disabled="submission_tab_disabled">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row challenge-page__tab-content">
                 <div class="bx--col-md-16 bx--col-lg-16">
@@ -32,17 +32,37 @@
               </div>
             </div>
           </cv-tab>
-          <cv-tab label="Give me my points"  :selected="t2_selected" >
+          <cv-tab label="Give me my points"  :selected="t2_selected" :disabled="submission_tab_disabled">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row challenge-page__tab-content">
-                <div class="bx--col-sm-16 bx--col-md-6 bx--col-lg-6 bx--offset-md-5 bx--offset-lg-5 ">
+                <div class="bx--col-sm-16 bx--col-md-6 bx--col-lg-6 bx--offset-sm-0 bx--offset-md-5 bx--offset-lg-5 ">
                   <h1 class="">Almost there...</h1>
                   <p class="">Submit the following form and your points will magically appear</p>
                   <cv-form>
-                    <cv-text-input label="IBMID" placeholder="IBMID you used to sign up for the conference"> </cv-text-input>
-                    <cv-checkbox label="I agree to use my email here" :value="checkbox_value"> dfg </cv-checkbox>
-                    <cv-button @click="submit">Submit</cv-button>
+                    <cv-text-input 
+                      v-model="input_email" 
+                      label="IBMID" 
+                      type="email"
+                      :invalid-message="email_invalid"
+                      placeholder="IBMID you used to sign up for the conference"> </cv-text-input>
+                    <cv-checkbox 
+                    label="I agree to use my email here" 
+                    v-model="checkbox_value"
+                    value="checkbox_value">  </cv-checkbox>
+                    <cv-button @click="submit" :disabled="notReadyForSubmit">Submit</cv-button>
                   </cv-form>
+                  <cv-inline-loading
+                    v-if="submission_active"
+                    error-text="Something went wrong"
+                    loading-text="Working on it, Beep Boop!"
+                    :active="submission_active"></cv-inline-loading>
+                </div>
+                <div class="bx--col-md-4 bx--col-lg-7">
+                  <cv-toast-notification v-if="toast_visible" 
+                    :title="toast_title"
+                    :sub-title="toast_subtitle"
+                    :caption="toast_caption"
+                    @close="doClose"></cv-toast-notification>
                 </div>
               </div>
             </div>
@@ -57,6 +77,7 @@
                     <p>You can also play with the source code for this app and make it even cooler. Don't forget to send a PullRequest if you think everyone will benefit from your changes :)</p>
                     <h4>Thanks for joining us in this short jounry :D</h4>
                 </div>
+                
               </div>
             </div>
           </cv-tab>
@@ -90,35 +111,89 @@ export default {
       t1_selected: false,
       t2_selected: false,
       t3_selected: false,
-      checkbox_value: "false",
+      checkbox_value: false,
       input_email : "",
+      toast_visible: false,
+      toast_title: "",
+      toast_subtitle: "",
+      toast_caption: "",
+      email_invalid: undefined,
+      submission_active:false,
+      submission_tab_disabled: false
     }
   },
   methods: {
       activate_t1: function() {
         this.t1_selected = true;
-        },
+      },
       activate_t2: function() {
         this.t2_selected = true;
-        },
+      },
       activate_t3: function() {
         this.t3_selected = true;
-        },
+      },
       deactivate_t: function() {
         this.t1_selected = false
         this.t2_selected = false
         this.t3_selected = false
       },
-      submit: function() {
-        var tt = moment().format();
-        var APP_ID = "ADUMMY_ID";
+      disable_submission_tabs: function() {
+        this.submission_tab_disabled = true;
+      },
+      validEmail: function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      },
+      submit: function(e) {
 
-        this.activate_t3()
+        e.preventDefault();
+
+        if(this.validEmail(this.input_email)) {
+          this.email_invalid=undefined;
+        }else {
+          this.email_invalid="Invalid Email";
+          return;
+        }
+
+        this.submission_active = true;        
+        var parent_obj = this;
+        this.axios.post('https://digital-conference-responses-test.mybluemix.net/responses', {
+          IBM_ID: this.input_email,
+          APP_ID: "APPIDIDIDIDID",
+          TIMESTAMP: moment().format(),
+        })
+        .then(function (response) {
+          console.log("success");
+          parent_obj.toast_visible = true;
+          parent_obj.toast_title = "Success"
+          parent_obj.toast_subtitle = "Your points are on their way"
+          parent_obj.toast_caption = "This is the caption"
+          // currentObj.output = response.data;
+          parent_obj.submission_active = false;     
+          parent_obj.disable_submission_tabs();   
+          parent_obj.activate_t3()
+        })
+        .catch(function (error) {
+          console.log(error);
+          parent_obj.toast_visible = true;
+          parent_obj.toast_title = "Oops"
+          parent_obj.toast_subtitle = "There was a problem"
+          parent_obj.toast_caption = error
+          parent_obj.submission_active = false;     
+          // currentObj.output = error;
+        });
+      },
+      doClose : function() {
+        this.toast_visible = false;
       }
   },
   computed: {
     createdAtDisplay() {
       return moment().format();
+    },
+    notReadyForSubmit() {
+      return !this.checkbox_value
+      return !(this.validEmail(this.input_email))
     }
   }
 };
