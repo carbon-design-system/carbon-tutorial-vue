@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node ./bin/www",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "ci-check": "yarn format:diff",
@@ -20,7 +21,11 @@
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.5",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
