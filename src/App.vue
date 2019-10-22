@@ -8,14 +8,12 @@
 </template>
 
 <script>
-import TutorialHeader from './components/TutorialHeader';
+import TutorialHeader from './components/TutorialHeader'
 
 export default {
-  name: 'App',
-  components: {
-    TutorialHeader
-  }
-};
+    name: 'App',
+    components: {TutorialHeader}
+}
 </script>
 
 <style lang="scss">
