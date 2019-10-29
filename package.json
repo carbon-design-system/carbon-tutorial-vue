@@ -6,12 +6,16 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "ci-check": "yarn format:diff",
-    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
+    "format:diff": "prettier -- --list-different \"src/**/*.{js,vue,scss}\"",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.6.1",
+    "@carbon/vue": "^2.15.0",
+    "carbon-components": "^10.7.2",
     "core-js": "^2.6.5",
+    "format": "^0.2.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
@@ -28,6 +32,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
+    "prettier": "^1.18.2",
+    "prettylint": "^1.0.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   },
