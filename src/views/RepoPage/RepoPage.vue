@@ -1,3 +1,3 @@
 <template>
-  <div>LANDING PAGE</div>
+  <div>REPO PAGE</div>
 </template>

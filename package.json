@@ -16,8 +16,7 @@
     "carbon-components": "^10.7.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "yarn": "^1.19.1"
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
