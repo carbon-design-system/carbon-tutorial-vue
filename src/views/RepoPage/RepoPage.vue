@@ -124,7 +124,7 @@ export default {
   },
   watch: {
     rows() {
-      console.log(this.organization);
+      window.console.log(this.organization);
       if (this.organization) {
         window.console.dir(this.organization.repositories.nodes);
       }
