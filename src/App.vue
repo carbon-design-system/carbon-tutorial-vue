@@ -1,17 +1,24 @@
 <template>
-  <cv-content id="#main-content">
-    <router-view />
-  </cv-content>
+  <div id="app">
+    Hello Carbon! Well, not quite yet. This is the starting point for the Carbon
+    tutorial.
+    <tutorial-header />
+    <cv-content id="#main-content">
+      <router-view />
+    </cv-content>
+  </div>
 </template>
 
+<style lang="scss">
+@import './styles/carbon';
+</style>
+
 <script>
-import Notification20 from '@carbon/icons-vue/es/notification/20';
-import UserAvatar20 from '@carbon/icons-vue/es/user--avatar/20';
-import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20';
+import TutorialHeader from './components/TutorialHeader';
 export default {
-  name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 }
+  name: 'App',
+  components: {
+    TutorialHeader
+  }
 };
 </script>
-
-<style lang="scss"></style>
