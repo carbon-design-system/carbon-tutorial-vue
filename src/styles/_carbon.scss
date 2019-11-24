@@ -2,7 +2,6 @@ $feature-flags: (
   grid-columns-16: true
 );
 
-@import './carbon-fixes';
 // Feature flags
 $css--font-face: true;
 $css--plex: true;
@@ -19,3 +18,5 @@ $css--plex: true;
 @import 'carbon-components/scss/components/pagination/pagination';
 @import 'carbon-components/scss/components/tabs/tabs';
 @import 'carbon-components/scss/components/ui-shell/ui-shell';
+
+@import './carbon-fixes';
