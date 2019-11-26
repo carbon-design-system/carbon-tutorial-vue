@@ -3,7 +3,7 @@
     <cv-data-table v-else :columns="columns" :title="title" :helper-text="helperText"
         :pagination="{ numberOfItems: this.totalRows }" @pagination="$emit('pagination', $event)">
         <template slot="data">
-            <cv-data-table-row v-for="row in data" :key="`${row.description}`">
+            <cv-data-table-row v-for="(row,index) in data" :key="`${index}`">
                 <cv-data-table-cell v-for="cell in row.data" :key="`${cell.url}`">
                     <template v-if="!cell.url">
                         {{cell}}
