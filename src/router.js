@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import LandingPage from './view/LandingPage';
+import LandingPage from './views/LandingPage';
 Vue.use(Router);
 export default new Router({
   routes: [{
@@ -15,7 +15,7 @@ export default new Router({
       // this generates a separate chunk (repo-page.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import( /* webpackChunkName: "repo-page" */ './view/RepoPage'),
+        import( /* webpackChunkName: "repo-page" */ './views/RepoPage'),
     },
   ],
 });
