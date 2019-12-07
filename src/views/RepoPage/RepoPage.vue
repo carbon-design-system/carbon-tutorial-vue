@@ -41,7 +41,6 @@ const headers = [
     header: 'Links'
   }
 ];
-
 const rows = [
   {
     id: '1',
@@ -71,7 +70,6 @@ const rows = [
     links: 'Links'
   }
 ];
-
 export default {
   name: 'RepoPage',
   components: { RepoTable },

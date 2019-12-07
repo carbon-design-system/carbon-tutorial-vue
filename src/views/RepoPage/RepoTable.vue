@@ -6,15 +6,14 @@
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
           >{{ cell }}
-          <template slot="expandedContent">
-            {{ row.description }}
-          </template>
         </cv-data-table-cell>
+        <template slot="expandedContent">
+          {{ row.description }}
+        </template>
       </cv-data-table-row>
     </template>
   </cv-data-table>
 </template>
-
 <script>
 export default {
   name: 'RepoTable',
