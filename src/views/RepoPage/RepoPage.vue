@@ -130,19 +130,19 @@ export default {
   },
   computed: {
     rows() {
-        if (!this.organization) {
-          return [];
-        } else {
-          return this.organization.repositories.nodes.map(row => ({
-            ...row,
-            key: row.id,
-            stars: row.stargazers.totalCount,
-            issueCount: row.issues.totalCount,
-            createdAt: new Date(row.createdAt).toLocaleDateString(),
-            updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-            links: { url: row.url, homepageUrl: row.homepageUrl }
-          }));
-        }
+      if (!this.organization) {
+        return [];
+      } else {
+        return this.organization.repositories.nodes.map(row => ({
+          ...row,
+          key: row.id,
+          stars: row.stargazers.totalCount,
+          issueCount: row.issues.totalCount,
+          createdAt: new Date(row.createdAt).toLocaleDateString(),
+          updatedAt: new Date(row.updatedAt).toLocaleDateString(),
+          links: { url: row.url, homepageUrl: row.homepageUrl }
+        }));
+      }
     },
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
@@ -161,7 +161,7 @@ export default {
         console.dir(this.organization.repositories.nodes);
       }
     }
-  },
+  }
 };
 </script>
 

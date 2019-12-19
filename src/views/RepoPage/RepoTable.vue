@@ -13,18 +13,15 @@
     :helper-text="helperText"
     :pagination="{ numberOfItems: this.totalRows }"
     @pagination="$emit('pagination', $event)"
-    >
+  >
     <template slot="data">
-      <cv-data-table-row
-        v-for="(row, rowIndex) in data"
-        :key="`${rowIndex}`"
-        >
+      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
-          >
+        >
           <template v-if="!cell.url">
-            {{cell}}
+            {{ cell }}
           </template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
@@ -52,8 +49,6 @@ export default {
       return this.headers.map(header => header.header);
     },
     data() {
-      // console.dir("BLAH")
-      // console.dir(this.rows);
       return this.rows.map(row => ({
         data: [
           row.name,
@@ -67,7 +62,7 @@ export default {
       }));
     }
   },
-  components: { LinkList },
+  components: { LinkList }
 };
 </script>
 
