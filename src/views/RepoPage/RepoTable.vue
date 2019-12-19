@@ -17,11 +17,11 @@
     <template slot="data">
       <cv-data-table-row
         v-for="(row, rowIndex) in data"
-        :key="row.url"
+        :key="`${rowIndex}`"
         >
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
-          :key="cell.key"
+          :key="`${cellIndex}`"
           >
           <template v-if="!cell.url">
             {{cell}}
