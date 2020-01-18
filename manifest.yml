@@ -1,4 +1,4 @@
 applications:
-  - name: carbon-tutorial-vue-mouadcherkaoui
+  - name: carbon-vue-mouadcherkaoui
     memory: 64M
     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
