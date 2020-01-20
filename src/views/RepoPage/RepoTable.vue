@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <cv-data-table-skeleton
     v-if="loading"
     :columns="columns"
@@ -7,17 +6,6 @@
     :helper-text="helperText"
     :rows="10"
   />
-=======
-  <div v-if="loading">
-    <cv-data-table-skeleton
-      v-if="loading"
-      :columns="columns"
-      :title="title"
-      :helper-text="helperText"
-      :rows="10"
-    />
-  </div>
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
   <cv-data-table
     v-else
     :columns="columns"
@@ -32,13 +20,7 @@
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
         >
-<<<<<<< HEAD
           <template v-if="!cell.url">{{ cell }}</template>
-=======
-          <template v-if="!cell.url">
-            {{ cell }}
-          </template>
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
         <template slot="expandedContent">{{ row.description }}</template>
@@ -49,18 +31,9 @@
 
 <script>
 import LinkList from './LinkList';
-<<<<<<< HEAD
 export default {
   name: 'RepoTable',
   components: { LinkList },
-=======
-
-export default {
-  name: 'RepoTable',
-  components: {
-    LinkList
-  },
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
   props: {
     headers: Array,
     rows: Array,
@@ -84,12 +57,8 @@ export default {
           row.stars,
           row.links
         ],
-<<<<<<< HEAD
         description: row.description,
         key: row.key
-=======
-        description: row.description
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
       }));
     }
   }

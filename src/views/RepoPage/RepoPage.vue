@@ -18,22 +18,14 @@
 
 <script>
 import gql from 'graphql-tag';
-<<<<<<< HEAD
-=======
-
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
 import RepoTable from './RepoTable';
 
 const REPO_QUERY = gql`
   query REPO_QUERY {
-<<<<<<< HEAD
     # Let's use carbon as our organization
     organization(login: "carbon-design-system") {
       # We'll grab all the repositories in one go. To load more resources
       # continuously, see the advanced topics.
-=======
-    organization(login: "carbon-design-system") {
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
       repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
         totalCount
         nodes {
@@ -103,14 +95,6 @@ export default {
       page: 0
     };
   },
-<<<<<<< HEAD
-=======
-
-  apollo: {
-    organization: REPO_QUERY
-  },
-
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
   computed: {
     rows() {
       if (!this.organization) {
@@ -123,26 +107,14 @@ export default {
           issueCount: row.issues.totalCount,
           createdAt: new Date(row.createdAt).toLocaleDateString(),
           updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-<<<<<<< HEAD
           links: { url: row.url, homepageUrl: row.homepageUrl }
         }));
       }
     },
-=======
-          links: {
-            url: row.url,
-            homepageUrl: row.homepageUrl
-          }
-        }));
-      }
-    },
-
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
-<<<<<<< HEAD
   watch: {
     rows() {
       if (this.organization) {
@@ -155,14 +127,6 @@ export default {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
-=======
-
-  methods: {
-    onPagination(value) {
-      this.pageSize = value.length;
-      this.pageStart = value.start;
-      this.page = value.page;
->>>>>>> 991663f4db563c4b3ccddc1c0b509fa8989e86d7
     }
   }
 };
