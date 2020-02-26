@@ -670,6 +670,35 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/icon-helpers@^10.5.0", "@carbon/icon-helpers@^10.5.2":
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.5.2.tgz#7975fc091206f4a423e812dada89519df52c2041"
+  integrity sha512-L3pK5YbXj2B/lXHb0NyHbGzOLpMBOP0uL9J4wARCr/NNvuyqJEkgj9JSSX7OAORkOk9NncOdpgCyKzjIBheU6w==
+
+"@carbon/icons-vue@10.8.0":
+  version "10.8.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.8.0.tgz#68f242e36b814efd03b777b79d1e3357cd5bf6dc"
+  integrity sha512-kWfr6sKYTMQMTpUJ9S/iias0N9dn5GPfnZWBa1kC0/pUbimuD9XPUVFS7+uZRGy7QqeIVZFe8qlU/2W5eAqZCQ==
+  dependencies:
+    "@carbon/icon-helpers" "^10.5.0"
+
+"@carbon/icons-vue@^10.8.2":
+  version "10.8.2"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.8.2.tgz#37bf853662e7e309ff2f1ea1087f88a4b9c376e3"
+  integrity sha512-dJllyOJu2D4i6GTmRocJG5YQKe+Ei5IBnuCsglNbI3gkDXnrF962eE86sV3IDnOyjjqFbUFR+27Oqln5Ha9EfQ==
+  dependencies:
+    "@carbon/icon-helpers" "^10.5.2"
+
+"@carbon/vue@^2.23.0":
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.23.0.tgz#99991c8473fbbd41157b48331ca72becaf9245da"
+  integrity sha512-U+rohghGka2vWKGcNa7qOPsNdctaVp6FSSK0SNr5HxdnAfrF6ac4s29VQeMvUFXJANZ6nHXn/xtDvhSCWKFS+A==
+  dependencies:
+    "@carbon/icons-vue" "10.8.0"
+    carbon-components "10.9.0"
+    flatpickr "4.6.3"
+    vue "^2.6.10"
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
@@ -2231,6 +2260,31 @@ capture-exit@^1.2.0:
   integrity sha1-HF/MSJ/QqwDU8ax64QcuMXP7q28=
   dependencies:
     rsvp "^3.3.3"
+
+carbon-components@10.9.0:
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.9.0.tgz#b96f097582301b009232ebc54927327ee3608a84"
+  integrity sha512-r0fHHGV1nAGazL42ecsFSBHlrRlg/2d1XAvnlnRzOvZW8O+DFR4XxpAgf5ZWKFCiiysS5eDympZTqTflN/NewQ==
+  dependencies:
+    carbon-icons "^7.0.7"
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-components@^10.9.3:
+  version "10.9.3"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.9.3.tgz#d0d8f42c35fb7ce1cacc131d1c4b11fc2c905a6a"
+  integrity sha512-8TPIBjFIez2ymh3RmbHilel+/ReqpbfPf9IUBTOLtSdxI2VuyBWFxtBB/82xtHpUr3RfPdQ1U/rxDKYxoDOxrg==
+  dependencies:
+    carbon-icons "^7.0.7"
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
@@ -4153,6 +4207,16 @@ flat-cache@^2.0.1:
     flatted "^2.0.0"
     rimraf "2.6.3"
     write "1.0.3"
+
+flatpickr@4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.1.tgz#9eb498ab805dd27f5ae02e1ac6ac6c099ce45e94"
+  integrity sha512-3ULSxbXmcMIRzer/2jLNweoqHpwDvsjEawO2FUd9UFR8uPwLM+LruZcPDpuZStcEgbQKhuFOfXo4nYdGladSNw==
+
+flatpickr@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
+  integrity sha512-007VucCkqNOMMb9ggRLNuJowwaJcyOh4sKAFcdGfahfGc7JQbf94zSzjdBq/wVyHWUEs5o3+idhFZ0wbZMRmVQ==
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -6081,6 +6145,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.defaultsdeep@^4.6.0:
   version "4.6.1"
@@ -9777,6 +9846,13 @@ walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"
