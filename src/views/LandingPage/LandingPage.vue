@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bx--grid bx--grid--full-width landing-page">
     <div class="bx--row landing-page__banner">
       <div class="bx--col-lg-16">
         <cv-breadcrumb noTrailingSlash aria-label="Page navigation">
