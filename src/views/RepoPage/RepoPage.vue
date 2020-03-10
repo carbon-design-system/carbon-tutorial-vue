@@ -114,14 +114,7 @@ export default {
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
-  },
-  // watch: {
-  //   rows() {
-  //     if (this.organization) {
-  //       console.dir(this.organization.repositories.nodes);
-  //     }
-  //   }
-  // },
+  }, 
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
@@ -129,6 +122,7 @@ export default {
       this.page = val.page;
     }
   }
+  
 };
 </script>
 
