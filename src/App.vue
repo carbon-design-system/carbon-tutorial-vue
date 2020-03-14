@@ -1,8 +1,23 @@
 <template>
   <div id="app">
-    Hello Carbon! Well, not quite yet. This is the starting point for the Carbon
-    tutorial.
+    <AppHeader />
+    <CvContent id="#main-content">
+      <router-view />
+    </CvContent>
   </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+import AppHeader from './components/AppHeader';
+
+export default {
+  name: 'App',
+  components: {
+    AppHeader
+  }
+};
+</script>
+
+<style lang="scss">
+@import './styles/carbon';
+</style>
