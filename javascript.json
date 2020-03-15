@@ -1,0 +1,12 @@
+  "index-file": {
+    "prefix": "index",
+    "body": [
+      "import ${TM_DIRECTORY/.*[\\/]//gm} from './${TM_DIRECTORY/.*[\\/]//gm}';",
+      "export { ",
+      "\t${TM_DIRECTORY/.*[\\/]//gm},",
+      "};",
+      "export default ${TM_DIRECTORY/.*[\\/]//gm}",
+      ""
+    ],
+    "description": "Index file"
+  }

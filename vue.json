@@ -1,0 +1,19 @@
+  "Vue_Component": {
+    "prefix": "template",
+    "body": [
+      "<template>",
+      "\t$0",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "\tname: '${TM_FILENAME/[\\.]vue//}'",
+      "};",
+      "</script>",
+      "",
+      "<style lang=\"scss\">",
+      "</style>",
+      ""
+    ],
+    "description": "Single file template"
+  }
