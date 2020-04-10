@@ -1,9 +1,8 @@
 <template>
-  <div class="home"></div>
+  <div>LANDING PAGE</div>
 </template>
-
 <script>
 export default {
-  name: 'home'
+  name: 'TutorialHeader'
 };
 </script>
