@@ -48,6 +48,7 @@
     "graphql-tag": "^2.10.3",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "save-graphql-schema": "^1.0.6",
     "vue-cli-plugin-apollo": "^0.21.3",
     "vue-template-compiler": "^2.6.10"
   },
