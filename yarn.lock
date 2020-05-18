@@ -675,17 +675,24 @@
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.7.0.tgz#7ad56c3f377bfaa687ccca0b0813011606d6cb28"
   integrity sha512-zIswRvP4JyZOq7+4A4/ro7K05xVNid/+HxBOSM1ApuqcXg1e1Vl9fg37+rGY/in9v7vVgsmA8s5Arlx1mJzPIw==
 
-"@carbon/icons-vue@10.10.2", "@carbon/icons-vue@^10.10.2":
+"@carbon/icons-vue@10.10.2":
   version "10.10.2"
   resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.10.2.tgz#fda8fc3f6767e94442728a79cb3d0d2e5cbb5d17"
   integrity sha512-rBA6Jhe9tL8SPu8ULyMKtQwAnyj8o8H9CFJBz7KwQph8xKgJ3rvSJj2k74irhmaMXhIn05cHa5GDpWaQlvJc2A==
   dependencies:
     "@carbon/icon-helpers" "^10.7.0"
 
-"@carbon/vue@^2.25.0":
-  version "2.25.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.25.0.tgz#83dbb1d2b6229880ab70eb1b6841f3af9a30640a"
-  integrity sha512-pE3A6/twWXqE2CaL1Wc4h8pArSS4SUwKLkpkClkBmB+YKcsBMm38+VlnTC1E4Y54xz0ptgu1g2sJCrx8x54lzw==
+"@carbon/icons-vue@^10.11.0":
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.11.0.tgz#251da47f440d00bf743261b11c78f68a138c7bad"
+  integrity sha512-Exe2lKno+wGRBPemMmeSiMTybIwER76rPxoxrSq3GN0/TcAb+kpcibXQY3ukg6gGkouwWW5ib5XSFvZ4DBSRBQ==
+  dependencies:
+    "@carbon/icon-helpers" "^10.7.0"
+
+"@carbon/vue@^2.25.1":
+  version "2.25.1"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.25.1.tgz#ec7d5aabeaf0c44866703364aeb380e72ce66852"
+  integrity sha512-D8rJ4DfdCfcS6joWlZy+l/cqJOFAgthjOF6URIy2PmTHNmrmCy22xquAGhmTgwubFPmdQo8+MU3Dc7aX5VHLzQ==
   dependencies:
     "@carbon/icons-vue" "10.10.2"
     carbon-components "10.11.2"
@@ -2254,10 +2261,19 @@ capture-exit@^1.2.0:
   dependencies:
     rsvp "^3.3.3"
 
-carbon-components@10.11.2, carbon-components@^10.11.2:
+carbon-components@10.11.2:
   version "10.11.2"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.11.2.tgz#c2e6e2168e548010d3033e3c620e3bdc4c1182c7"
   integrity sha512-bclmy7lXH3/GXXh5Udwcup51i+MUDbDle1kUEilRF9e6phkVhn7I+qN7y/xuRfE4PuXsBC7CtMVNEjtnie6Qow==
+  dependencies:
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-components@^10.12.0:
+  version "10.12.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.12.0.tgz#a27649a5541c45833e0534f5f3b9d871f7cb0bc5"
+  integrity sha512-QPP4f6/11Buwtz+3JW/2wQKKL1QY6GZ3WIxfifpK2MyjhO8NW4LrYrLsbcwFr4kYQ6Aph18b8sHY21T61zaYLQ==
   dependencies:
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
