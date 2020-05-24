@@ -1,6 +1,8 @@
 <template>
   <cv-header arial-label="Carbon tutorial">
-    <cv-skip-to-content href="#main-content">Skip to content</cv-skip-to-content>
+    <cv-skip-to-content href="#main-content"
+      >Skip to content</cv-skip-to-content
+    >
 
     <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 
@@ -23,11 +25,11 @@
 </template>
 
 <script>
-import Notification20 from "@carbon/icons-vue/es/notification/20";
-import UserAvatar20 from "@carbon/icons-vue/es/user--avatar/20";
-import AppSwitcher20 from "@carbon/icons-vue/es/app-switcher/20";
+import Notification20 from '@carbon/icons-vue/es/notification/20';
+import UserAvatar20 from '@carbon/icons-vue/es/user--avatar/20';
+import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20';
 export default {
-  name: "TutorialHeader",
+  name: 'TutorialHeader',
   components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>
