@@ -12,9 +12,9 @@
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
-    "@carbon/icons-vue": "^10.10.2",
-    "@carbon/vue": "~2.11.0",
-    "carbon-components": "^10.11.2",
+    "@carbon/icons-vue": "^10.4.0",
+    "@carbon/vue": "^2.12.0",
+    "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-apollo": "^3.0.0-beta.11",
@@ -35,7 +35,7 @@
     "graphql-tag": "^2.9.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-cli-plugin-apollo": "~0.21.3",
+    "vue-cli-plugin-apollo": "^0.21.3",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
