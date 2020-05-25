@@ -11,11 +11,8 @@
 </template>
 
 <script>
-import LinkList from './LinkList';
-
 export default {
   name: 'LinkList',
-  components: { LinkList },
   props: {
     url: String,
     homepageUrl: String
