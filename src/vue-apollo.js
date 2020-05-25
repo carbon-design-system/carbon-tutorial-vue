@@ -13,7 +13,7 @@ const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 // Http endpoint
 const httpEndpoint =
-  process.env.VUE_APP_GRAPHQL_HTTP || 'http://api.github.com/graphql';
+  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
 
 // Config
 const defaultOptions = {

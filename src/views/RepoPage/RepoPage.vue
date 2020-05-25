@@ -92,6 +92,9 @@ export default {
       page: 0
     };
   },
+  apollo: {
+    organization: REPO_QUERY
+  },
   computed: {
     rows() {
       if (!this.organization) {
@@ -125,9 +128,6 @@ export default {
         //console.dir(this.organization.repositories.nodes);
       }
     }
-  },
-  apollo: {
-    organization: REPO_QUERY
   }
 };
 </script>
