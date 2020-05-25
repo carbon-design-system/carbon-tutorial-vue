@@ -775,17 +775,22 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/icon-helpers@10.2.0":
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
+  integrity sha512-PAxu8KMuSrifF4VCW7N7bgu/QKG/Q4T9ojWUEqI0zKjTCkJnzEZTYgK1FrWAdE1uAdAwLlbPIjzIS/QzP15Uvw==
+
 "@carbon/icon-helpers@^10.7.0":
   version "10.7.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.7.0.tgz#7ad56c3f377bfaa687ccca0b0813011606d6cb28"
   integrity sha512-zIswRvP4JyZOq7+4A4/ro7K05xVNid/+HxBOSM1ApuqcXg1e1Vl9fg37+rGY/in9v7vVgsmA8s5Arlx1mJzPIw==
 
-"@carbon/icons-vue@10.10.2":
-  version "10.10.2"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.10.2.tgz#fda8fc3f6767e94442728a79cb3d0d2e5cbb5d17"
-  integrity sha512-rBA6Jhe9tL8SPu8ULyMKtQwAnyj8o8H9CFJBz7KwQph8xKgJ3rvSJj2k74irhmaMXhIn05cHa5GDpWaQlvJc2A==
+"@carbon/icons-vue@10.3.0":
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.3.0.tgz#537e707c679bd69f8b61ce97691b742d6dfaa643"
+  integrity sha512-tZJ2ZsgGi6jfX65F6LDjha3ttkrGp7UJdqapGuPuHY+kooDPr9HVlabp3BoAJXA2w8t2XK3zqSdk1lJu/txg/A==
   dependencies:
-    "@carbon/icon-helpers" "^10.7.0"
+    "@carbon/icon-helpers" "10.2.0"
 
 "@carbon/icons-vue@^10.4.0":
   version "10.11.0"
@@ -794,15 +799,15 @@
   dependencies:
     "@carbon/icon-helpers" "^10.7.0"
 
-"@carbon/vue@^2.12.0":
-  version "2.26.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.26.0.tgz#4cd99a441e5ab988972d354da11f8514fed5fd3e"
-  integrity sha512-tAtwkpB1X854zmeXat6RCbRXJENNJGvnPbrbNECa92MQFt2snKLO8IGSxE3oQl7LM2I9+dXf3FWqHB4EIw5Fyg==
+"@carbon/vue@~2.12.0":
+  version "2.12.7"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.7.tgz#b39ce0e6d1d3a60c04b1121cecffefa803fb12a9"
+  integrity sha512-a0Sd/qcvPCIdt8TRGxTakILz5RekLzhlvCzoxOHQt1XeiODYpWb9g6ULRiu7lAjM+bQtgF5FDOIUNbGJMrD/3Q==
   dependencies:
-    "@carbon/icons-vue" "10.10.2"
-    carbon-components "10.11.2"
-    flatpickr "4.6.3"
-    vue "^2.6.11"
+    "@carbon/icons-vue" "10.3.0"
+    carbon-components "10.3.1"
+    flatpickr "4.6.1"
+    vue "^2.6.10"
 
 "@endemolshinegroup/cosmiconfig-typescript-loader@^1.0.0":
   version "1.0.1"
@@ -3314,11 +3319,12 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
-carbon-components@10.11.2:
-  version "10.11.2"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.11.2.tgz#c2e6e2168e548010d3033e3c620e3bdc4c1182c7"
-  integrity sha512-bclmy7lXH3/GXXh5Udwcup51i+MUDbDle1kUEilRF9e6phkVhn7I+qN7y/xuRfE4PuXsBC7CtMVNEjtnie6Qow==
+carbon-components@10.3.1:
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.3.1.tgz#c150dff410c9ada83d44bfda1a23b6a5f2ced0b1"
+  integrity sha512-DsQXnSYFRTouFoDXDtbRvOhxKEWurM4uPGds62WFoS6ZpelfWUlS8mX6NkyIEktnkgUseLdvRNRx93j6AcJwTg==
   dependencies:
+    carbon-icons "^7.0.7"
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
@@ -3331,6 +3337,11 @@ carbon-components@^10.4.1:
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
+
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
 
 cardinal@^2.1.1:
   version "2.1.1"
@@ -5610,11 +5621,6 @@ flatpickr@4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.1.tgz#9eb498ab805dd27f5ae02e1ac6ac6c099ce45e94"
   integrity sha512-3ULSxbXmcMIRzer/2jLNweoqHpwDvsjEawO2FUd9UFR8uPwLM+LruZcPDpuZStcEgbQKhuFOfXo4nYdGladSNw==
-
-flatpickr@4.6.3:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
-  integrity sha512-007VucCkqNOMMb9ggRLNuJowwaJcyOh4sKAFcdGfahfGc7JQbf94zSzjdBq/wVyHWUEs5o3+idhFZ0wbZMRmVQ==
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -12191,7 +12197,7 @@ vue-apollo@^3.0.0-beta.11:
     serialize-javascript "^2.1.0"
     throttle-debounce "^2.1.0"
 
-vue-cli-plugin-apollo@^0.21.3:
+vue-cli-plugin-apollo@~0.21.3:
   version "0.21.3"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-apollo/-/vue-cli-plugin-apollo-0.21.3.tgz#520d336db0e88b26fe854833a555e2e29fe26571"
   integrity sha512-8CzRVrAsFkB9lpl600cRCNR9OUnrSYYAIVF9/qW4pP0TMXbhrd1F1wEAAN6E0CPimjTLB+qSt6zWS4vb2wC8Wg==
@@ -12310,11 +12316,6 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
-
-vue@^2.6.11:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
-  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
