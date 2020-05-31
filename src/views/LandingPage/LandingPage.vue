@@ -12,7 +12,7 @@
       <div class="bx--col bx--no-gutter">
         <cv-tabs selected="0" aria-label="Tab navigation">
           <cv-tab label="About">
-            <div class="bx--grid bx--grid-no-gutter bx--grid--full-width">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-md-4 bx--col-lg-7">
                   <h2 class="landing-page__subheading">What is Carbon?</h2>
@@ -36,7 +36,7 @@
             </div>
           </cv-tab>
           <cv-tab label="Design">
-            <div class="bx--grid bx--grid-no-gutter bx--grid--full-width">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
                   Rapidy build beautiful and accessible experiences. The Carbon
