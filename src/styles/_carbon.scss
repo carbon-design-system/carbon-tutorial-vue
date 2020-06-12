@@ -3,7 +3,7 @@ $feature-flags: (
 );
 
 //@import 'carbon-components/scss/globals/scss/styles';
-//@import './carbon-fixes';
+@import './carbon-fixes';
 
 // Feature flags
 $css--font-face: true;
