@@ -57,7 +57,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description,
+        description: row.description
       }));
     },
   }

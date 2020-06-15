@@ -87,8 +87,8 @@ const props = {
 </script>
 -->
 <style lang="scss">
-@import './carbon-overrides';
 @import '../../styles/carbon-utils';
+@import './carbon-overrides';
 @import './mixins';
 
 .landing-page__illo {
@@ -103,6 +103,10 @@ const props = {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
   @include landing-page-background;
+}
+
+.landing-page__heading {
+  @include carbon--type-style('productive-heading-05');
 }
 
 .landing-page__r2 {
