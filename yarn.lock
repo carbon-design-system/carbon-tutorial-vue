@@ -670,7 +670,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@carbon/grid@^10.10.2":
+"@carbon/grid@^10.11.0":
   version "10.11.0"
   resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.11.0.tgz#c06936738f2110f73887924744e1225d2ed66581"
   integrity sha512-QlHuMqTxuDoFLrTPhBq0K5uECaRCM68GU7Y64pzVv9kDPEBmEXshbdY7p6mV92nD/iXAkuALzsEU/vu5Z7q0Dw==
@@ -690,7 +690,7 @@
   dependencies:
     "@carbon/icon-helpers" "^10.7.0"
 
-"@carbon/icons-vue@^10.11.0":
+"@carbon/icons-vue@^10.12.0":
   version "10.12.0"
   resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.12.0.tgz#00fc1cfd0c23cf8a8a2428a738c0b7b0a2a72c68"
   integrity sha512-iBd0i65K6QGbRDPVmOyzTTkZ0bp2ql5SAPpZ7EQSQ6GEEx6uCl3DHT1bm4koJsOAliZMfLE8NcyF1ZKyjp5Lxw==
@@ -707,7 +707,7 @@
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.10.0.tgz#a27cdf3586360fa3c456ed7a2691a4fa8237cd62"
   integrity sha512-3XVl3w0wdRu7qMcgvNLPvW1JcvBwc9rtvvkaz5HFwbf9O5bRIMNP+HB+a8dt2tdngNXisfrbeGuhG4Cws5VbgA==
 
-"@carbon/vue@^2.27.0":
+"@carbon/vue@^2.27.1":
   version "2.27.1"
   resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.27.1.tgz#150c271d852c80fbd6f5e229d34efa4be17ff6b6"
   integrity sha512-x5uF3hwIL63yhSiLNcWVktr8NStqwngpFUF4BgnR899NWHI7c8d9jZnr4dE4DVdWSg8VKjl20eQJiAN2a7UV1A==
@@ -2408,7 +2408,7 @@ carbon-components@10.11.2:
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
 
-carbon-components@^10.12.0:
+carbon-components@^10.13.0:
   version "10.13.0"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.13.0.tgz#1129972c3d16b129d8245cd8264b3f045d6dd974"
   integrity sha512-BVwmNkt63N9xthoOAFvR+5hpPN/4CWs2a/D2iZHWu8lbFsAskfPnrFbA+74vA6xqLkediw6Tww4GfoxAmBtaKw==
@@ -10011,6 +10011,11 @@ vue-template-es2015-compiler@^1.6.0, vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue@^2.6.11:
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
+  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 vue@^2.6.11:
   version "2.6.11"
