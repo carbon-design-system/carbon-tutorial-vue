@@ -6,7 +6,7 @@
 
     <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 
-    <cv-header-nav>
+    <cv-header-nav aria-label="Carbon tutorial nav">
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
     </cv-header-nav>
 
@@ -34,3 +34,5 @@ export default {
   components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>
+
+<style lang="scss"></style>
