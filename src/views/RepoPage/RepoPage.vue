@@ -11,9 +11,13 @@
 </template>
 
 <script>
-{{ this.organization }}
+{
+  {
+    this.organization;
+  }
+}
 import RepoTable from './RepoTable';
-//import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export default {
   name: 'RepoPage',
@@ -28,7 +32,7 @@ export default {
   },
   computed: {
     rows() {
-        if (!this.organization) {
+      if (!this.organization) {
         return [];
       } else {
         return this.organization.repositories.nodes.map(row => ({
@@ -53,7 +57,6 @@ export default {
       this.page = val.page;
     }
   },
-  /*
   watch: {
     rows() {
       if (this.organization) {
@@ -61,7 +64,6 @@ export default {
       }
     }
   }
-*/
 };
 
 const headers = [
@@ -91,7 +93,6 @@ const headers = [
   }
 ];
 
-/*
 const rows = [
   {
     id: '1',
@@ -121,9 +122,7 @@ const rows = [
     links: 'Links'
   }
 ];
-*/
 
-/*
 const REPO_QUERY = gql`
   query REPO_QUERY {
     # Let's use carbon as our organization
@@ -157,12 +156,9 @@ const REPO_QUERY = gql`
     }
   }
 `;
-*/
-/*
 apollo: {
-  organization: REPO_QUERY
+  organization: REPO_QUERY;
 }
-*/
 </script>
 
 <style lang="scss">
