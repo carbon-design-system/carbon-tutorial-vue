@@ -5,6 +5,8 @@
     :columns="columns"
     :title="title"
     :helper-text="helperText"
+    :pagination="{ numberOfItems: this.totalRows }"
+    @pagination="$emit('pagination', $event)"
   >
     <template slot="data">
       <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
@@ -33,7 +35,8 @@ export default {
     rows: Array,
     title: String,
     helperText: String,
-    loading: Boolean
+    loading: Boolean,
+    totalRows: Number
   },
   computed: {
     columns() {

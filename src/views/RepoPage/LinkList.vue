@@ -16,7 +16,7 @@ export default {
   name: 'LinkList',
   props: {
     url: String,
-    homepageUrl: String,
+    homepageUrl: String
   }
 };
 </script>
