@@ -1,50 +1,28 @@
 import Vue from 'vue'
 import VueApollo from 'vue-apollo'
-import { createApolloClient, restartWebsockets } from 'vue-cli-plugin-apollo/graphql-client'
+import {
+  createApolloClient,
+  restartWebsockets
+} from 'vue-cli-plugin-apollo/graphql-client';
 
-// Install the vue plugin
+// Use our access token
 Vue.use(VueApollo)
 
 // Name of the localStorage item
-const AUTH_TOKEN = 'apollo-token'
+const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
-// Http endpoint
-const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'http://localhost:4000/graphql'
+// Target github api
+const httpEndpoint =
+  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
 
 // Config
 const defaultOptions = {
-  // You can use `https` for secure connection (recommended in production)
-  httpEndpoint,
-  // You can use `wss` for secure connection (recommended in production)
-  // Use `null` to disable subscriptions
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://localhost:4000/graphql',
-  // LocalStorage token
-  tokenName: AUTH_TOKEN,
-  // Enable Automatic Query persisting with Apollo Engine
-  persisting: false,
-  // Use websockets for everything (no HTTP)
-  // You need to pass a `wsEndpoint` for this to work
-  websocketsOnly: false,
-  // Is being rendered on the server?
-  ssr: false,
+  // set wsEndpoint to null
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS,
 
-  // Override default apollo link
-  // note: don't override httpLink here, specify httpLink options in the
-  // httpLinkOptions property of defaultOptions.
-  // link: myLink
-
-  // Override default cache
-  // cache: myCache
-
-  // Override the way the Authorization header is set
-  // getAuth: (tokenName) => ...
-
-  // Additional ApolloClient options
-  // apollo: { ... }
-
-  // Client local data (see apollo-link-state)
-  // clientState: { resolvers: { ... }, defaults: { ... } }
-}
+  // Use the form expected by github for authorisation
+  getAuth: tokenName => `Bearer ${tokenName}`
+};
 
 // Call this in the Vue app file
 export function createProvider (options = {}) {
