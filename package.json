@@ -17,6 +17,7 @@
     "carbon-components": "^10.13.0",
     "core-js": "^2.6.5",
     "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.3",
     "vue-router": "^3.0.3"
