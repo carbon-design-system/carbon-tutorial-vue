@@ -1,16 +1,34 @@
 <template>
-  <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
-    <template slot="data">
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
-        <cv-data-table-cell
-          v-for="(cell, cellIndex) in row.data"
-          :key="`${cellIndex}`"
-          >{{ cell }}</cv-data-table-cell
-        >
-        <template slot="expandedContent">{{ row.description }}</template>
-      </cv-data-table-row>
-    </template>
-  </cv-data-table>
+  <div>
+    <div v-if="loading">Loading...</div>
+    <cv-data-table
+      v-else
+      :columns="columns"
+      :title="title"
+      :helper-text="helperText"
+      :pagination="{ numberOfItems: this.totalRows }"
+      @pagination="$emit('pagination', $event)"
+    >
+      <template slot="data">
+        <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+          <cv-data-table-cell
+            v-for="(cell, cellIndex) in row.data"
+            :key="`${cellIndex}`"
+          >
+            <template v-if="!cell.url">
+              {{ cell }}
+            </template>
+            <link-list
+              v-else
+              :url="cell.url"
+              :homepage-url="cell.homepageUrl"
+            />
+          </cv-data-table-cell>
+          <template slot="expandedContent">{{ row.description }}</template>
+        </cv-data-table-row>
+      </template>
+    </cv-data-table>
+  </div>
 </template>
 
 <script>
@@ -20,7 +38,9 @@ export default {
     headers: Array,
     rows: Array,
     title: String,
-    helperText: String
+    helperText: String,
+    loading: Boolean,
+    totalRows: Number
   },
   computed: {
     columns() {
@@ -36,7 +56,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: 'Row description'
+        description: row.description
       }));
     }
   }
