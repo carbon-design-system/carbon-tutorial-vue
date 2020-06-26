@@ -4,7 +4,9 @@
       <div class="bx--col-lg-16">
         <repo-table
           :headers="headers"
-          :rows="rows"
+          :rows="pagedRows"
+          :totalRows="rows.length"
+          @pagination="onPagination"
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
           :loading="$apollo.loading"
@@ -84,7 +86,10 @@ export default {
   components: { RepoTable },
   data() {
     return {
-      headers
+      headers,
+      pageSize: 0,
+      pageStart: 0,
+      page: 0
     };
   },
   apollo: {
@@ -105,6 +110,16 @@ export default {
           links: { url: row.url, homepageUrl: row.homepageUrl }
         }));
       }
+    },
+    pagedRows() {
+      return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
+    }
+  },
+  methods: {
+    onPagination(val) {
+      this.pageSize = val.length;
+      this.pageStart = val.start;
+      this.page = val.page;
     }
   }
 };
