@@ -746,10 +746,10 @@
   dependencies:
     "@carbon/icon-helpers" "10.3.0"
 
-"@carbon/vue@^2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.0.tgz#7c17c4ebd48919e1f28bf9f0d17974e8a78589f7"
-  integrity sha512-UhtQZltByEWShbjs2VVi3LX+rFRE196BqEv6V93rEqwfLq2HuwcUDIkmcn//O/Qefzv3YswOO7DXMmTtM0ejKg==
+"@carbon/vue@~2.12.0":
+  version "2.12.7"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.7.tgz#b39ce0e6d1d3a60c04b1121cecffefa803fb12a9"
+  integrity sha512-a0Sd/qcvPCIdt8TRGxTakILz5RekLzhlvCzoxOHQt1XeiODYpWb9g6ULRiu7lAjM+bQtgF5FDOIUNbGJMrD/3Q==
   dependencies:
     "@carbon/icons-vue" "10.3.0"
     carbon-components "10.3.1"
@@ -7828,13 +7828,6 @@ lodash@4.x, lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lod
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-log-symbols@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-1.0.2.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
-  integrity sha1-N2/3tY6jCGoPCfrMdGF+ylAeGhg=
-  dependencies:
-    chalk "^1.0.0"
 
 log-symbols@^1.0.2:
   version "1.0.2"
