@@ -8,16 +8,18 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "ci-check": "yarn format:diff",
-    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
-      "format": "prettier --write \"**/*.{js,md,scss}\""
+    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
+    "apollo": "^2.28.3",
+    "apollo-boost": "^0.4.9",
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.11",
+    "graphql": "^15.2.0",
+    "vue": "^2.6.11",
+    "vue-apollo": "^3.0.3",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
