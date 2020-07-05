@@ -19,6 +19,7 @@
 <script>
 import RepoTable from './RepoTable';
 import gql from 'graphql-tag';
+
 const headers = [
   {
     key: 'name',
@@ -45,6 +46,7 @@ const headers = [
     header: 'Links'
   }
 ];
+
 const REPO_QUERY = gql`
   query REPO_QUERY {
     # Let's use carbon as our organization
@@ -78,6 +80,7 @@ const REPO_QUERY = gql`
     }
   }
 `;
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
@@ -112,6 +115,13 @@ export default {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
+  // watch: {
+  //   rows() {
+  //     if (this.organization) {
+  //       console.dir(this.organization.repositories.nodes);
+  //     }
+  //   }
+  // },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
@@ -124,6 +134,7 @@ export default {
 
 <style lang="scss">
 @import '../../styles/carbon-utils';
+
 .repo-page .bx--row {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
