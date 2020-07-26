@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
     "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
     "ci-check": "yarn format:diff",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
