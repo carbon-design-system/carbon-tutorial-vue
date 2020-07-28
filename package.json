@@ -13,9 +13,17 @@
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
+    "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-http": "^1.5.17",
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.10.4",
     "vue": "^2.6.10",
+    "vue-apollo": "^3.0.4",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
