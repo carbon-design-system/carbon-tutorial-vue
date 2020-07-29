@@ -5,7 +5,7 @@
         <!-- {{ this.organization }} -->
         <RepoTable
           :headers="headers"
-          :rows="pagedRows"
+          :rows="rows"
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
           :loading="$apollo.loading"
@@ -102,7 +102,7 @@ export default {
     } else {
       return this.organization.repositories.nodes.map(row => ({
         ...row,
-        key: row.url,
+        key: row.id,
         stars: row.stargazers.totalCount,
         issueCount: row.issues.totalCount,
         createdAt: new Date(row.createdAt).toLocaleDateString(),
@@ -111,15 +111,8 @@ export default {
       }));
     }
   },
-  pagedRows() {
+pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    }
-  },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
     }
   },
   methods: {
@@ -128,8 +121,7 @@ export default {
       this.pageStart = val.start;
       this.page = val.page;
     }
-  },
-  
+  }
 };
 </script>
 

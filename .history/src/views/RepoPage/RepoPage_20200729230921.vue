@@ -27,7 +27,7 @@ const REPO_QUERY = gql`
     organization(login: "carbon-design-system") {
       # We'll grab all the repositories in one go. To load more resources
       # continuously, see the advanced topics.
-      repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+      repositories(first: 100, orderBy: { field: UPDATED_AT, direction: DESC }) {
         totalCount
         nodes {
           url
@@ -102,7 +102,7 @@ export default {
     } else {
       return this.organization.repositories.nodes.map(row => ({
         ...row,
-        key: row.url,
+        key: row.id,
         stars: row.stargazers.totalCount,
         issueCount: row.issues.totalCount,
         createdAt: new Date(row.createdAt).toLocaleDateString(),
@@ -115,21 +115,13 @@ export default {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
-  },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
     }
-  },
-  
+  }
 };
 </script>
 

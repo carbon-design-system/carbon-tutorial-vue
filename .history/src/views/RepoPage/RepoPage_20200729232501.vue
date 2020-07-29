@@ -92,6 +92,13 @@ export default {
       page: 0
     };
   },
+  watch: {
+    rows() {
+      if (this.organization) {
+        console.dir(this.organization.repositories.nodes);
+      }
+    }
+  },
   apollo: {
     organization: REPO_QUERY
   },
@@ -113,13 +120,6 @@ export default {
   },
   pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    }
-  },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
     }
   },
   methods: {

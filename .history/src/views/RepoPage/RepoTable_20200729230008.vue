@@ -40,7 +40,6 @@ export default {
     title: String,
     helperText: String,
     loading: Boolean,
-    totalRows: Number,
   },
   computed: {
     columns() {
