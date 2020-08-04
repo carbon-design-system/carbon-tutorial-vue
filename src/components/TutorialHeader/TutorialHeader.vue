@@ -31,5 +31,3 @@ export default {
   components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>
-
-<style scoped></style>
