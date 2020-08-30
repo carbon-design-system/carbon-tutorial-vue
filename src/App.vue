@@ -15,8 +15,9 @@
 import TutorialHeader from './components/TutorialHeader';
 
 export default {
+  name:   'App',
   components: {
-    TutorialHeader,
+    TutorialHeader
   }
 };
 </script>
