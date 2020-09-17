@@ -18,7 +18,6 @@ export default {
     TutorialHeader
   }
 };
-
 </script>
 
 <style lang="scss">

@@ -8,23 +8,21 @@
 
     <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
-
     </cv-header-nav>
 
     <template slot="header-global">
-    <cv-header-global-action aria-label="Notifications">
+      <cv-header-global-action aria-label="Notifications">
         <notification-20 />
-    </cv-header-global-action>
-    <cv-header-global-action aria-label="User avatar">
+      </cv-header-global-action>
+      <cv-header-global-action aria-label="User avatar">
         <user-avatar-20 />
-    </cv-header-global-action>
-    <cv-header-global-action aria-label="App switcher">
+      </cv-header-global-action>
+      <cv-header-global-action aria-label="App switcher">
         <app-switcher-20 />
-    </cv-header-global-action>
+      </cv-header-global-action>
     </template>
   </cv-header>
 </template>
-
 
 <script>
 import Notification20 from '@carbon/icons-vue/es/notification/20';
