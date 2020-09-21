@@ -11,6 +11,10 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.18.0",
+    "@carbon/vue": "^2.33.0",
+    "carbon-components": "^10.20.0",
+    "ci-check": "^1.0.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
