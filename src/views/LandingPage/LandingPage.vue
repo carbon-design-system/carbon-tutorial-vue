@@ -120,4 +120,13 @@ export default {};
 .landing-page__label {
   @include carbon--type-style('heading-01');
 }
+.landing-page__p {
+  @include carbon--type-style('productive-heading-03');
+  margin-top: $spacing-06;
+  margin-bottom: $spacing-08;
+
+  @include carbon--breakpoint-between((320px + 1), md) {
+    max-width: 75%;
+  }
+}
 </style>
