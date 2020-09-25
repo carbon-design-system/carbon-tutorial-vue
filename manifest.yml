@@ -1,0 +1,5 @@
+---
+applications:
+  - name: carbon-tutorial-vue-Tenbamboo
+    memory: 64M
+    buildpack: https://github.com/tenbamboo/carbon-tutorial-vue.git
