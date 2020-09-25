@@ -125,7 +125,7 @@ export default {
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
-      this.pageStart = val.start;
+      this.pageStart = Math.max(0, val.start - 1); // page numbers start at 1 - use max value as a precaution.
       this.page = val.page;
     }
   }
