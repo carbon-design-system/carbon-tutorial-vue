@@ -1,5 +1,5 @@
 ---
 applications:
   - name: carbon-tutorial-vue-jerbeemacalino
-    memory: 64M
+    memory: 65M
     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
