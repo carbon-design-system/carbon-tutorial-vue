@@ -2,7 +2,6 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        {{ this.organization }}
         <RepoTable
           :headers="headers"
           :rows="pagedRows"
@@ -116,17 +115,17 @@ export default {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
-  },
+  // watch: {
+  //   rows() {
+  //     if (this.organization) {
+  //       console.dir(this.organization.repositories.nodes);
+  //     }
+  //   }
+  // },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
-      this.pageStart = val.start;
+      this.pageStart = Math.max(0, val.start - 1); // page numbers start at 1 - use max value as a precaution.
       this.page = val.page;
     }
   }
