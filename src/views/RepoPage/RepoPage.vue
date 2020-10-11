@@ -121,7 +121,7 @@ export default {
       this.pageStart = val.start;
       this.page = val.page;
     }
-  },
+  }
 };
 </script>
 
