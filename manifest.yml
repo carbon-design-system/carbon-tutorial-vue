@@ -1,5 +1,6 @@
 ---
 applications:
   - name: carbon-tutorial-vue-fabriceDaguet
+    path: "./dist"
     memory: 64M
     buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
