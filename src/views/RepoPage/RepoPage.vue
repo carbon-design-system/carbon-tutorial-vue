@@ -20,6 +20,7 @@
   padding-bottom: $spacing-05;
 }
 </style>
+
 <script>
 import RepoTable from './RepoTable';
 
