@@ -12,13 +12,13 @@
 
     <template slot="header-global">
       <cv-header-global-action aria-label="Notifications">
-        <Notification20 />
+        <notification-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="User avatar">
-        <UserAvatar20 />
+        <user-avatar-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="App switcher">
-        <AppSwitcher20 />
+        <app-switcher-20 />
       </cv-header-global-action>
     </template>
   </cv-header>
