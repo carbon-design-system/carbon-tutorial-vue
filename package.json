@@ -15,6 +15,7 @@
     "@carbon/vue": "^2.35.0",
     "carbon-components": "^10.24.0",
     "core-js": "^2.6.5",
+    "eslint-config-prettier": "^6.15.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
