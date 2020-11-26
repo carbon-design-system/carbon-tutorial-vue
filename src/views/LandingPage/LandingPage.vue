@@ -19,7 +19,7 @@
 		      <div class="bx--col-md-4 bx--col-lg-7">
 			<h2 class="landing-page__subheading">What is Carbon?</h2>
 			<p class="landing-page__p">
-			  Carbon is IBM¡¯s open-source design system for digital
+			  Carbon is IBM's open-source design system for digital
 			  products and experiences. With the IBM Design Language as
 			  its foundation, the system consists of working code, design
 			  tools and resources, human interface guidelines, and a
