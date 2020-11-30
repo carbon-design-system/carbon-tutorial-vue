@@ -670,6 +670,35 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/icon-helpers@^10.9.0":
+  version "10.9.0"
+  resolved "https://registry.npm.taobao.org/@carbon/icon-helpers/download/@carbon/icon-helpers-10.9.0.tgz#5aee08e9d253d3bf6f996bc61f739660c62cbb21"
+  integrity sha1-Wu4I6dJT079vmWvGH3OWYMYsuyE=
+
+"@carbon/icons-vue@10.20.0":
+  version "10.20.0"
+  resolved "https://registry.npm.taobao.org/@carbon/icons-vue/download/@carbon/icons-vue-10.20.0.tgz#da8d00cd32fc4e985f6295d3f9f07593cb78a314"
+  integrity sha1-2o0AzTL8TphfYpXT+fB1k8t4oxQ=
+  dependencies:
+    "@carbon/icon-helpers" "^10.9.0"
+
+"@carbon/icons-vue@^10.21.0":
+  version "10.21.0"
+  resolved "https://registry.npm.taobao.org/@carbon/icons-vue/download/@carbon/icons-vue-10.21.0.tgz#fee8424e4a92ecc0bd4c5d105449aed7e3271751"
+  integrity sha1-/uhCTkqS7MC9TF0QVEmu1+MnF1E=
+  dependencies:
+    "@carbon/icon-helpers" "^10.9.0"
+
+"@carbon/vue@^2.35.0":
+  version "2.35.0"
+  resolved "https://registry.npm.taobao.org/@carbon/vue/download/@carbon/vue-2.35.0.tgz#cb1b174eedb39c9319950005e75b7317650074ea"
+  integrity sha1-yxsXTu2znJMZlQAF51tzF2UAdOo=
+  dependencies:
+    "@carbon/icons-vue" "10.20.0"
+    carbon-components "10.23.1"
+    flatpickr "4.6.3"
+    vue "^2.6.12"
+
 "@hapi/address@2.x.x":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.0.0.tgz#9f05469c88cb2fd3dcd624776b54ee95c312126a"
@@ -2231,6 +2260,24 @@ capture-exit@^1.2.0:
   integrity sha1-HF/MSJ/QqwDU8ax64QcuMXP7q28=
   dependencies:
     rsvp "^3.3.3"
+
+carbon-components@10.23.1:
+  version "10.23.1"
+  resolved "https://registry.npm.taobao.org/carbon-components/download/carbon-components-10.23.1.tgz#cf649a09aa25eac14dc158f0fb79ba625730026c"
+  integrity sha1-z2SaCaol6sFNwVjw+3m6YlcwAmw=
+  dependencies:
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-components@^10.24.0:
+  version "10.24.0"
+  resolved "https://registry.npm.taobao.org/carbon-components/download/carbon-components-10.24.0.tgz#6fe2a0423bcbb654e4a8db3af86d46210c2ddf31"
+  integrity sha1-b+KgQjvLtlTkqNs6+G1GIQwt3zE=
+  dependencies:
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
@@ -4153,6 +4200,16 @@ flat-cache@^2.0.1:
     flatted "^2.0.0"
     rimraf "2.6.3"
     write "1.0.3"
+
+flatpickr@4.6.1:
+  version "4.6.1"
+  resolved "https://registry.npm.taobao.org/flatpickr/download/flatpickr-4.6.1.tgz?cache=0&sync_timestamp=1597065105903&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fflatpickr%2Fdownload%2Fflatpickr-4.6.1.tgz#9eb498ab805dd27f5ae02e1ac6ac6c099ce45e94"
+  integrity sha1-nrSYq4Bd0n9a4C4axqxsCZzkXpQ=
+
+flatpickr@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.npm.taobao.org/flatpickr/download/flatpickr-4.6.3.tgz?cache=0&sync_timestamp=1597065105903&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fflatpickr%2Fdownload%2Fflatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
+  integrity sha1-Fai3a24046ByhhJQUDpZlbnTvGA=
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -6081,6 +6138,11 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.npm.taobao.org/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.defaultsdeep@^4.6.0:
   version "4.6.1"
@@ -9764,6 +9826,11 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
+vue@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
+  integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
+
 w3c-hr-time@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
@@ -9777,6 +9844,13 @@ walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+warning@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/warning/download/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"
