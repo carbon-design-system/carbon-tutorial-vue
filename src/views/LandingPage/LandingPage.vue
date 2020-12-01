@@ -10,7 +10,7 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
-
+	
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
         <cv-tabs selected="0" aria-label="Tabs navigation">
@@ -37,6 +37,7 @@
                 </div>
               </div>
             </div>
+			
           </cv-tab>
           <cv-tab label="Design">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
@@ -61,16 +62,25 @@
         </cv-tabs>
       </div>
     </div>
-
-    <div class="bx--row landing-page__r3">
-      <div class="bx--col-md-4 bx--col-lg-4">
-        <h3 class="landing-page__label">The Principles</h3>
-      </div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
-    </div>
-  </div>
+	
+    <info-section heading="The Principles" class="landing-page__r3">
+	  <info-card
+    heading="Carbon is Open"
+    body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
+    :icon="PersonFavorite32"
+  />
+  <info-card
+    heading="Carbon is Modular"
+    body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
+    :icon="Application32"
+  />
+  <info-card
+    heading="Carbon is Consistent"
+    body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
+    :icon="Globe32"
+  />
+ </info-section>
+ </div>
 </template>
 
 <style lang="scss">
@@ -125,4 +135,26 @@
 .landing-page__label {
   @include carbon--type-style('heading-01');
 }
+
+
 </style>
+
+<script>
+import { InfoSection, InfoCard } from '../../components/InfoSection';
+import Globe32 from '@carbon/icons-vue/lib/globe/32';
+import PersonFavorite32 from '@carbon/icons-vue/lib/person--favorite/32';
+import Application32 from '@carbon/icons-vue/lib/application/32';
+
+export default {
+  components: { InfoSection, InfoCard },
+  name: 'LandingPage',
+  created() {
+  // Add icons to this
+    Object.assign(this, {
+      Globe32,
+      PersonFavorite32,
+      Application32
+    });
+  }
+};
+</script>
