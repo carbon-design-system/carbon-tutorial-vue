@@ -2,45 +2,47 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-      <repo-table
-	  :headers="headers"
-	  :rows="rows"
-	  title="Carbon Repositories"
-	  helperText="A collection of public Carbon repositories."
-	/>
+        <RepoTable
+          :headers="headers"
+          :rows="rows"
+          title="Carbon Repositories"
+          helperText="A collection of public Carbon repositories."
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import RepoTable from "./RepoTable";
+import RepoTable from './RepoTable';
+
 const headers = [
   {
     key: 'name',
-    header: 'Name',
+    header: 'Name'
   },
   {
     key: 'createdAt',
-    header: 'Created',
+    header: 'Created'
   },
   {
     key: 'updatedAt',
-    header: 'Updated',
+    header: 'Updated'
   },
   {
     key: 'issueCount',
-    header: 'Open Issues',
+    header: 'Open Issues'
   },
   {
     key: 'stars',
-    header: 'Stars',
+    header: 'Stars'
   },
   {
     key: 'links',
-    header: 'Links',
-  },
+    header: 'Links'
+  }
 ];
+
 const rows = [
   {
     id: '1',
@@ -49,7 +51,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links',
+    links: 'Links'
   },
   {
     id: '2',
@@ -58,7 +60,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links',
+    links: 'Links'
   },
   {
     id: '3',
@@ -67,23 +69,25 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links',
-  },
+    links: 'Links'
+  }
 ];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
   data() {
     return {
       headers,
-      rows,
+      rows
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss">
 @import '../../styles/carbon-utils';
+
 .repo-page .bx--row {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
