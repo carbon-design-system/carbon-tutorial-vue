@@ -8,7 +8,8 @@
     "ci-check": "yarn format:diff",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifect.yml"
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
@@ -17,6 +18,7 @@
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-apollo": "^3.0.0-beta.11",
+    "node-sass": "^4.0.0",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
@@ -32,7 +34,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "graphql-tag": "^2.9.0",
-    "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-apollo": "^0.21.0",
     "vue-template-compiler": "^2.6.10"
