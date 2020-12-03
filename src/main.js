@@ -2,13 +2,13 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import CarbonComponentsVue from '@carbon/vue';
-import { createProvider } from 'vue-apollo';
 Vue.use(CarbonComponentsVue);
 
 Vue.config.productionTip = false;
 
+import { ApolloProvider } from 'vue-apollo';
 new Vue({
   router,
-  apolloProvider: createProvider(),
+  apolloProvider: ApolloProvider,
   render: h => h(App)
 }).$mount('#app');

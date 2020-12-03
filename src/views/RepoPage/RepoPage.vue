@@ -2,7 +2,6 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        {{ this.organization }}
         <repo-table
           :headers="headers"
           :rows="pagedRows"
@@ -18,6 +17,7 @@
 </template>
 
 <script>
+import gql from 'graphql-tag';
 import RepoTable from './RepoTable';
 
 const headers = [
@@ -46,8 +46,6 @@ const headers = [
     header: 'Links'
   }
 ];
-
-import gql from 'graphql-tag';
 
 const REPO_QUERY = gql`
   query REPO_QUERY {
@@ -99,7 +97,7 @@ export default {
   },
   computed: {
     rows() {
-        if (!this.organization) {
+      if (!this.organization) {
         return [];
       } else {
         return this.organization.repositories.nodes.map(row => ({
@@ -117,18 +115,18 @@ export default {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
-  },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
+    }
+  },
+  watch: {
+    rows() {
+      if (this.organization) {
+        // console.dir(this.organization.repositories.nodes);
+      }
     }
   }
 };
