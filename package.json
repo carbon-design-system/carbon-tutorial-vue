@@ -92,5 +92,6 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  }
+  },
+  "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml"
 }
