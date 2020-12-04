@@ -8,10 +8,10 @@ import {
 // Install the vue plugin
 Vue.use(VueApollo);
 
-// Name of the localStorage item
+// Use our access token
 const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
-// Http endpoint
+// Target github api
 const httpEndpoint =
   process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
 
@@ -20,7 +20,7 @@ const defaultOptions = {
   // You can use `https` for secure connection (recommended in production)
   httpEndpoint,
   // You can use `wss` for secure connection (recommended in production)
-  // Use `null` to disable subscriptions
+  // set wsEndpoint to null
   wsEndpoint: process.env.VUE_APP_GRAPHQL_WS,
   // LocalStorage token
   tokenName: AUTH_TOKEN,
@@ -42,6 +42,8 @@ const defaultOptions = {
 
   // Override the way the Authorization header is set
   // getAuth: (tokenName) => ...
+
+  // Use the form expected by github for authorisation
   getAuth: tokenName => `Bearer ${tokenName}`
 
   // Additional ApolloClient options
