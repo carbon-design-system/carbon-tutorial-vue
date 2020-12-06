@@ -91,16 +91,13 @@ import Application32 from '@carbon/icons-vue/lib/application/32';
 export default {
   name: 'LandingPage',
   components: { InfoSection, InfoCard },
-  methods: {
-    // in or out methods (?)
-    created() {
-      // Add icons to this
-      Object.assign(this, {
-        Globe32,
-        PersonFavorite32,
-        Application32
-      });
-    }
+  created() {
+    // Add icons to this
+    Object.assign(this, {
+      Globe32,
+      PersonFavorite32,
+      Application32
+    });
   }
 };
 </script>
