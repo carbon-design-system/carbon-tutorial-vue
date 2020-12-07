@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueApollo from 'vue-apollo';
 import {
   createApolloClient,
-  restartWebsockets
+  restartWebsockets,
 } from 'vue-cli-plugin-apollo/graphql-client';
 
 // Install the vue plugin
@@ -44,7 +44,7 @@ const defaultOptions = {
   // getAuth: (tokenName) => ...
 
   // Use the form expected by github for authorisation
-  getAuth: tokenName => `Bearer ${tokenName}`
+  getAuth: (tokenName) => `Bearer ${tokenName}`,
 
   // Additional ApolloClient options
   // apollo: { ... }
@@ -58,7 +58,7 @@ export function createProvider(options = {}) {
   // Create apollo client
   const { apolloClient, wsClient } = createApolloClient({
     ...defaultOptions,
-    ...options
+    ...options,
   });
   apolloClient.wsClient = wsClient;
 
@@ -68,7 +68,7 @@ export function createProvider(options = {}) {
     defaultOptions: {
       $query: {
         // fetchPolicy: 'cache-and-network',
-      }
+      },
     },
     errorHandler(error) {
       // eslint-disable-next-line no-console
@@ -77,7 +77,7 @@ export function createProvider(options = {}) {
         'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;',
         error.message
       );
-    }
+    },
   });
 
   return apolloProvider;

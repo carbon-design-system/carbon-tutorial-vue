@@ -23,28 +23,28 @@ import gql from 'graphql-tag';
 const headers = [
   {
     key: 'name',
-    header: 'Name'
+    header: 'Name',
   },
   {
     key: 'createdAt',
-    header: 'Created'
+    header: 'Created',
   },
   {
     key: 'updatedAt',
-    header: 'Updated'
+    header: 'Updated',
   },
   {
     key: 'issueCount',
-    header: 'Open Issues'
+    header: 'Open Issues',
   },
   {
     key: 'stars',
-    header: 'Stars'
+    header: 'Stars',
   },
   {
     key: 'links',
-    header: 'Links'
-  }
+    header: 'Links',
+  },
 ];
 
 const REPO_QUERY = gql`
@@ -85,14 +85,14 @@ export default {
   name: 'RepoPage',
   components: { RepoTable },
   apollo: {
-    organization: REPO_QUERY
+    organization: REPO_QUERY,
   },
   data() {
     return {
       headers,
       pageSize: 0,
       pageStart: 0,
-      page: 0
+      page: 0,
     };
   },
   computed: {
@@ -100,20 +100,20 @@ export default {
       if (!this.organization) {
         return [];
       } else {
-        return this.organization.repositories.nodes.map(row => ({
+        return this.organization.repositories.nodes.map((row) => ({
           ...row,
           key: row.id,
           stars: row.stargazers.totalCount,
           issueCount: row.issues.totalCount,
           createdAt: new Date(row.createdAt).toLocaleDateString(),
           updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-          links: { url: row.url, homepageUrl: row.homepageUrl }
+          links: { url: row.url, homepageUrl: row.homepageUrl },
         }));
       }
     },
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    }
+    },
   },
   // watch: {
   //   rows() {
@@ -127,8 +127,8 @@ export default {
       this.pageSize = val.length;
       this.pageStart = Math.max(0, val.start - 1); // page numbers start at 1 - use max value as a precaution.
       this.page = val.page;
-    }
-  }
+    },
+  },
 };
 </script>
 
