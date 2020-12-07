@@ -7,8 +7,10 @@ Vue.use(CarbonComponentsVue);
 Vue.config.productionTip = false;
 
 import { ApolloProvider } from 'vue-apollo';
+import { createProvider } from './vue-apollo';
 new Vue({
   router,
   apolloProvider: ApolloProvider,
-  render: (h) => h(App),
+  apolloProvider: createProvider(),
+  render: h => h(App)
 }).$mount('#app');
