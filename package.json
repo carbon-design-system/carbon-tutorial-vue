@@ -7,23 +7,16 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "apollo": "vue-cli-service apollo:dev --generate-schema",
-    "apollo:schema:generate": "vue-cli-service apollo:schema:generate",
-    "apollo:schema:publish": "vue-cli-service apollo:schema:publish",
-    "apollo:start": "vue-cli-service apollo:start",
     "ci-check": "yarn format:diff",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
     "@carbon/vue": "^2.12.0",
-    "apollo-boost": "^0.4.9",
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
-    "graphql": "^15.4.0",
-    "graphql-type-json": "^0.2.1",
     "vue": "^2.6.10",
-    "vue-apollo": "^3.0.5",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
@@ -37,7 +30,6 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-graphql": "^2.1.1",
     "eslint-plugin-vue": "^5.0.0",
     "graphql-tag": "^2.9.0",
     "node-sass": "^4.9.0",
@@ -54,22 +46,10 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {
-      "graphql/template-strings": [
-        "error",
-        {
-          "env": "literal",
-          "projectName": "app",
-          "schemaJsonFilepath": "node_modules/.temp/graphql/schema.json"
-        }
-      ]
-    },
+    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "plugins": [
-      "graphql"
-    ]
+    }
   },
   "prettier": {
     "singleQuote": true
@@ -112,5 +92,6 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  }
+  },
+  "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml"
 }
