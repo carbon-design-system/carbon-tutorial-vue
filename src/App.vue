@@ -9,14 +9,13 @@
 </template>
 
 <script>
-import  TutorialHeader from './components/TutorialHeader';
-import { CvButton, CvContent } from "@carbon/vue";
+import TutorialHeader from './components/TutorialHeader';
+import { CvContent } from '@carbon/vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     TutorialHeader,
-    CvButton,
     CvContent
   }
 };

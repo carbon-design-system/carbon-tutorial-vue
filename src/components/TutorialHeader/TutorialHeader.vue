@@ -12,13 +12,13 @@
 
     <template slot="header-global">
       <cv-header-global-action aria-label="Notifications">
-       <notification-20/>
+        <notification-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="User Avatar">
-        <user-avatar-20/>
+        <user-avatar-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="App switcher">
-        <app-switcher-20/>
+        <app-switcher-20 />
       </cv-header-global-action>
     </template>
   </cv-header>
@@ -31,6 +31,6 @@ import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20';
 
 export default {
   name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 },
+  components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>
