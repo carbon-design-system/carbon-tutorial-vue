@@ -17,6 +17,7 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-md-4 bx--col-lg-7">
+                  <h2 class="landing-page__subheading">What is Carbon?</h2>
                   <p class="landing-page__p">
                     Carbon is IBM's open-source design system for digital
                     products and experiences. With the IBM Design Language as
@@ -105,6 +106,15 @@ export default {};
 .landing-page__subheading {
   @include carbon--type-style('productive-heading-03');
   @include carbon--font-weight('semibold');
+}
+
+.landing-page__p {
+  @include carbon--type-style('productive-heading-03');
+  margin-top: $spacing-06;
+  margin-bottom: $spacing-08;
+  @include carbon--breakpoint-between((320px + 1), md) {
+    max-width: 75%;
+  }
 }
 
 .landing-page__r3 {
