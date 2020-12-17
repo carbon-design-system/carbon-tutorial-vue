@@ -1,13 +1,20 @@
 <template>
-<cv-data-table-skeleton
+  <div>
+  <cv-data-table-skeleton
   v-if="loading"
   :columns="columns"
   :title="title"
   :helper-text="helperText"
   :rows="10"
-  :pagination="{ numberOfItems: this.totalRows }"
-  @pagination="$emit('pagination', $event)"
   />
+  <cv-data-table 
+    v-else
+    :columns="columns"
+    :title="title"
+    :helper-text="helperText"
+    :pagination="{ numberOfItems: this.totalRows }"
+    @pagination="$emit('pagination', $event)"
+  >
     <template slot="data">
       <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
         <cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
@@ -20,6 +27,7 @@
       </cv-data-table-row>
     </template>
   </cv-data-table>
+  </div>
 </template>
 
 <script>
