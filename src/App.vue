@@ -12,13 +12,11 @@
 </style>
 
 <script>
-import { CvButton } from '@carbon/vue';
-import TutorialHeader from './components/TutorialHeader';
+import TutorialHeader from "./components/TutorialHeader";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    CvButton,
     TutorialHeader
   }
 };
