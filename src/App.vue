@@ -1,8 +1,27 @@
 <template>
   <div id="app">
-    Hello Carbon! Well, not quite yet. This is the starting point for the Carbon
-    tutorial.
+    <TutorialHeader />
+    <CvCcontent id="#main-content">
+      <router-view />
+    </CvCcontent>
+    <CvButton>
+      Button
+    </CvButton>
   </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+import { CvButton } from '@carbon/vue'
+import TutorialHeader from '@/components/TutorialHeader'
+
+export default {
+  components: {
+    CvButton,
+    TutorialHeader,
+  },
+}
+</script>
+
+<style lang="scss">
+@import './styles/carbon'
+</style>
