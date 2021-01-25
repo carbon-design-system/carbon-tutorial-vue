@@ -2,7 +2,7 @@
   <cv-header aria-label="Carbon tutorial">
     <cv-skip-to-content href="#main-content"
       >Skip to content</cv-skip-to-content
-    >
+>
 
     <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 
@@ -28,6 +28,7 @@
 import Notification20 from '@carbon/icons-vue/es/notification/20';
 import UserAvatar20 from '@carbon/icons-vue/es/user--avatar/20';
 import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20';
+import CarbonComponentsVue from '@carbon/vue';
 
 export default {
   name: 'TutorialHeader',
