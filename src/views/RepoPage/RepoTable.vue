@@ -21,10 +21,12 @@
         :key="`${row.id}}`"
       >
         {{ data.id }}
-        <cv-data-table-cell
-          v-for="(cell, cellIndex) in row.data"
-          :key="`${cellIndex}`"
-          >{{cell}}</cv-data-table-cell>
+        <cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
+          <template v-if="!cell.url">
+            {{ cell }}
+          </template>
+          <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
+        </cv-data-table-cell>
         <template slot="expandedContent">{{ row.description }}</template>
       </cv-data-table-row>
     </template>

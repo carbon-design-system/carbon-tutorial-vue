@@ -16,7 +16,7 @@
     "carbon-components": "^10.4.1",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.11",
+    "vue-apollo": "^3.0.5",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
