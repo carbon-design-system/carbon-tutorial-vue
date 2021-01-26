@@ -670,22 +670,30 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@carbon/icon-helpers@10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.2.0.tgz#f58ab1d14b8b63d485d31e7d785d25057eac5409"
-  integrity sha512-PAxu8KMuSrifF4VCW7N7bgu/QKG/Q4T9ojWUEqI0zKjTCkJnzEZTYgK1FrWAdE1uAdAwLlbPIjzIS/QzP15Uvw==
+"@carbon/grid@^10.19.0":
+  version "10.19.0"
+  resolved "https://registry.npm.taobao.org/@carbon/grid/download/@carbon/grid-10.19.0.tgz#1ceeaeb75f1e5abbe81abf7c34f31e3a2aba2cbb"
+  integrity sha1-HO6ut18eWrvoGr98NPMeOiq6LLs=
+  dependencies:
+    "@carbon/import-once" "^10.5.0"
+    "@carbon/layout" "^10.17.0"
 
 "@carbon/icon-helpers@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.3.0.tgz#b0a772a7be9c10d5633cf78034c5c988ce998982"
   integrity sha512-vQegj82Y3hC17cA0g0bQUwYfcmhJD/3HyJVE/biyUXImTu82TcLrcRDTZoO9bOleEMEztMXTTDlMKTU9rrhRTw==
 
-"@carbon/icons-vue@10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.3.0.tgz#537e707c679bd69f8b61ce97691b742d6dfaa643"
-  integrity sha512-tZJ2ZsgGi6jfX65F6LDjha3ttkrGp7UJdqapGuPuHY+kooDPr9HVlabp3BoAJXA2w8t2XK3zqSdk1lJu/txg/A==
+"@carbon/icon-helpers@^10.9.0":
+  version "10.12.0"
+  resolved "https://registry.npm.taobao.org/@carbon/icon-helpers/download/@carbon/icon-helpers-10.12.0.tgz?cache=0&sync_timestamp=1611605205001&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40carbon%2Ficon-helpers%2Fdownload%2F%40carbon%2Ficon-helpers-10.12.0.tgz#8bf34bc7fbe81e0dc8c96a107ab0e8a44558f3c4"
+  integrity sha1-i/NLx/voHg3IyWoQerDopEVY88Q=
+
+"@carbon/icons-vue@10.20.0":
+  version "10.20.0"
+  resolved "https://registry.npm.taobao.org/@carbon/icons-vue/download/@carbon/icons-vue-10.20.0.tgz#da8d00cd32fc4e985f6295d3f9f07593cb78a314"
+  integrity sha1-2o0AzTL8TphfYpXT+fB1k8t4oxQ=
   dependencies:
-    "@carbon/icon-helpers" "10.2.0"
+    "@carbon/icon-helpers" "^10.9.0"
 
 "@carbon/icons-vue@^10.4.0":
   version "10.4.0"
@@ -694,15 +702,25 @@
   dependencies:
     "@carbon/icon-helpers" "10.3.0"
 
-"@carbon/vue@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.11.0.tgz#d7fa4e571bfd3d406e51da7c1f35896a07dc1015"
-  integrity sha512-PADkSljNU8CJw7mMirztbb13+voJSQs3gK86GcqSlpH69M7jV6Qpdpz0oTz5RYd9QJsswsfQjkII80Ye3LhhTw==
+"@carbon/import-once@^10.5.0":
+  version "10.5.0"
+  resolved "https://registry.npm.taobao.org/@carbon/import-once/download/@carbon/import-once-10.5.0.tgz#9a84b50a761aa561ae6600a6c34b9955d97b3fd8"
+  integrity sha1-moS1CnYapWGuZgCmw0uZVdl7P9g=
+
+"@carbon/layout@^10.17.0":
+  version "10.17.0"
+  resolved "https://registry.npm.taobao.org/@carbon/layout/download/@carbon/layout-10.17.0.tgz#de2b80673c0ee13c451adf7060e63b117a87bc30"
+  integrity sha1-3iuAZzwO4TxFGt9wYOY7EXqHvDA=
+
+"@carbon/vue@^2.12.0":
+  version "2.37.0"
+  resolved "https://registry.npm.taobao.org/@carbon/vue/download/@carbon/vue-2.37.0.tgz#51a2fc15b7ac9a1fb3532640c2a420487dbd1dab"
+  integrity sha1-UaL8Fbesmh+zUyZAwqQgSH29Has=
   dependencies:
-    "@carbon/icons-vue" "10.3.0"
-    carbon-components "10.3.1"
-    flatpickr "4.6.1"
-    vue "^2.6.10"
+    "@carbon/icons-vue" "10.20.0"
+    carbon-components "10.23.1"
+    flatpickr "4.6.3"
+    vue "^2.6.12"
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -2266,12 +2284,11 @@ capture-exit@^1.2.0:
   dependencies:
     rsvp "^3.3.3"
 
-carbon-components@10.3.1:
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.3.1.tgz#c150dff410c9ada83d44bfda1a23b6a5f2ced0b1"
-  integrity sha512-DsQXnSYFRTouFoDXDtbRvOhxKEWurM4uPGds62WFoS6ZpelfWUlS8mX6NkyIEktnkgUseLdvRNRx93j6AcJwTg==
+carbon-components@10.23.1:
+  version "10.23.1"
+  resolved "https://registry.npm.taobao.org/carbon-components/download/carbon-components-10.23.1.tgz?cache=0&sync_timestamp=1611605211124&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcarbon-components%2Fdownload%2Fcarbon-components-10.23.1.tgz#cf649a09aa25eac14dc158f0fb79ba625730026c"
+  integrity sha1-z2SaCaol6sFNwVjw+3m6YlcwAmw=
   dependencies:
-    carbon-icons "^7.0.7"
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
@@ -4217,6 +4234,11 @@ flatpickr@4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.1.tgz#9eb498ab805dd27f5ae02e1ac6ac6c099ce45e94"
   integrity sha512-3ULSxbXmcMIRzer/2jLNweoqHpwDvsjEawO2FUd9UFR8uPwLM+LruZcPDpuZStcEgbQKhuFOfXo4nYdGladSNw==
+
+flatpickr@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.npm.taobao.org/flatpickr/download/flatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
+  integrity sha1-Fai3a24046ByhhJQUDpZlbnTvGA=
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -9832,6 +9854,11 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
+
+vue@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz?cache=0&sync_timestamp=1609359858533&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
+  integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
