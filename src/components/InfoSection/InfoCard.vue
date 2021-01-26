@@ -2,8 +2,10 @@
   <div
     class="info-card bx--col-md-4 bx--col-lg-4 bx--col-xlg-3 bx--offset-xlg-1"
   >
-    {{ splitHeading[0] }}
-    <strong>{{ splitHeading[1] }}</strong>
+    <h4 class="info-card__heading">
+      {{ splitHeading[0] }}
+      <strong>{{ splitHeading[1] }}</strong>
+    </h4>
     <p class="info-card__body">{{ body }}</p>
     <component :is="icon" />
   </div>
