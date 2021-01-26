@@ -1,41 +1,35 @@
 <template>
-  <CvHeader aria-label="Carbon tutorial">
-    <CvSkipToContent
-      href="#main-content"
+  <cv-header aria-label="Carbon tutorial">
+    <cv-skip-to-content href="#main-content"
+      >Skip to content</cv-skip-to-content
     >
-      Skip to content
-    </CvSkipToContent>
-    <CvHeaderName
-      href="/"
-      prefix="IBM"
-    >
-      Carbon Tutorial
-    </CvHeaderName>
-    <CvHeaderNav>
-      <CvHeaderMenuItem href="/repos">
-        Repositories
-      </CvHeaderMenuItem>
-    </CvHeaderNav>
+
+    <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
+
+    <cv-header-nav>
+      <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
+    </cv-header-nav>
+
     <template slot="header-global">
-      <CvHeaderGlobalAction aria-label="Notifications">
-        <Notification20 />
-      </CvHeaderGlobalAction>
-      <CvHeaderGlobalAction aria-label="User avatar">
-        <UserAvatar20 />
-      </CvHeaderGlobalAction>
-      <CvHeaderGlobalAction aria-label="App switcher">
+      <cv-header-global-action aria-label="Notifications">
+        <notification-20 />
+      </cv-header-global-action>
+      <cv-header-global-action aria-label="User avatar">
+        <user-avatar-20 />
+      </cv-header-global-action>
+      <cv-header-global-action aria-label="App switcher">
         <app-switcher-20 />
-      </CvHeaderGlobalAction>
+      </cv-header-global-action>
     </template>
-  </CvHeader>
+  </cv-header>
 </template>
 
 <script>
-import Notification20 from '@carbon/icons-vue/es/notification/20'
-import UserAvatar20 from '@carbon/icons-vue/es/user--avatar/20'
-import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20'
+import Notification20 from "@carbon/icons-vue/es/notification/20";
+import UserAvatar20 from "@carbon/icons-vue/es/user--avatar/20";
+import AppSwitcher20 from "@carbon/icons-vue/es/app-switcher/20";
 export default {
-  name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 },
-}
+  name: "TutorialHeader",
+  components: { Notification20, UserAvatar20, AppSwitcher20 }
+};
 </script>

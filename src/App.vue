@@ -1,27 +1,23 @@
 <template>
   <div id="app">
-    <TutorialHeader />
-    <CvCcontent id="#main-content">
+    <tutorial-header />
+    <cv-content id="#main-content">
       <router-view />
-    </CvCcontent>
-    <CvButton>
-      Button
-    </CvButton>
+    </cv-content>
   </div>
 </template>
 
 <script>
-import { CvButton } from '@carbon/vue'
-import TutorialHeader from '@/components/TutorialHeader'
+import TutorialHeader from "./components/TutorialHeader";
 
 export default {
+  name: "App",
   components: {
-    CvButton,
-    TutorialHeader,
-  },
-}
+    TutorialHeader
+  }
+};
 </script>
 
 <style lang="scss">
-@import './styles/carbon'
+@import "./styles/carbon";
 </style>
