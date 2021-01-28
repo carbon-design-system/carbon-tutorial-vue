@@ -92,10 +92,7 @@ export default {
   name: 'LandingPage',
   components: {
     InfoSection,
-    InfoCard,
-    Globe32,
-    PersonFavorite32,
-    Application32
+    InfoCard
   },
   created() {
     // Add icons to this
