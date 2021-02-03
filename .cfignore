@@ -1,0 +1,18 @@
+node_modules/.cache
+
+*.sw?
+.git*
+.env*
+README.md
+# Staticfile
+apollo.config.js
+babel.config.js
+design.sketch
+# dist
+manifest.yml
+node_modules
+package.json
+public
+src
+tests
+yarn.lock
