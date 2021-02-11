@@ -2,7 +2,7 @@
   <div id="app">
     <tutorial-header />
     <cv-content id="#main-content">
-      <router-view/>
+      <router-view />
     </cv-content>
   </div>
 </template>
@@ -12,9 +12,9 @@
 </style>
 
 <script>
-import TutorialHeader from "./components/TutorialHeader";
+import TutorialHeader from './components/TutorialHeader';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     TutorialHeader
   }
