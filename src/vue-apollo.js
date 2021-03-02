@@ -9,7 +9,7 @@ import {
 Vue.use(VueApollo);
 
 // Name of the localStorage item
-const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_TOKEN;
+const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 // Http endpoint
 const httpEndpoint =
