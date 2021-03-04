@@ -752,6 +752,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+<<<<<<< HEAD
 "@babel/types@^7.12.13", "@babel/types@^7.13.0":
   version "7.13.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.13.0.tgz#74424d2816f0171b4100f0ab34e9a374efdf7f80"
@@ -815,6 +816,36 @@
     colorspace "1.1.x"
     enabled "2.0.x"
     kuler "^2.0.0"
+=======
+"@carbon/icon-helpers@^10.5.0", "@carbon/icon-helpers@^10.6.0":
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.6.0.tgz#72a5bbd1edbee3728e47fa6d17c2aca67dbb101c"
+  integrity sha512-4Nh6l+B8SRNyw1RpgNT4Z83Aa5UwRFmKJ2mx5m7mE5TqxPkfIZjyyLHyv5gl3gPtaVwq78ZGz80wG0NRQzRM7g==
+
+"@carbon/icons-vue@10.8.0":
+  version "10.8.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.8.0.tgz#68f242e36b814efd03b777b79d1e3357cd5bf6dc"
+  integrity sha512-kWfr6sKYTMQMTpUJ9S/iias0N9dn5GPfnZWBa1kC0/pUbimuD9XPUVFS7+uZRGy7QqeIVZFe8qlU/2W5eAqZCQ==
+  dependencies:
+    "@carbon/icon-helpers" "^10.5.0"
+
+"@carbon/icons-vue@^10.9.2":
+  version "10.9.2"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.9.2.tgz#a78befc2a33d94fb4f59203f3a22321788120ab3"
+  integrity sha512-/262FoQlqdvFdY3AFYGHAb1jsXipBKVYaGn6VY+WnkeeL5nf2ADO7fhkozvN7DKTBFi5PZDPWKK2jBb6y7sU1A==
+  dependencies:
+    "@carbon/icon-helpers" "^10.6.0"
+
+"@carbon/vue@^2.23.1":
+  version "2.23.1"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.23.1.tgz#b9cca212e60f673236562d521f4e2bc0a8b04d39"
+  integrity sha512-KthfhPOLiolWkIp8rDv33XTbPuCWiWthR2X0+6y4UrM//zrLYdNlbrmZ9vEwSIr8D8XxvYdVWJ938RGN56CVmA==
+  dependencies:
+    "@carbon/icons-vue" "10.8.0"
+    carbon-components "10.9.0"
+    flatpickr "4.6.3"
+    vue "^2.6.10"
+>>>>>>> d3e50f541665874bb4d8b1f6c546372115999d17
 
 "@hapi/address@2.x.x":
   version "2.0.0"
@@ -2487,25 +2518,50 @@ capture-exit@^1.2.0:
   dependencies:
     rsvp "^3.3.3"
 
+<<<<<<< HEAD
 carbon-components@10.23.1:
   version "10.23.1"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.23.1.tgz#cf649a09aa25eac14dc158f0fb79ba625730026c"
   integrity sha512-izeyNCo9cPfdw9358y5VPsDRzmGAO1wAjSnkD5gGEQO46P2HBdQcgXV1IqjAbFuit+TgfG/MrP38u+pmjp4zyQ==
   dependencies:
+=======
+carbon-components@10.9.0:
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.9.0.tgz#b96f097582301b009232ebc54927327ee3608a84"
+  integrity sha512-r0fHHGV1nAGazL42ecsFSBHlrRlg/2d1XAvnlnRzOvZW8O+DFR4XxpAgf5ZWKFCiiysS5eDympZTqTflN/NewQ==
+  dependencies:
+    carbon-icons "^7.0.7"
+>>>>>>> d3e50f541665874bb4d8b1f6c546372115999d17
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
 
+<<<<<<< HEAD
 carbon-components@^10.29.0:
   version "10.29.0"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.29.0.tgz#9fd31f1a5cce4cb59a7196222e524d8442fd9026"
   integrity sha512-y7BPEfwWxE1URTjrtHz4+rYQwB0u/e7WptlbTH2Lb/iqRYCe6T94u9EVZuq0ZZTpRUNRckbI1irt0AV3J/qlcA==
   dependencies:
     "@carbon/telemetry" "0.0.0-alpha.6"
+=======
+carbon-components@^10.10.2:
+  version "10.10.2"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.10.2.tgz#509279b9f541e5c50532088e5bcfe67e77884cfe"
+  integrity sha512-gfuH+64gIHdg8jqyYcdhGTf8utzCE85+J6jc04zG2CocHBL4UMBahoiTk2H8nj2X0T8KrMjexGY4f8RS+iHVFA==
+  dependencies:
+>>>>>>> d3e50f541665874bb4d8b1f6c546372115999d17
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
 
+<<<<<<< HEAD
+=======
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
+
+>>>>>>> d3e50f541665874bb4d8b1f6c546372115999d17
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.2.0.tgz#3371ef6365ef9c25fa4b81c16ace0e9c7dc58c3e"
