@@ -1,20 +1,49 @@
-<template>
-  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
-    <div class="bx--row repo-page__r1">
-      <div class="bx--col-lg-16">
-        <RepoTable
-          :headers="headers"
-          :rows="rows"
-          title="Carbon Repositories"
-          helperText="A collection of public Carbon repositories."
-        />
-      </div>
-    </div>
-  </div>
-</template>
+<style lang="scss">
+@import '../../styles/carbon-utils';
+
+.repo-page .bx--row {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+</style>
 
 <script>
+import gql from 'graphql-tag';
 import RepoTable from './RepoTable';
+
+const REPO_QUERY = gql`
+  query REPO_QUERY {
+    # Let's use carbon as our organization
+    organization(login: "carbon-design-system") {
+      # We'll grab all the repositories in one go. To load more resources
+      # continuously, see the advanced topics.
+      repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+        totalCount
+        nodes {
+          url
+          homepageUrl
+          issues(filterBy: { states: OPEN }) {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+          releases(first: 1) {
+            totalCount
+            nodes {
+              name
+            }
+          }
+          name
+          updatedAt
+          createdAt
+          description
+          id
+        }
+      }
+    }
+  }
+`;
 
 const headers = [
   {
@@ -79,17 +108,30 @@ export default {
   data() {
     return {
       headers,
-      rows
+      rows,
+      pageSize: 0,
+      pageStart: 0,
+      page: 0
     };
+  },
+  apollo: {
+    organization: REPO_QUERY
   }
 };
 </script>
 
-<style lang="scss">
-@import '../../styles/carbon-utils';
-
-.repo-page .bx--row {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
-}
-</style>
+<template>
+  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
+    <div class="bx--row repo-page__r1">
+      <div class="bx--col-lg-16">
+        <repo-table
+          :headers="headers"
+          :rows="rows"
+          title="Carbon Repositories"
+          helperText="A collection of public Carbon repositories."
+          :loading="$apollo.loading"
+        />
+      </div>
+    </div>
+  </div>
+</template>
