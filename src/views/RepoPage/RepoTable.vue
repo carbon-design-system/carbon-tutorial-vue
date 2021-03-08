@@ -1,11 +1,15 @@
 <template>
   <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
     <template slot="data">
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">{{cell}}</cv-data-table-row>
+      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+        <cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
+          {{cell}}
+          <template slot="expandedContent">
+            {{ row.description }}
+          </template>
+        </cv-data-table-cell>
+      </cv-data-table-row>
     </template>	
-    <template slot="expandedContent">
-      {{ row.description }}
-    </template>
   </cv-data-table>
 </template>
 
