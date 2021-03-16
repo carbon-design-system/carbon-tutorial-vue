@@ -42,6 +42,7 @@ const defaultOptions = {
 
   // Override the way the Authorization header is set
   // getAuth: (tokenName) => ...
+  getAuth: tokenName => `Bearer ${tokenName}`
 
   // Additional ApolloClient options
   // apollo: { ... }
