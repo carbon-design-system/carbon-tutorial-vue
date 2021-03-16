@@ -23,27 +23,27 @@ import gql from 'graphql-tag';
 const headers = [
   {
     key: 'name',
-    header: 'Name',
+    header: 'Name'
   },
   {
     key: 'createdAt',
-    header: 'Created',
+    header: 'Created'
   },
   {
     key: 'updatedAt',
-    header: 'Updated',
+    header: 'Updated'
   },
   {
     key: 'issueCount',
-    header: 'Open Issues',
+    header: 'Open Issues'
   },
   {
     key: 'stars',
-    header: 'Stars',
+    header: 'Stars'
   },
   {
     key: 'links',
-    header: 'Links',
+    header: 'Links'
   },
 ];
 
@@ -85,14 +85,14 @@ export default {
   name: 'RepoPage',
   components: { RepoTable },
   apollo: {
-    organization: REPO_QUERY,
+    organization: REPO_QUERY
   },
   data() {
     return {
       headers,
       pageSize: 0,
       pageStart: 0,
-      page: 0,
+      page: 0
     };
   },
   computed: {
@@ -107,7 +107,7 @@ export default {
           issueCount: row.issues.totalCount,
           createdAt: new Date(row.createdAt).toLocaleDateString(),
           updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-          links: { url: row.url, homepageUrl: row.homepageUrl },
+          links: { url: row.url, homepageUrl: row.homepageUrl }
         }));
       }
     },

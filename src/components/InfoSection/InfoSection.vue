@@ -12,7 +12,7 @@ export default {
   name: 'InfoSection',
   props: {
     heading: String
-  },
+  }
 };
 </script>
 

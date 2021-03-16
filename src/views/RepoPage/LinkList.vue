@@ -17,7 +17,7 @@ export default {
   props: {
     url: String,
     homepageUrl: String
-  },
+  }
 };
 </script>
 
