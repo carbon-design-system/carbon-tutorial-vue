@@ -1,6 +1,7 @@
 {
   "name": "carbon-tutorial-vue",
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,6 +12,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.27.0",
+    "@carbon/vue": "^2.37.1",
+    "carbon-components": "^10.30.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
