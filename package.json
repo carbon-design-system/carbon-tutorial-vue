@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "start": "yarn serve",
     "ci-check": "yarn format:diff",
-    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
+    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "deploy": "yarn build && cf push -f manifest.yml"
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.4.0",
@@ -22,20 +24,24 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-plugin-unit-jest": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
+    "@vue/cli-plugin-unit-jest": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^26.6.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "graphql-tag": "^2.9.0",
     "node-sass": "^4.9.0",
+    "prettier": "2.2.1",
     "sass-loader": "^7.1.0",
-    "vue-cli-plugin-apollo": "~0.22.2",
+    "vue-cli-plugin-apollo": "^0.21.0",
     "vue-template-compiler": "^2.6.10"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "eslintConfig": {
     "root": true,
@@ -50,9 +56,6 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
-  },
-  "prettier": {
-    "singleQuote": true
   },
   "postcss": {
     "plugins": {
@@ -92,6 +95,5 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  },
-  "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml"
+  }
 }

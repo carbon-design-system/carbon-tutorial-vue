@@ -96,9 +96,9 @@ export default {
     Object.assign(this, {
       Globe32,
       PersonFavorite32,
-      Application32
+      Application32,
     });
-  }
+  },
 };
 </script>
 

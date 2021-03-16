@@ -2,18 +2,18 @@ import Vue from 'vue';
 import VueApollo from 'vue-apollo';
 import {
   createApolloClient,
-  restartWebsockets
+  restartWebsockets,
 } from 'vue-cli-plugin-apollo/graphql-client';
 
 // Install the vue plugin
 Vue.use(VueApollo);
 
 // Name of the localStorage item
-const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
+const AUTH_TOKEN = 'apollo-token';
 
-// Target github api
+// Http endpoint
 const httpEndpoint =
-  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
+  process.env.VUE_APP_GRAPHQL_HTTP || 'http://localhost:4000/graphql';
 
 // Config
 const defaultOptions = {
@@ -21,7 +21,7 @@ const defaultOptions = {
   httpEndpoint,
   // You can use `wss` for secure connection (recommended in production)
   // Use `null` to disable subscriptions
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS,
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://localhost:4000/graphql',
   // LocalStorage token
   tokenName: AUTH_TOKEN,
   // Enable Automatic Query persisting with Apollo Engine
@@ -42,7 +42,7 @@ const defaultOptions = {
 
   // Override the way the Authorization header is set
   // getAuth: (tokenName) => ...
-  getAuth: tokenName => `Bearer ${tokenName}`
+
   // Additional ApolloClient options
   // apollo: { ... }
 
@@ -55,7 +55,7 @@ export function createProvider(options = {}) {
   // Create apollo client
   const { apolloClient, wsClient } = createApolloClient({
     ...defaultOptions,
-    ...options
+    ...options,
   });
   apolloClient.wsClient = wsClient;
 
@@ -65,7 +65,7 @@ export function createProvider(options = {}) {
     defaultOptions: {
       $query: {
         // fetchPolicy: 'cache-and-network',
-      }
+      },
     },
     errorHandler(error) {
       // eslint-disable-next-line no-console
@@ -74,7 +74,7 @@ export function createProvider(options = {}) {
         'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;',
         error.message
       );
-    }
+    },
   });
 
   return apolloProvider;
