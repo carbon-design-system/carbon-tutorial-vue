@@ -11,7 +11,7 @@
 export default {
   name: 'InfoSection',
   props: {
-    heading: String,
+    heading: String
   },
 };
 </script>
