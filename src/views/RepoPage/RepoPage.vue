@@ -44,7 +44,7 @@ const headers = [
   {
     key: 'links',
     header: 'Links'
-  },
+  }
 ];
 
 const REPO_QUERY = gql`
@@ -100,7 +100,7 @@ export default {
       if (!this.organization) {
         return [];
       } else {
-        return this.organization.repositories.nodes.map((row) => ({
+        return this.organization.repositories.nodes.map(row => ({
           ...row,
           key: row.id,
           stars: row.stargazers.totalCount,
@@ -113,7 +113,7 @@ export default {
     },
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    },
+    }
   },
   // watch: {
   //   rows() {
@@ -127,8 +127,8 @@ export default {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -58,7 +58,7 @@ export default {
           row.links
         ],
         description: row.description,
-        key: row.key,
+        key: row.key
       }));
     }
   }
