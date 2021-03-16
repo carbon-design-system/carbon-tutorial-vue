@@ -17,7 +17,7 @@ export default {
   props: {
     heading: String,
     body: String,
-    icon: Object,
+    icon: Object
   },
   computed: {
     // Take in a phrase and separate the third word in an array
@@ -25,8 +25,8 @@ export default {
       const splitHeading = this.heading.split(' ');
       const finalWord = splitHeading.pop();
       return [splitHeading.join(' '), finalWord];
-    },
-  },
+    }
+  }
 };
 </script>
 
