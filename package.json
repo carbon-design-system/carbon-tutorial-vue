@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "ci-check": "yarn format:diff",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
     "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
