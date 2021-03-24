@@ -58,8 +58,6 @@
             </cv-tab>
           </cv-tabs>
         </div>
-      <div class="bx--col-md-4 bx--col-lg-7">7/16</div>
-      <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">8/16</div>
     </div>
     <div class="bx--row landing-page__r3">
       <div class="bx--col-md-4 bx--col-lg-4">
@@ -72,6 +70,7 @@
   </div>
 </template>
 
+<script>
 const props = {
   tabs: {
     selected: 0,
@@ -84,11 +83,11 @@ const props = {
     tabIndex: 0,
   },
 };
-
+</script>
 
 <style lang="scss">
 @import '../../styles/carbon-utils';
-@import "./carbon-overrides";
+@import './carbon-overrides';
 @import './mixins';
 
 .landing-page__illo {

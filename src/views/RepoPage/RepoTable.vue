@@ -42,10 +42,4 @@
   </cv-data-table>
 </template>
 
-<style lang="scss">
-@import '../../styles/carbon-utils';
-.repo-page .bx--row {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
-}
-</style>
+
