@@ -36,7 +36,7 @@
                </div>
              </div>
            </div>
-          </cv-tab>          
+	</cv-tab>
           <cv-tab label="Design">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -56,7 +56,7 @@
                 </div>
               </div>
             </div>
-          </cv-tab> 
+	</cv-tab>
         </cv-tabs>
       </div>
     </div>
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-  const props = {
+const props = {
   tabs: {
     selected: 0,
     triggerHref: '#',
@@ -82,7 +82,7 @@
     href: '#',
     role: 'presentation',
     tabIndex: 0
-  },
+  }
 };
 </script>
 
