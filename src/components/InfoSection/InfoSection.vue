@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "InfoSection",
+  name: 'InfoSection',
   props: {
     heading: String
   }
