@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "jsx": "preserve",
+    "strictFunctionTypes": true
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "index-file": {
+    "prefix": "index",
+    "body": [
+      "import ${TM_DIRECTORY/.*[\\/]//gm} from './${TM_DIRECTORY/.*[\\/]//gm}';",
+      "export { ",
+      "\t${TM_DIRECTORY/.*[\\/]//gm},",
+      "};",
+      "export default ${TM_DIRECTORY/.*[\\/]//gm}",
+      ""
+    ],
+    "description": "Index file"
+  }
+}
