@@ -1,34 +1,25 @@
-import { shallowMount } from '@vue/test-utils';
+import { RouterLinkStub, shallowMount, mount } from '@vue/test-utils';
 import App from '@/App.vue';
+import RouterViewStub from '../stubs/router-view-stub.vue';
 
-describe('App', () => {
-  const dummyContent = 'dummy content';
-
-  it('should load app with dummy content', () => {
+describe('App.vue', () => {
+  it('Can see an app ok', () => {
     const wrapper = shallowMount(App, {
-      slots: { default: dummyContent }
+      stubs: {
+        RouterLink: RouterLinkStub,
+        'router-view': RouterViewStub,
+      },
     });
-    const app = wrapper.find('#app');
-    expect(app).not.toBeNull;
   });
 });
 
-// describe('HelloWorld.vue', () => {
-//   it('renders props.msg when passed', () => {
-//     const msg = 'new message';
-//     const wrapper = shallowMount(HelloWorld, {
-//       propsData: { msg }
-//     });
-//     expect(wrapper.text()).toMatch(msg);
-//   });
-// });
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import App from './App';
-
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
+describe('App.vue', () => {
+  it('Can see an app ok with a real mount', () => {
+    const wrapper = mount(App, {
+      stubs: {
+        RouterLink: RouterLinkStub,
+        'router-view': RouterViewStub,
+      },
+    });
+  });
+});
