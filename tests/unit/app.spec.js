@@ -24,7 +24,7 @@ describe('Vue Step 1 Tests', () => {
     wrapper.get('.bx--header');
     wrapper.get('.bx--content');
     wrapper.get('.bx--skip-to-content');
-    wrapper.get('.bx--header-name');
-    wrapper.get('.bx--header-nav');
+    wrapper.get('.bx--header__name');
+    wrapper.get('.bx--header__nav');
   });
 });
