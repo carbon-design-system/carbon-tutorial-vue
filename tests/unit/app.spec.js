@@ -21,7 +21,6 @@ describe('Vue Step 1 Tests', () => {
     });
 
     wrapper.get('.bx--header');
-    wrapper.get('.bx--header');
     wrapper.get('.bx--content');
     wrapper.get('.bx--skip-to-content');
     wrapper.get('.bx--header__name');
