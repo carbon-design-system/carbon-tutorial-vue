@@ -12,7 +12,7 @@ jobs:
           command: yarn ci-check
       - run:
           name: Run tests
-          command: yarn test
+          command: yarn test:unit
 
 workflows:
   version: 2
