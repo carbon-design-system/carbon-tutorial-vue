@@ -6,19 +6,19 @@
 
     <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 
-    <cv-header-nav aria-label="Carbon tutorial nav">
+    <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
     </cv-header-nav>
 
     <template slot="header-global">
       <cv-header-global-action aria-label="Notifications">
-        <Notification20 />
+        <notification-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="User avatar">
-        <UserAvatar20 />
+        <user-avatar-20 />
       </cv-header-global-action>
       <cv-header-global-action aria-label="App switcher">
-        <AppSwitcher20 />
+        <app-switcher-20 />
       </cv-header-global-action>
     </template>
   </cv-header>
@@ -29,8 +29,6 @@ import { Notification20, UserAvatar20, AppSwitcher20 } from '@carbon/icons-vue';
 
 export default {
   name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 },
+  components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>
-
-<style lang="scss"></style>

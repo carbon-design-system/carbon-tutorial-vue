@@ -1,28 +1,29 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils';
+import { RouterLinkStub, shallowMount, mount } from '@vue/test-utils';
 import App from '@/App.vue';
 import RouterViewStub from '../stubs/router-view-stub.vue';
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    shallowMount(App, {
-      stubs: {
-        RouterLink: RouterLinkStub,
-        'router-view': RouterViewStub,
-      },
-    });
-  });
-
-  it('contains a TutorialHeader', () => {
+describe('Vue Step 1 Tests', () => {
+  it('Renders without crashing', () => {
     const wrapper = shallowMount(App, {
       stubs: {
         RouterLink: RouterLinkStub,
-        'router-view': RouterViewStub,
-      },
+        'router-view': RouterViewStub
+      }
+    });
+  });
+
+  it('It has a Carbon header', () => {
+    const wrapper = mount(App, {
+      stubs: {
+        RouterLink: RouterLinkStub,
+        'router-view': RouterViewStub
+      }
     });
 
-    // console.dir(wrapper);
-    console.log(wrapper.element.outerHTML);
-
-    console.dir(wrapper.find('div').element.outerHtml);
+    wrapper.get('.bx--header');
+    wrapper.get('.bx--content');
+    wrapper.get('.bx--skip-to-content');
+    wrapper.get('.bx--header__name');
+    wrapper.get('.bx--header__nav');
   });
 });
