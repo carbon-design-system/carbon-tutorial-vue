@@ -4,7 +4,7 @@ import RepoPage from '../../src/views/RepoPage/RepoPage.vue';
 import LandingPage from '../../src/views/LandingPage/LandingPage.vue';
 import RouterViewStub from '../stubs/router-view-stub.vue';
 
-describe('Vue Step 1 Tests', () => {
+describe('Vue Step 2 Tests', () => {
   it('Renders without crashing', () => {
     const wrapper = shallowMount(App, {
       stubs: {
