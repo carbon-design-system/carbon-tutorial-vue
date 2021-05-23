@@ -18,4 +18,4 @@ workflows:
   version: 2
   main:
     jobs:
-      - step-three
+      - step-four
