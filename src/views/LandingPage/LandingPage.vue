@@ -10,10 +10,9 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
-
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
-        <cv-tabs selected="0" aria-label="Tabs navigation">
+        <cv-tabs selected="0" aria-label="Tab navigation">
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -52,7 +51,7 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Carbon provides styles and components in Vanilla, Vue,
+                  Carbon provides styles and components in Vanilla, React,
                   Angular, and Vue for anyone building on the web.
                 </div>
               </div>
@@ -61,7 +60,6 @@
         </cv-tabs>
       </div>
     </div>
-
     <info-section heading="The Principles" class="landing-page__r3">
       <info-card
         heading="Carbon is Open"
@@ -83,13 +81,11 @@
 </template>
 
 <script>
-import { InfoSection, InfoCard } from "../../components/InfoSection";
-import Globe32 from "@carbon/icons-vue/lib/globe/32";
-import PersonFavorite32 from "@carbon/icons-vue/lib/person--favorite/32";
-import Application32 from "@carbon/icons-vue/lib/application/32";
+import { InfoSection, InfoCard } from '../../components/InfoSection';
+import { Globe32, PersonFavorite32, Application32 } from '@carbon/icons-vue';
 
 export default {
-  name: "LandingPage",
+  name: 'LandingPage',
   components: { InfoSection, InfoCard },
   created() {
     // Add icons to this
@@ -103,9 +99,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
-@import "./carbon-overrides";
-@import "./mixins";
+@import '../../styles/carbon-utils';
+@import './carbon-overrides';
+@import './mixins';
 
 .landing-page__illo {
   max-width: 100%;
@@ -118,7 +114,7 @@ export default {
 }
 
 .landing-page__heading {
-  @include carbon--type-style("productive-heading-05");
+  @include carbon--type-style('productive-heading-05');
 }
 
 .landing-page__r2 {
@@ -131,12 +127,12 @@ export default {
 }
 
 .landing-page__subheading {
-  @include carbon--type-style("productive-heading-03");
-  @include carbon--font-weight("semibold");
+  @include carbon--type-style('productive-heading-03');
+  @include carbon--font-weight('semibold');
 }
 
 .landing-page__p {
-  @include carbon--type-style("productive-heading-03");
+  @include carbon--type-style('productive-heading-03');
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
 
@@ -152,6 +148,6 @@ export default {
 }
 
 .landing-page__label {
-  @include carbon--type-style("heading-01");
+  @include carbon--type-style('heading-01');
 }
 </style>

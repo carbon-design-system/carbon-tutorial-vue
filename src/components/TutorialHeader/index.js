@@ -1,3 +1,2 @@
-import TutorialHeader from "./TutorialHeader";
-export { TutorialHeader };
+import TutorialHeader from './TutorialHeader';
 export default TutorialHeader;

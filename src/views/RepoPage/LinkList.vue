@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "LinkList",
+  name: 'LinkList',
   props: {
     url: String,
     homepageUrl: String

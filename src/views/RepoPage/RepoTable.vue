@@ -14,26 +14,28 @@
     :pagination="{ numberOfItems: this.totalRows }"
     @pagination="$emit('pagination', $event)"
   >
-    <template slot="data">
-      <cv-data-table-row v-for="row in data" :key="`${row.key}`">
+    <template v-slot:data>
+      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
         <cv-data-table-cell
-          v-for="cell in row.data"
-          :key="`${row.key}-${cell.url}`"
+          v-for="(cell, cellIndex) in row.data"
+          :key="`${cellIndex}`"
         >
-          <template v-if="!cell.url">{{ cell }}</template>
+          <template v-if="!cell.url">
+            {{ cell }}
+          </template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
-        <template slot="expandedContent">{{ row.description }}</template>
+        <template v-slot:expandedContent> {{ row.description }} xx </template>
       </cv-data-table-row>
     </template>
   </cv-data-table>
 </template>
 
 <script>
-import LinkList from "./LinkList";
+import LinkList from './LinkList';
 
 export default {
-  name: "RepoTable",
+  name: 'RepoTable',
   components: { LinkList },
   props: {
     headers: Array,
@@ -57,12 +59,18 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description,
-        key: row.key
+        description: row.description
       }));
     }
   }
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '../../styles/carbon-utils';
+
+.repo-page .bx--row {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+</style>
