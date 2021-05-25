@@ -51,6 +51,12 @@ const props = {
 .landing-page__label {
   @include carbon--type-style('heading-01');
 }
+
+.landing-page__p {
+  @include carbon--type-style('productive-heading-03');
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
 </style>
 
 <template>
