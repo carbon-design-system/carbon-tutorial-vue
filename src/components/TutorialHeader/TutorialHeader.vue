@@ -2,7 +2,7 @@
   <cv-header aria-label="Carbon tutorial">
     <cv-skip-to-content to="#main-content">Skip to content</cv-skip-to-content>
 
-    <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
+    <cv-header-name to="/" prefix="IBM">Carbon Tutorial test</cv-header-name>
 
     <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
