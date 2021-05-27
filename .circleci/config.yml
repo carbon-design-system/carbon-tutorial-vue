@@ -8,9 +8,6 @@ jobs:
       - checkout
       - run: yarn install --immutable --immutable-cache
       - run:
-          name: Run ci checks
-          command: yarn ci-check
-      - run:
           name: Run tests
           command: yarn test:unit
 
