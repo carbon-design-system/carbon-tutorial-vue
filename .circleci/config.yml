@@ -8,17 +8,9 @@ jobs:
       - checkout
       - run: yarn install --immutable --immutable-cache
       - run:
-<<<<<<< HEAD
-          name: Run ci checks
-          command: yarn ci-check
-      - run:
-          name: Run tests
-          command: yarn test:unit
-=======
           name: Run tests
           command: yarn test:unit
 
->>>>>>> 5a390e60368cc5d4da50b9a7373a47ab151d57b9
 workflows:
   version: 2
   main:
