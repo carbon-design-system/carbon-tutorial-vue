@@ -12,17 +12,6 @@
 </template>
 <script>
 import RepoTable from "./RepoTable";
-export default {
-  name: 'RepoPage',
-  components: { RepoTable },
-  data() {
-    return {
-      headers,
-      rows,
-    };
-  },
-};
-
 const headers = [
   {
     key: 'name',
@@ -79,6 +68,18 @@ const rows = [
     links: 'Links',
   },
 ];
+export default {
+  name: 'RepoPage',
+  components: { RepoTable },
+  data() {
+    return {
+      headers,
+      rows,
+    };
+  },
+};
+
+
 
 </script>
 <style lang="scss">
