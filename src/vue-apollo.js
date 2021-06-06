@@ -8,7 +8,7 @@ import {
 // Install the vue plugin
 Vue.use(VueApollo);
 
-// Name of the localStorage item
+// Use our access token
 const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 // Target github api
@@ -45,6 +45,7 @@ const defaultOptions = {
   getAuth: tokenName => `Bearer ${tokenName}`
   // Additional ApolloClient options
   // apollo: { ... }
+
   // Client local data (see apollo-link-state)
   // clientState: { resolvers: { ... }, defaults: { ... } }
 };
