@@ -2,7 +2,6 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        {{ this.organization }}
         <repo-table
           :headers="headers"
           :rows="pagedRows"
@@ -19,65 +18,7 @@
 
 <script>
 import RepoTable from './RepoTable';
-import LinkList from './LinkList';
 import gql from 'graphql-tag';
-
-const headers = [
-  {
-    key: 'name',
-    header: 'Name',
-  },
-  {
-    key: 'createdAt',
-    header: 'Created',
-  },
-  {
-    key: 'updatedAt',
-    header: 'Updated',
-  },
-  {
-    key: 'issueCount',
-    header: 'Open Issues',
-  },
-  {
-    key: 'stars',
-    header: 'Stars',
-  },
-  {
-    key: 'links',
-    header: 'Links',
-  },
-];
-
-const rows = [
-  {
-    id: '1',
-    name: 'Repo 1',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links',
-  },
-  {
-    id: '2',
-    name: 'Repo 2',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links',
-  },
-  {
-    id: '3',
-    name: 'Repo 3',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links',
-  },
-];
 
 const REPO_QUERY = gql`
   query REPO_QUERY {
@@ -113,12 +54,36 @@ const REPO_QUERY = gql`
   }
 `;
 
+const headers = [
+  {
+    key: 'name',
+    header: 'Name'
+  },
+  {
+    key: 'createdAt',
+    header: 'Created'
+  },
+  {
+    key: 'updatedAt',
+    header: 'Updated'
+  },
+  {
+    key: 'issueCount',
+    header: 'Open Issues'
+  },
+  {
+    key: 'stars',
+    header: 'Stars'
+  },
+  {
+    key: 'links',
+    header: 'Links'
+  }
+];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
-  apollo: {
-    organization: REPO_QUERY,
-  },
   data() {
     return {
       headers,
@@ -126,39 +91,42 @@ export default {
       pageStart: 0,
       page: 0
     };
-  },  
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
+  },
+  apollo: {
+    organization: REPO_QUERY
   },
   computed: {
-    pagedRows() {
-      return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    },
     rows() {
       if (!this.organization) {
         return [];
       } else {
-        return this.organization.repositories.nodes.map((row) => ({
+        return this.organization.repositories.nodes.map(row => ({
           ...row,
           key: row.id,
           stars: row.stargazers.totalCount,
           issueCount: row.issues.totalCount,
           createdAt: new Date(row.createdAt).toLocaleDateString(),
           updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-          links: { url: row.url, homepageUrl: row.homepageUrl },
+          links: { url: row.url, homepageUrl: row.homepageUrl }
         }));
       }
     },
+    pagedRows() {
+      return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
+    }
   },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
+    }
+  },
+  watch: {
+    rows() {
+      if (this.organization) {
+        console.dir(this.organization.repositories.nodes);
+      }
     }
   }
 };

@@ -3,6 +3,7 @@
     <li>
       <cv-link :href="url">GitHub</cv-link>
     </li>
+
     <li v-if="homepageUrl">
       <span>&nbsp;|&nbsp;</span>
       <cv-link :href="homepageUrl">Homepage</cv-link>
@@ -15,7 +16,13 @@ export default {
   name: 'LinkList',
   props: {
     url: String,
-    homepageUrl: String,
-  },
+    homepageUrl: String
+  }
 };
 </script>
+
+<style lang="scss">
+.link-list {
+  display: flex;
+}
+</style>
