@@ -1,2 +1,6 @@
 @import 'carbon-components/scss/globals/scss/styles';
 @import './carbon-fixes';
+
+$feature-flags: (
+  grid-columns-16: true
+);
