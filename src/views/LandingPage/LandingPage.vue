@@ -68,6 +68,7 @@
       <div class="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
       <div class="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
     </div>
+  </div>
 </template>
 
 <style lang="scss">
