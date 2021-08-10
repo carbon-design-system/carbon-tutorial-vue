@@ -4,9 +4,12 @@
       <div class="bx--col-lg-16">
         <repo-table
           :headers="headers"
-          :rows="rows"
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
+          :loading="$apollo.loading"
+          :rows="pagedRows"
+          :totalRows="rows.length"
+          @pagination="onPagination"
         />
       </div>
     </div>
@@ -16,62 +19,7 @@
 <script>
 import RepoTable from './RepoTable';
 
-const headers = [
-  {
-    key: 'name',
-    header: 'Name'
-  },
-  {
-    key: 'createdAt',
-    header: 'Created'
-  },
-  {
-    key: 'updatedAt',
-    header: 'Updated'
-  },
-  {
-    key: 'issueCount',
-    header: 'Open Issues'
-  },
-  {
-    key: 'stars',
-    header: 'Stars'
-  },
-  {
-    key: 'links',
-    header: 'Links'
-  }
-];
-
-const rows = [
-  {
-    id: '1',
-    name: 'Repo 1',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
-  },
-  {
-    id: '2',
-    name: 'Repo 2',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
-  },
-  {
-    id: '3',
-    name: 'Repo 3',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
-  }
-];
+import { headers, REPO_QUERY } from '@/stores';
 
 export default {
   name: 'RepoPage',
@@ -79,8 +27,47 @@ export default {
   data() {
     return {
       headers,
-      rows
+      pageSize: 0,
+      pageStart: 0,
+      page: 0
     };
+  },
+  apollo: {
+    organization: REPO_QUERY
+  },
+  watch: {
+    rows() {
+      if (this.organization) {
+        console.dir(this.organization.repositories.nodes);
+      }
+    }
+  },
+  methods: {
+    onPagination(val) {
+      this.pageSize = val.length;
+      this.pageStart = val.start;
+      this.page = val.page;
+    }
+  },
+  computed: {
+    pagedRows() {
+      return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
+    },
+    rows() {
+      if (!this.organization) {
+        return [];
+      } else {
+        return this.organization.repositories.nodes.map(row => ({
+          ...row,
+          key: row.id,
+          stars: row.stargazers.totalCount,
+          issueCount: row.issues.totalCount,
+          createdAt: new Date(row.createdAt).toLocaleDateString(),
+          updatedAt: new Date(row.updatedAt).toLocaleDateString(),
+          links: { url: row.url, homepageUrl: row.homepageUrl }
+        }));
+      }
+    }
   }
 };
 </script>

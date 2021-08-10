@@ -4,7 +4,7 @@
       <div class="bx--col-lg-16">
         <cv-breadcrumb noTrailingSlash aria-label="Page navigation">
           <cv-breadcrumb-item>
-            <cv-link href="/">Getting started</cv-link>
+            <cv-link to="/">Getting started</cv-link>
           </cv-breadcrumb-item>
         </cv-breadcrumb>
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
