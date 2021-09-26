@@ -1,14 +1,16 @@
 <template>
   <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
     <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
-      <cv-data-table-cell v-for="(cell, cellIndex) in row.data" :key="`${cellIndex}`">
-          {{cell}}
+      <cv-data-table-cell
+        v-for="(cell, cellIndex) in row.data"
+        :key="`${cellIndex}`"
+      >
+        {{ cell }}
       </cv-data-table-cell>
       {{ row.description }}
     </cv-data-table-row>
   </cv-data-table>
 </template>
-
 
 <script>
 export default {
@@ -40,5 +42,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
