@@ -2,10 +2,9 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        {{ this.organization }}
         <repo-table
           :headers="headers"
-          :rows="rows"
+          :rows="pagedRows"
           :totalRows="rows.length"
           @pagination="onPagination"
           title="Carbon Repositories"
@@ -20,6 +19,7 @@
 <script>
 import RepoTable from './RepoTable';
 import gql from 'graphql-tag';
+
 const REPO_QUERY = gql`
   query REPO_QUERY {
     # Let's use carbon as our organization
@@ -53,6 +53,7 @@ const REPO_QUERY = gql`
     }
   }
 `;
+
 const headers = [
   {
     key: 'name',
@@ -79,6 +80,7 @@ const headers = [
     header: 'Links'
   }
 ];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
@@ -91,8 +93,21 @@ export default {
     };
   },
   computed: {
-    // other computed properties
-    // ...
+    rows() {
+      if (!this.organization) {
+        return [];
+      } else {
+        return this.organization.repositories.nodes.map(row => ({
+          ...row,
+          key: row.id,
+          stars: row.stargazers.totalCount,
+          issueCount: row.issues.totalCount,
+          createdAt: new Date(row.createdAt).toLocaleDateString(),
+          updatedAt: new Date(row.updatedAt).toLocaleDateString(),
+          links: { url: row.url, homepageUrl: row.homepageUrl }
+        }));
+      }
+    },
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
@@ -102,13 +117,6 @@ export default {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
-    }
-  },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
     }
   },
   apollo: {

@@ -37,15 +37,14 @@ import LinkList from './LinkList';
 export default {
   name: 'RepoTable',
   components: { LinkList },
-  description: row.description,
   props: {
     headers: Array,
     rows: Array,
     title: String,
     helperText: String,
-    loading: Boolean
+    loading: Boolean,
+    totalRows: Number
   },
-  totalRows: Number,
   computed: {
     columns() {
       return this.headers.map(header => header.header);
@@ -60,7 +59,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: 'Row description'
+        description: row.description
       }));
     }
   }
