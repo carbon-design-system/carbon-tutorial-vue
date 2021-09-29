@@ -25,7 +25,13 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import { Notification20, UserAvatar20, AppSwitcher20 } from '@carbon/icons-vue';
+=======
+import Notification20 from '@carbon/icons-vue/es/notification/20';
+import UserAvatar20 from '@carbon/icons-vue/es/user--avatar/20';
+import AppSwitcher20 from '@carbon/icons-vue/es/app-switcher/20';
+>>>>>>> c1001190dd4817bd65f746f7ccc325af6fa3c589
 
 export default {
   name: 'TutorialHeader',
