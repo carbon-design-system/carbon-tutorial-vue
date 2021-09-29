@@ -111,13 +111,6 @@ export default {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
   },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
-  },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
