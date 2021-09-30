@@ -51,7 +51,30 @@ const REPO_QUERY = gql`
     }
   }
 `;
-const headers = [{}];
+const headers = [ {
+    key: 'name',
+    header: 'Name'
+  },
+  {
+    key: 'createdAt',
+    header: 'Created'
+  },
+  {
+    key: 'updatedAt',
+    header: 'Updated'
+  },
+  {
+    key: 'issueCount',
+    header: 'Open Issues'
+  },
+  {
+    key: 'stars',
+    header: 'Stars'
+  },
+  {
+    key: 'links',
+    header: 'Links'
+  }];
 export default {
   name: 'RepoPage',
   components: { RepoTable },
