@@ -1,5 +1,4 @@
 <template>
-  <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
   <cv-data-table-skeleton
     v-if="loading"
     :columns="columns"
@@ -31,7 +30,6 @@
     </template>
   </cv-data-table>
 </template>
-
 <script>
 import LinkList from './LinkList';
 export default {
@@ -43,29 +41,28 @@ export default {
     title: String,
     helperText: String,
     loading: Boolean,
-    totalRows: Number,
+    totalRows: Number
   },
   computed: {
     columns() {
-      return this.headers.map((header) => header.header);
+      return this.headers.map(header => header.header);
     },
     data() {
-      return this.rows.map((row) => ({
+      return this.rows.map(row => ({
         data: [
           row.name,
           row.createdAt,
           row.updatedAt,
           row.issueCount,
           row.stars,
-          row.links,
+          row.links
         ],
-        description: row.description,
+        description: row.description
       }));
-    },
-  },
+    }
+  }
 };
 </script>
-
 <style lang="scss">
 @import '../../styles/carbon-utils';
 .repo-page .bx--row {

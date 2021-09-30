@@ -10,7 +10,6 @@
     </li>
   </ul>
 </template>
-
 <script>
 export default {
   name: 'LinkList',
@@ -20,7 +19,6 @@ export default {
   }
 };
 </script>
-
 <style lang="scss">
 .link-list {
   display: flex;

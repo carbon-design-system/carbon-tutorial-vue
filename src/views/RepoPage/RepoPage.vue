@@ -60,7 +60,7 @@ export default {
       headers,
       pageSize: 0,
       pageStart: 0,
-      page: 0,
+      page: 0
     };
   },
   computed: {
@@ -68,30 +68,30 @@ export default {
       if (!this.organization) {
         return [];
       } else {
-        return this.organization.repositories.nodes.map((row) => ({
+        return this.organization.repositories.nodes.map(row => ({
           ...row,
           key: row.id,
           stars: row.stargazers.totalCount,
           issueCount: row.issues.totalCount,
           createdAt: new Date(row.createdAt).toLocaleDateString(),
           updatedAt: new Date(row.updatedAt).toLocaleDateString(),
-          links: { url: row.url, homepageUrl: row.homepageUrl },
+          links: { url: row.url, homepageUrl: row.homepageUrl }
         }));
       }
     },
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
-    },
+    }
   },
   methods: {
     onPagination(val) {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
-    },
+    }
   },
   apollo: {
-    organization: REPO_QUERY,
-  },
+    organization: REPO_QUERY
+  }
 };
 </script>
