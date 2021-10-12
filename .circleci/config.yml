@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  step-one:
+    docker:
+      - image: circleci/node:14
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: yarn install --immutable --immutable-cache
+      - run:
+          name: Run tests
+          command: yarn test:unit
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - step-one
