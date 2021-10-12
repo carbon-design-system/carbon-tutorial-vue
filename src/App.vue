@@ -12,9 +12,6 @@
 </style>
 
 <script>
-  import {
-    CvButton
-  } from '@carbon/vue';
   import TutorialHeader from "./components/TutorialHeader";
   export default {
     components: {
