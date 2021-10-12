@@ -20,10 +20,10 @@ describe('Vue Step 1 Tests', () => {
       }
     });
 
-    wrapper.get('.bx--header');
-    wrapper.get('.bx--content');
-    wrapper.get('.bx--skip-to-content');
-    wrapper.get('.bx--header__name');
-    wrapper.get('.bx--header__nav');
+    wrapper.find('.bx--header');
+    wrapper.find('.bx--content');
+    wrapper.find('.bx--skip-to-content');
+    wrapper.find('.bx--header__name');
+    wrapper.find('.bx--header__nav');
   });
 });
