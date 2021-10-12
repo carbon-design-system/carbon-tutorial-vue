@@ -1,6 +1,10 @@
 version: 2
 jobs:
+<<<<<<< HEAD
   step-two:
+=======
+  step-one:
+>>>>>>> vue-step-1
     docker:
       - image: circleci/node:14
     working_directory: ~/repo
@@ -8,11 +12,23 @@ jobs:
       - checkout
       - run: yarn install --immutable --immutable-cache
       - run:
+<<<<<<< HEAD
           name: Run tests
           command: yarn test:unit
 
+=======
+          name: Run ci checks
+          command: yarn ci-check
+      - run:
+          name: Run tests
+          command: yarn test:unit
+>>>>>>> vue-step-1
 workflows:
   version: 2
   main:
     jobs:
+<<<<<<< HEAD
       - step-two
+=======
+      - step-one
+>>>>>>> vue-step-1

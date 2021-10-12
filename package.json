@@ -15,6 +15,7 @@
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
     "carbon-components": "^10.33.0",
+
     "core-js": "^3.11.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
@@ -71,6 +72,7 @@
     "setupFiles": [
       "./tests/setup.js"
     ],
+    "setupFiles": ["./tests/setup.js"],
     "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
