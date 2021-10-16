@@ -886,6 +886,14 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/grid@^10.38.0":
+  version "10.38.0"
+  resolved "https://registry.npmmirror.com/@carbon/grid/download/@carbon/grid-10.38.0.tgz#cecce1fd857052f85e61df6e168a0be8cbfdd500"
+  integrity sha1-zszh/YVwUvheYd9uFooL6Mv91QA=
+  dependencies:
+    "@carbon/import-once" "^10.6.0"
+    "@carbon/layout" "^10.33.0"
+
 "@carbon/icon-helpers@^10.16.0", "@carbon/icon-helpers@^10.9.0":
   version "10.16.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.16.0.tgz#66f20b9bba49c6ec4c956b8e9e7ec65bdf40da8f"
@@ -904,6 +912,16 @@
   integrity sha512-79JVIK+hVugoQfybawF9L9iahO28Zy5leAuu0Lbv+Co894Y1KGhaUWGj4CJI2AkCW3NyjOiDcRIyM14DPvTQUw==
   dependencies:
     "@carbon/icon-helpers" "^10.16.0"
+
+"@carbon/import-once@^10.6.0":
+  version "10.6.0"
+  resolved "https://registry.npm.taobao.org/@carbon/import-once/download/@carbon/import-once-10.6.0.tgz#a8fb846d9dc3eea9d45d9131a235e898d0f8db1e"
+  integrity sha1-qPuEbZ3D7qnUXZExojXomND42x4=
+
+"@carbon/layout@^10.33.0":
+  version "10.33.0"
+  resolved "https://registry.npmmirror.com/@carbon/layout/download/@carbon/layout-10.33.0.tgz#15fa1db6f80f02f76c84aa1665c67751bb0ec472"
+  integrity sha1-FfodtvgPAvdshKoWZcZ3UbsOxHI=
 
 "@carbon/telemetry@0.0.0-alpha.6", "@carbon/telemetry@^0.0.0-alpha.6":
   version "0.0.0-alpha.6"
