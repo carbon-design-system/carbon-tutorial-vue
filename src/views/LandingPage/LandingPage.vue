@@ -28,11 +28,7 @@
                   <cv-button>Learn more</cv-button>
                 </div>
                 <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
-                  <img
-                    class="landing-page__illo"
-                    src="../../assets/tab-illo.png"
-                    alt="Carbon illustration"
-                  />
+                  <img class="landing-page__illo" src="../../assets/tab-illo.png" alt="Carbon illustration" />
                 </div>
               </div>
             </div>
@@ -41,8 +37,8 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Rapidly build beautiful and accessible experiences. The Carbon
-                  kit contains all resources you need to get started.
+                  Rapidly build beautiful and accessible experiences. The Carbon kit
+                  contains all resources you need to get started.
                 </div>
               </div>
             </div>
@@ -51,8 +47,8 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Carbon provides styles and components in Vanilla, React,
-                  Angular, and Vue for anyone building on the web.
+                  Carbon provides styles and components in Vanilla, React, Angular,
+                  and Vue for anyone building on the web.
                 </div>
               </div>
             </div>
@@ -60,41 +56,58 @@
         </cv-tabs>
       </div>
     </div>
-    <div class="bx--row landing-page__r3">
-      <div class="bx--col-md-4 bx--col-lg-4">
-        <h3 class="landing-page__label">The Principles</h3>
-      </div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
-      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
-    </div>
+    <info-section heading="The Principles" class="landing-page__r3">
+      <info-card heading="Carbon is Open"
+        body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
+        :icon="PersonFavorite32" />
+      <info-card heading="Carbon is Modular"
+        body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
+        :icon="Application32" />
+      <info-card heading="Carbon is Consistent"
+        body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
+        :icon="Globe32" />
+    </info-section>
   </div>
 </template>
 
+<script>
+  import { InfoSection, InfoCard } from '../../components/InfoSection';
+  import { Globe32, PersonFavorite32, Application32 } from '@carbon/icons-vue';
+
+  export default {
+    name: 'LandingPage',
+    components: { InfoSection, InfoCard },
+    created() {
+      // Add icons to this
+      Object.assign(this, {
+        Globe32,
+        PersonFavorite32,
+        Application32
+      });
+    }
+  };
+</script>
+
 <style lang="scss">
-@import '../../styles/carbon-utils';
-@import './carbon-overrides';
-@import './mixins';
+  @import '../../styles/carbon-utils';
+  @import './carbon-overrides';
+  @import './mixins';
 
-.landing-page__illo {
-  max-width: 100%;
-}
-
-.landing-page__banner {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-07 * 4;
-  @include landing-page-background;
-}
-
-.landing-page__heading {
-  @include carbon--type-style('productive-heading-05');
-}
-
-.landing-page__r2 {
-  margin-top: rem(-40px);
-}
-
-.landing-page__tab-content {
+  .landing-page__illo {
+    max-width: 100%;
+  }
+  .landing-page__banner {
+    padding-top: $spacing-05;
+    padding-bottom: $spacing-07 * 4;
+    @include landing-page-background;
+  }
+  .landing-page__heading {
+    @include carbon--type-style('productive-heading-05');
+  }
+  .landing-page__r2 {
+    margin-top: rem(-40px);
+  }
+  .landing-page__tab-content {
   padding-top: $layout-05;
   padding-bottom: $layout-05;
 }
@@ -113,7 +126,6 @@
     max-width: 75%;
   }
 }
-
 .landing-page__r3 {
   padding-top: $spacing-09;
   padding-bottom: $spacing-09;
