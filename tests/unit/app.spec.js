@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { RouterLinkStub, shallowMount, mount } from '@vue/test-utils';
 import App from '@/App.vue';
 import RouterViewStub from '../stubs/router-view-stub.vue';
@@ -26,15 +25,5 @@ describe('Vue Step 1 Tests', () => {
     wrapper.get('.bx--skip-to-content');
     wrapper.get('.bx--header__name');
     wrapper.get('.bx--header__nav');
-=======
-import { shallowMount } from '@vue/test-utils';
-import App from '@/App.vue';
-
-describe('App', () => {
-  it('should load app with dummy content', () => {
-    const wrapper = shallowMount(App);
-    const app = wrapper.find('#app');
-    expect(app).not.toBeNull;
->>>>>>> master
   });
 });
