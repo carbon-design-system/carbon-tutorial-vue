@@ -16,6 +16,9 @@
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
+    "@carbon/icons-vue": "^10.39.0",
+    "@carbon/vue": "^2.40.0",
+    "carbon-components": "^10.44.0",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-plugin-unit-jest": "^4.5.12",
