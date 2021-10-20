@@ -91,7 +91,7 @@
 }
 
 .landing-page__r2 {
-  margin-top: rem(-40px);
+  margin-top: rem(-4px);
 }
 
 .landing-page__tab-content {
