@@ -2,6 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils';
 import RepoPage from '../../src/views/RepoPage/RepoPage.vue';
 import VueApollo from 'vue-apollo';
 import { createMockClient } from 'mock-apollo-client';
+
 import gql from 'graphql-tag';
 
 const localVue = createLocalVue();
