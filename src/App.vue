@@ -21,3 +21,22 @@ export default {
   }
 };
 </script>
+<script>
+import { CvButton } from '@carbon/vue';
+
+export default {
+  components: {
+    CvButton
+  }
+};
+</script>
+<script>
+import TutorialHeader from './components/TutorialHeader';
+
+export default {
+  name: 'App',
+  components: {
+    TutorialHeader
+  }
+};
+</script>
