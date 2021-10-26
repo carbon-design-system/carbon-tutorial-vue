@@ -5,18 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "ci-check": "yarn format:diff",
-    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "ci-check": "yarn format:diff",
+    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
+    "@vue/cli": "^4.5.14",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
     "mock-apollo-client": "^1.1.0",
     "vue": "^2.6.12",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
@@ -31,12 +33,11 @@
     "eslint": "^7.25.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
+    "graphql-tag": "^2.9.0",
     "sass": "^1.32.11",
     "sass-loader": "^10.1.1",
+    "vue-cli-plugin-apollo": "~0.22.2",
     "vue-template-compiler": "^2.6.12"
-  },
-  "prettier": {
-    "singleQuote": true
   },
   "eslintConfig": {
     "root": true,
@@ -51,6 +52,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "postcss": {
     "plugins": {
@@ -68,8 +72,10 @@
       "json",
       "vue"
     ],
-   "setupFiles": ["./tests/setup.js"],
-   "transform": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
