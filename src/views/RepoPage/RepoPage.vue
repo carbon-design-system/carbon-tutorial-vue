@@ -84,12 +84,13 @@ const headers = [
 export default {
   name: 'RepoPage',
   components: { RepoTable },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
+  data() {
+    return {
+      headers,
+      pageSize: 0,
+      pageStart: 0,
+      page: 0
+    };
   },
   computed: {
     rows() {
@@ -107,7 +108,6 @@ export default {
         }));
       }
     },
-
     pagedRows() {
       return this.rows.slice(this.pageStart, this.pageStart + this.pageSize);
     }
@@ -118,14 +118,6 @@ export default {
       this.pageStart = val.start;
       this.page = val.page;
     }
-  },
-  data() {
-    return {
-      headers,
-      pageSize: 0,
-      pageStart: 0,
-      page: 0
-    };
   },
   apollo: {
     organization: REPO_QUERY

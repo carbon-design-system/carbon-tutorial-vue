@@ -25,7 +25,7 @@
           </template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
-        <template v-slot:expandedContent> {{ row.description }} </template>
+        <template v-slot:expandedContent> {{ row.description }} xx </template>
       </cv-data-table-row>
     </template>
   </cv-data-table>
@@ -72,5 +72,5 @@ export default {
 .repo-page .bx--row {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
-}
-</style>
+}</style
+>ƒ
