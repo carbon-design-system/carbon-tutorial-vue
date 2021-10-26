@@ -11,7 +11,7 @@
     :columns="columns"
     :title="title"
     :helper-text="helperText"
-    :pagination="{ numberOfItems: this.totalRows, totalRows: Number }"
+    :pagination="{ numberOfItems: this.totalRows }"
     @pagination="$emit('pagination', $event)"
   >
     <template v-slot:data>
@@ -42,7 +42,8 @@ export default {
     rows: Array,
     title: String,
     helperText: String,
-    loading: Boolean
+    loading: Boolean,
+    totalRows: Number
   },
   computed: {
     columns() {
