@@ -1527,10 +1527,17 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
+<<<<<<< HEAD
 "@endemolshinegroup/cosmiconfig-typescript-loader@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-1.0.2.tgz#c1eadbb4c269f7898195ca8f7428bf5f5d1c449a"
   integrity sha512-ZHkXKq2XFFmAUdmSZrmqUSIrRM4O9gtkdpxMmV+LQl7kScUnbo6pMnXu6+FTDgZ12aW6SDoZoOJfS56WD+Eu6A==
+=======
+"@carbon/vue@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@carbon/vue/-/vue-2.12.0.tgz#7c17c4ebd48919e1f28bf9f0d17974e8a78589f7"
+  integrity sha512-UhtQZltByEWShbjs2VVi3LX+rFRE196BqEv6V93rEqwfLq2HuwcUDIkmcn//O/Qefzv3YswOO7DXMmTtM0ejKg==
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
   dependencies:
     lodash.get "^4"
     make-error "^1"
