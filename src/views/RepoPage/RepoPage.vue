@@ -11,7 +11,6 @@
           :totalRows="rows.length"
           @pagination="onPagination"
         />
-        {{ this.organization }}
       </div>
     </div>
   </div>
@@ -90,12 +89,11 @@ export default {
       headers,
       pageSize: 0,
       pageStart: 0,
-      page: 0,
-      organization: null,
-      apollo: {
-        organization: REPO_QUERY
-      }
+      page: 0
     };
+  },
+  apollo: {
+    organization: REPO_QUERY
   },
   computed: {
     pagedRows() {
