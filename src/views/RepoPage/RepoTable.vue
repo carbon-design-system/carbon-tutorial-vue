@@ -33,7 +33,6 @@
 
 <script>
 import LinkList from './LinkList';
-
 export default {
   name: 'RepoTable',
   components: { LinkList },
