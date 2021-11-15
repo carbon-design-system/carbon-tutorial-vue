@@ -1,0 +1,6 @@
+---
+applications:
+  - name: carbon-tutorial-vue-eliecer2000@gmail.com
+    memory: 64M
+    buildpacks:
+      - https://github.com/cloudfoundry/staticfile-buildpack.git
