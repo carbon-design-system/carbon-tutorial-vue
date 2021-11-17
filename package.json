@@ -11,6 +11,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/icons-vue": "^10.43.0",
+    "@carbon/vue": "^2.40.0",
+    "carbon-components": "^10.48.0",
     "core-js": "^3.11.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
@@ -39,10 +42,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
+    "extends": ["plugin:vue/essential", "@vue/prettier"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -53,32 +53,32 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json",
-      "vue"
+  "browserslist": ["> 1%", "last 2 versions"],
+  "index-file": {
+    "prefix": "index",
+    "body": [
+      "import ${TM_DIRECTORY/.*[\\/]//gm} from './${TM_DIRECTORY/.*[\\/]//gm}';",
+      "export { ",
+      "\t${TM_DIRECTORY/.*[\\/]//gm},",
+      "};",
+      "export default ${TM_DIRECTORY/.*[\\/]//gm}",
+      ""
     ],
+    "description": "Index file"
+  },
+  "jest": {
+    "moduleFileExtensions": ["js", "jsx", "json", "vue"],
     "setupFiles": ["./tests/setup.js"],
     "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
     },
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ],
+    "transformIgnorePatterns": ["/node_modules/"],
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     },
-    "snapshotSerializers": [
-      "jest-serializer-vue"
-    ],
+    "snapshotSerializers": ["jest-serializer-vue"],
     "testMatch": [
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
