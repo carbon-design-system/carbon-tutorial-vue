@@ -5,11 +5,10 @@
     title="Carbon Repositories"
     helperText="A collection of public Carbon repositories."
   />
- 
-  </cv-data-table>
-  <template slot="expandedContent">
+    <template slot="expandedContent">
     {{ row.description }}
   </template>
+  </cv-data-table>
 </template>
 <script>
 import RepoTable from "./RepoTable";
