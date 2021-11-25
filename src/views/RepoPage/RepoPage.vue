@@ -40,6 +40,7 @@ const headers = [
     header: 'Links'
   }
 ];
+
 const rows = [
   {
     id: '1',
@@ -69,6 +70,7 @@ const rows = [
     links: 'Links'
   }
 ];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
@@ -82,6 +84,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../../styles/carbon-utils';
+
 .repo-page .bx--row {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
