@@ -4,7 +4,7 @@
       Skip to content
     </cv-skip-to-content>
 
-    <cv-header-name to="/" prefix="IBM"> Carbon Tutorial </cv-header-name>
+    <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
 
     <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
@@ -29,6 +29,6 @@ import { Notification20, UserAvatar20, AppSwitcher20 } from '@carbon/icons-vue';
 
 export default {
   name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 },
+  components: { Notification20, UserAvatar20, AppSwitcher20 }
 };
 </script>

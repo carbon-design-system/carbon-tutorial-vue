@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'landing-page',
-      component: LandingPage,
+      component: LandingPage
     },
     {
       path: '/repos',
@@ -18,7 +18,7 @@ export default new Router({
       // this generates a separate chunk (repo-page.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "repo-page" */ './views/RepoPage'),
-    },
-  ],
+        import(/* webpackChunkName: "repo-page" */ './views/RepoPage')
+    }
+  ]
 });
