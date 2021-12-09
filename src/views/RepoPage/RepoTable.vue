@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/carbon-utils';
+@import 'src/styles/carbon-utils';
 
 .repo-page .bx--row {
   padding-top: $spacing-05;
