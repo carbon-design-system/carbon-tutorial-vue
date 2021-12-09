@@ -68,10 +68,15 @@
       "json",
       "vue"
     ],
+<<<<<<< HEAD
     "setupFiles": [
       "./tests/setup.js"
     ],
     "transform": {
+=======
+   "setupFiles": ["./tests/setup.js"],
+   "transform": {
+>>>>>>> 23891323332e4d95312b5ab254f1b2f110867ea3
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"

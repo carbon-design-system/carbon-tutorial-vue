@@ -7,10 +7,6 @@
   </div>
 </template>
 
-<style lang="scss">
-@import './styles/carbon';
-</style>
-
 <script>
 import TutorialHeader from './components/TutorialHeader';
 
@@ -21,3 +17,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import './styles/carbon';
+</style>
