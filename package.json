@@ -15,6 +15,7 @@
     "@carbon/vue": "^2.37.1",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
+    "graphql": "^16.2.0",
     "mock-apollo-client": "^1.1.0",
     "vue": "^2.6.12",
     "vue-apollo": "^3.0.0-beta.11",
@@ -35,7 +36,7 @@
     "graphql-tag": "^2.9.0",
     "sass": "^1.32.11",
     "sass-loader": "^10.1.1",
-    "vue-cli-plugin-apollo": "~0.22.2",
+    "vue-cli-plugin-apollo": "^0.22.2",
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
