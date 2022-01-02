@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "ci-check": "yarn format:diff",
