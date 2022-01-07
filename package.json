@@ -92,8 +92,5 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  },
-  "babel": {
-    "plugins": ["transform-es2015-modules-commonjs"]
   }
 }
