@@ -7,8 +7,8 @@ describe('Vue Step 1 Tests', () => {
     const wrapper = shallowMount(App, {
       stubs: {
         RouterLink: RouterLinkStub,
-        'router-view': RouterViewStub
-      }
+        'router-view': RouterViewStub,
+      },
     });
   });
 
@@ -16,8 +16,8 @@ describe('Vue Step 1 Tests', () => {
     const wrapper = mount(App, {
       stubs: {
         RouterLink: RouterLinkStub,
-        'router-view': RouterViewStub
-      }
+        'router-view': RouterViewStub,
+      },
     });
 
     wrapper.get('.bx--header');
