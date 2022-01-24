@@ -33,6 +33,7 @@
 
 <script>
 import LinkList from './LinkList';
+
 export default {
   name: 'RepoTable',
   components: { LinkList },
@@ -41,6 +42,7 @@ export default {
     rows: Array,
     title: String,
     helperText: String,
+    loading: Boolean,
     totalRows: Number
   },
   computed: {
@@ -57,7 +59,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: 'Row description'
+        description: row.description
       }));
     }
   }

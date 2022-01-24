@@ -84,13 +84,6 @@ const headers = [
 export default {
   name: 'RepoPage',
   components: { RepoTable },
-  props: {
-    headers: Array,
-    rows: Array,
-    title: String,
-    helperText: String,
-    loading: Boolean
-  },
   data() {
     return {
       headers,
