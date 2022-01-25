@@ -122,5 +122,12 @@ export default {
   apollo: {
     organization: REPO_QUERY,
   },
+  watch: {
+    rows() {
+      if (this.organization) {
+        console.dir(this.organization.repositories.nodes);
+      }
+    },
+  },
 };
 </script>
