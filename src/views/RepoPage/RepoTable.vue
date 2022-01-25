@@ -20,26 +20,26 @@ export default {
     headers: Array,
     rows: Array,
     title: String,
-    helperText: String,
+    helperText: String
   },
   computed: {
     columns() {
-      return this.headers.map((header) => header.header);
+      return this.headers.map(header => header.header);
     },
     data() {
-      return this.rows.map((row) => ({
+      return this.rows.map(row => ({
         data: [
           row.name,
           row.createdAt,
           row.updatedAt,
           row.issueCount,
           row.stars,
-          row.links,
+          row.links
         ],
-        description: 'Row description',
+        description: 'Row description'
       }));
-    },
-  },
+    }
+  }
 };
 </script>
 
