@@ -11,14 +11,18 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/grid": "^10.40.0",
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
+    "autoprefixer": "^9.0.0",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
+    "postcss": "^8.4.5",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.12",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-plugin-unit-jest": "^4.5.12",
@@ -67,8 +71,10 @@
       "json",
       "vue"
     ],
-   "setupFiles": ["./tests/setup.js"],
-   "transform": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
