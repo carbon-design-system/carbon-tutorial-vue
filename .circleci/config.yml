@@ -10,7 +10,6 @@ jobs:
       - run:
           name: Run tests
           command: yarn test:unit
-
 workflows:
   version: 2
   main:
