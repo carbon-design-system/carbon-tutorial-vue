@@ -84,13 +84,6 @@ const headers = [
 export default {
   name: 'RepoPage',
   components: { RepoTable },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    },
-  },
   data() {
     return {
       headers,
