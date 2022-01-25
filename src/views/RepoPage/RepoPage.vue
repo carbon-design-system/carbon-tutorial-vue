@@ -92,6 +92,9 @@ export default {
       page: 0,
     };
   },
+  apollo: {
+    organization: REPO_QUERY,
+  },
   computed: {
     rows() {
       if (!this.organization) {
@@ -118,9 +121,6 @@ export default {
       this.pageStart = val.start;
       this.page = val.page;
     },
-  },
-  apollo: {
-    organization: REPO_QUERY,
   },
   watch: {
     rows() {
