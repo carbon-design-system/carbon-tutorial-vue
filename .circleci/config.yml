@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  step-two:
+  step-three:
     docker:
       - image: circleci/node:14
     working_directory: ~/repo
@@ -10,9 +10,8 @@ jobs:
       - run:
           name: Run tests
           command: yarn test:unit
-
 workflows:
   version: 2
   main:
     jobs:
-      - step-two
+      - step-three
