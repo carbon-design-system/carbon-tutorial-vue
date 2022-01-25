@@ -10,10 +10,9 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
-
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
-        <cv-tabs selected="0" aria-label="Tabs navigation">
+        <cv-tabs selected="0" aria-label="Tab navigation">
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -52,7 +51,7 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Carbon provides styles and components in Vanilla, Vue,
+                  Carbon provides styles and components in Vanilla, React,
                   Angular, and Vue for anyone building on the web.
                 </div>
               </div>
@@ -61,7 +60,6 @@
         </cv-tabs>
       </div>
     </div>
-
     <div class="bx--row landing-page__r3">
       <div class="bx--col-md-4 bx--col-lg-4">
         <h3 class="landing-page__label">The Principles</h3>
@@ -74,28 +72,23 @@
 </template>
 
 <style lang="scss">
-@import '../../styles/carbon-utils';
 @import './carbon-overrides';
+@import '../../styles/carbon-utils';
 @import './mixins';
-
 .landing-page__illo {
   max-width: 100%;
 }
-
 .landing-page__banner {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
   @include landing-page-background;
 }
-
 .landing-page__heading {
   @include carbon--type-style('productive-heading-05');
 }
-
 .landing-page__r2 {
   margin-top: rem(-40px);
 }
-
 .landing-page__tab-content {
   padding-top: $layout-05;
   padding-bottom: $layout-05;
@@ -115,7 +108,6 @@
     max-width: 75%;
   }
 }
-
 .landing-page__r3 {
   padding-top: $spacing-09;
   padding-bottom: $spacing-09;

@@ -2,7 +2,7 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        <RepoTable
+        <repo-table
           :headers="headers"
           :rows="rows"
           title="Carbon Repositories"
@@ -19,28 +19,28 @@ import RepoTable from './RepoTable';
 const headers = [
   {
     key: 'name',
-    header: 'Name'
+    header: 'Name',
   },
   {
     key: 'createdAt',
-    header: 'Created'
+    header: 'Created',
   },
   {
     key: 'updatedAt',
-    header: 'Updated'
+    header: 'Updated',
   },
   {
     key: 'issueCount',
-    header: 'Open Issues'
+    header: 'Open Issues',
   },
   {
     key: 'stars',
-    header: 'Stars'
+    header: 'Stars',
   },
   {
     key: 'links',
-    header: 'Links'
-  }
+    header: 'Links',
+  },
 ];
 
 const rows = [
@@ -51,7 +51,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
+    links: 'Links',
   },
   {
     id: '2',
@@ -60,7 +60,7 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
+    links: 'Links',
   },
   {
     id: '3',
@@ -69,8 +69,8 @@ const rows = [
     updatedAt: 'Date',
     issueCount: '123',
     stars: '456',
-    links: 'Links'
-  }
+    links: 'Links',
+  },
 ];
 
 export default {
@@ -79,9 +79,9 @@ export default {
   data() {
     return {
       headers,
-      rows
+      rows,
     };
-  }
+  },
 };
 </script>
 
