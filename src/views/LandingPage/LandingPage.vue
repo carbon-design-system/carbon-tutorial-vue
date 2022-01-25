@@ -72,8 +72,6 @@
 </template>
 
 <style lang="scss">
-@import './carbon-overrides';
-@import '../../styles/carbon-utils';
 @import '../../styles/carbon-utils';
 @import './carbon-overrides';
 @import './mixins';
@@ -85,19 +83,17 @@
 .landing-page__banner {
   padding-top: $spacing-05;
   padding-bottom: $spacing-07 * 4;
-}
-
-.landing-page__banner {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-07 * 4;
   @include landing-page-background;
 }
+
 .landing-page__heading {
   @include carbon--type-style('productive-heading-05');
 }
+
 .landing-page__r2 {
   margin-top: rem(-40px);
 }
+
 .landing-page__tab-content {
   padding-top: $layout-05;
   padding-bottom: $layout-05;

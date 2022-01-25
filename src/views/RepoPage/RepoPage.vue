@@ -16,17 +16,6 @@
 <script>
 import RepoTable from './RepoTable';
 
-export default {
-  name: 'RepoPage',
-  components: { RepoTable },
-  data() {
-    return {
-      headers,
-      rows,
-    };
-  },
-};
-
 const headers = [
   {
     key: 'name',
@@ -83,13 +72,15 @@ const rows = [
     links: 'Links',
   },
 ];
+
+export default {
+  name: 'RepoPage',
+  components: { RepoTable },
+  data() {
+    return {
+      headers,
+      rows,
+    };
+  },
+};
 </script>
-
-<style lang="scss">
-@import '../../styles/carbon-utils';
-
-.repo-page .bx--row {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
-}
-</style>
