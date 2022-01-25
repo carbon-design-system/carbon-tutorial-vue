@@ -13,10 +13,14 @@
   "dependencies": {
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
+    "apollo-boost": "^0.4.9",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
+    "graphql": "^15.8.0",
     "mock-apollo-client": "^1.1.0",
     "vue": "^2.6.12",
+    "vue-apollo": "^3.1.0",
+    "vue-cli-plugin-apollo": "^0.22.2",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
@@ -68,8 +72,10 @@
       "json",
       "vue"
     ],
-   "setupFiles": ["./tests/setup.js"],
-   "transform": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
