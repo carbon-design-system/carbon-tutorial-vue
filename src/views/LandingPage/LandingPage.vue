@@ -70,11 +70,11 @@
     </div>
   </div>
 </template>
-<style lang="scss">
-@import '../../styles/carbon-utils';
-@import './carbon-overrides';
-@import './mixins';
 
+<style lang="scss">
+@import './carbon-overrides';
+@import '../../styles/carbon-utils';
+@import './mixins';
 .landing-page__illo {
   max-width: 100%;
 }

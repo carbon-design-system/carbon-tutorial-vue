@@ -5,8 +5,8 @@
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
-          >{{ cell }}
-        </cv-data-table-cell>
+          >{{ cell }}</cv-data-table-cell
+        >
         <template slot="expandedContent">
           {{ row.description }}
         </template>
@@ -14,6 +14,7 @@
     </template>
   </cv-data-table>
 </template>
+
 <script>
 export default {
   name: 'RepoTable',

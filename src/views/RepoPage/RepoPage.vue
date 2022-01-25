@@ -12,8 +12,10 @@
     </div>
   </div>
 </template>
+
 <script>
 import RepoTable from './RepoTable';
+
 const headers = [
   {
     key: 'name',
@@ -70,6 +72,7 @@ const rows = [
     links: 'Links',
   },
 ];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
@@ -81,6 +84,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 @import '../../styles/carbon-utils';
 
