@@ -1,2 +1,2 @@
-import LandingPage from './LandingPage';
+import LandingPage from './LandingPage.vue';
 export default LandingPage;
