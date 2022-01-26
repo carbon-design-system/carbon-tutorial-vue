@@ -18,7 +18,8 @@
     "mock-apollo-client": "^1.1.0",
     "vue": "^2.6.12",
     "vue-apollo": "^3.0.0-beta.11",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.12",
