@@ -4,12 +4,12 @@
       <div class="bx--col-lg-16">
         <repo-table
           :headers="headers"
-          :rows="pagedRows"
-          :totalRows="rows.length"
-          @pagination="onPagination"
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
           :loading="$apollo.loading"
+          :rows="pagedRows"
+          :totalRows="rows.length"
+          @pagination="onPagination"
         />
       </div>
     </div>
@@ -92,9 +92,6 @@ export default {
       page: 0
     };
   },
-  apollo: {
-    organization: REPO_QUERY
-  },
   computed: {
     rows() {
       if (!this.organization) {
@@ -122,12 +119,17 @@ export default {
       this.page = val.page;
     }
   },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
+  apollo: {
+    organization: REPO_QUERY
   }
 };
 </script>
+
+<style lang="scss">
+@import '../../styles/carbon-utils';
+
+.repo-page .bx--row {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+</style>

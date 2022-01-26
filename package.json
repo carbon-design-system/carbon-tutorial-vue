@@ -11,15 +11,13 @@
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
+    "@carbon/grid": "^10.40.0",
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
-    "apollo-boost": "^0.4.9",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
-    "graphql": "^16.2.0",
-    "mock-apollo-client": "^1.1.0",
     "vue": "^2.6.12",
-    "vue-apollo": "^3.1.0",
+    "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {

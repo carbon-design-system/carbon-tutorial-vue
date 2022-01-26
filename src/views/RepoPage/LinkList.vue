@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .link-list {
   display: flex;
 }
