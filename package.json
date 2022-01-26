@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "ci-check": "yarn format:diff",
-    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
+    "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\"",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml"
   },
   "dependencies": {
     "@carbon/icons-vue": "^10.30.0",
@@ -21,6 +22,7 @@
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
+    "@vue/babel-preset-app": "^4.5.15",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-plugin-unit-jest": "^4.5.12",
