@@ -8,6 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "ci-check": "yarn format:diff",
+    "deploy": "rm -rf ./dist && yarn build && cf push -f manifest.yml",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
