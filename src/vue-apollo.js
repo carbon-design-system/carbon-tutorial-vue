@@ -9,12 +9,11 @@ import {
 Vue.use(VueApollo);
 
 // Name of the localStorage item
-// Use our access token
-const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
+const AUTH_TOKEN = 'apollo-token';
 
-// Target github api
+// Http endpoint
 const httpEndpoint =
-  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
+  process.env.VUE_APP_GRAPHQL_HTTP || 'http://localhost:4000/graphql';
 
 // Config
 const defaultOptions = {
@@ -22,7 +21,7 @@ const defaultOptions = {
   httpEndpoint,
   // You can use `wss` for secure connection (recommended in production)
   // Use `null` to disable subscriptions
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS,
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'ws://localhost:4000/graphql',
   // LocalStorage token
   tokenName: AUTH_TOKEN,
   // Enable Automatic Query persisting with Apollo Engine
@@ -31,7 +30,7 @@ const defaultOptions = {
   // You need to pass a `wsEndpoint` for this to work
   websocketsOnly: false,
   // Is being rendered on the server?
-  ssr: false,
+  ssr: false
 
   // Override default apollo link
   // note: don't override httpLink here, specify httpLink options in the
@@ -42,7 +41,7 @@ const defaultOptions = {
   // cache: myCache
 
   // Override the way the Authorization header is set
-  getAuth: tokenName => `Bearer ${tokenName}`
+  // getAuth: (tokenName) => ...
 
   // Additional ApolloClient options
   // apollo: { ... }
