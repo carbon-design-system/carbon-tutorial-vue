@@ -15,7 +15,7 @@
     @pagination="$emit('pagination', $event)"
   >
     <template v-slot:data>
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+      <cv-data-table-row v-for="row in data" :key="`${row.data[3]}`">
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
