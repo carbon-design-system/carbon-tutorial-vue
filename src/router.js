@@ -4,7 +4,7 @@ import LandingPage from './views/LandingPage';
 
 Vue.use(Router);
 
-const expRouter = new Router({
+export default new Router({
   routes: [
     {
       path: '/',
@@ -21,6 +21,4 @@ const expRouter = new Router({
         import(/* webpackChunkName: "repo-page" */ './views/RepoPage'),
     },
   ],
-});
-
-export default expRouter;
+});;
