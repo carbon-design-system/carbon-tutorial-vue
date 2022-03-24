@@ -13,12 +13,6 @@
 
 <script>
 export default {
-  name: 'InfoCard',
-  props: {
-    heading: String,
-    body: String,
-    icon: Object
-  },
   computed: {
     // Take in a phrase and separate the third word in an array
     splitHeading() {
@@ -26,6 +20,12 @@ export default {
       const finalWord = splitHeading.pop();
       return [splitHeading.join(' '), finalWord];
     }
+  },
+  name: 'InfoCard',
+  props: {
+    heading: String,
+    body: String,
+    icon: Object
   }
 };
 </script>
@@ -37,6 +37,21 @@ export default {
   margin-top: $spacing-09;
   display: flex;
   flex-direction: column;
+
+  .info-card__heading {
+    @include carbon--type-style('productive-heading-03');
+  }
+
+  .info-card__body {
+    margin-top: $spacing-06;
+    flex-grow: 1; // fill space so icons are bottom aligned
+    @include type-style('body-long-01');
+
+    // prevent large line lengths between small and medium viewports
+    @include carbon--breakpoint-between(321px, md) {
+      max-width: 75%;
+    }
+  }
 
   svg {
     margin-top: $spacing-09;
@@ -67,6 +82,7 @@ export default {
     }
   }
 }
+<<<<<<< HEAD
 
 .info-card__heading {
   @include carbon--type-style('productive-heading-03');
@@ -82,4 +98,6 @@ export default {
     max-width: 75%;
   }
 }
+=======
+>>>>>>> vue-step-4
 </style>
