@@ -12,10 +12,12 @@
 </style>
 
 <script>
-import { Notification20, UserAvatar20, AppSwitcher20 } from '@carbon/icons-vue';
+import TutorialHeader from "./components/TutorialHeader";
 
 export default {
-  name: 'TutorialHeader',
-  components: { Notification20, UserAvatar20, AppSwitcher20 }
+  name: "App",
+  components: {
+    TutorialHeader
+  }
 };
 </script>
