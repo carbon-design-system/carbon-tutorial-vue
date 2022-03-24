@@ -41,8 +41,8 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Rapidly build beautiful and accessible experiences. The Carbon kit
-                  contains all resources you need to get started.
+                  Rapidly build beautiful and accessible experiences. The Carbon
+                  kit contains all resources you need to get started.
                 </div>
               </div>
             </div>
@@ -51,8 +51,8 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
-                  Carbon provides styles and components in Vanilla, React, Angular,
-                  and Vue for anyone building on the web.
+                  Carbon provides styles and components in Vanilla, React,
+                  Angular, and Vue for anyone building on the web.
                 </div>
               </div>
             </div>
@@ -113,5 +113,4 @@
 .landing-page__label {
   @include carbon--type-style('heading-01');
 }
-
 </style>
