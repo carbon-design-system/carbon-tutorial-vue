@@ -11,6 +11,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
     "apollo-boost": "^0.4.9",
