@@ -6,7 +6,6 @@ export default {
   name: 'LandingPage',
   components: { InfoSection, InfoCard },
   created() {
-    // Add icons to this
     Object.assign(this, {
       Globe32,
       PersonFavorite32,
