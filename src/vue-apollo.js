@@ -9,7 +9,8 @@ import {
 Vue.use(VueApollo);
 
 // Name of the localStorage item
-const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;;
+// Use our access token
+const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 // Target github api
 const httpEndpoint =
@@ -41,7 +42,7 @@ const defaultOptions = {
   // cache: myCache
 
   // Override the way the Authorization header is set
-  getAuth: (tokenName) => `Bearer ${tokenName}`
+  getAuth: tokenName => `Bearer ${tokenName}`
 
   // Additional ApolloClient options
   // apollo: { ... }
@@ -106,4 +107,4 @@ export async function onLogout(apolloClient) {
     // eslint-disable-next-line no-console
     console.log('%cError on cache reset (logout)', 'color: orange;', e.message);
   }
-}
+} 
