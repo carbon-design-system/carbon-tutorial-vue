@@ -2,7 +2,7 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        <repo-table
+        <RepoTable
           :headers="headers"
           :rows="pagedRows"
           :totalRows="rows.length"
@@ -84,6 +84,9 @@ const headers = [
 export default {
   name: 'RepoPage',
   components: { RepoTable },
+  apollo: {
+    organization: REPO_QUERY
+  },
   data() {
     return {
       headers,

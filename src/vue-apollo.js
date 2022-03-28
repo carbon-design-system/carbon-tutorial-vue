@@ -9,11 +9,20 @@ import {
 Vue.use(VueApollo);
 
 // Name of the localStorage item
+<<<<<<< HEAD
 const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 // Http endpoint
 const httpEndpoint =
   process.env.VUE_APP_GRAPHQL_HTTP;
+=======
+// Use our access token
+const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
+
+// Target github api
+const httpEndpoint =
+  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
+>>>>>>> fdaaf2e0b1c101b7db7f5d34738ee26a741ddbab
 
 // Config
 const defaultOptions = {
@@ -41,7 +50,11 @@ const defaultOptions = {
   // cache: myCache
 
   // Override the way the Authorization header is set
+<<<<<<< HEAD
   getAuth: (tokenName) => `Bearer ${tokenName}`,
+=======
+  getAuth: tokenName => `Bearer ${tokenName}`
+>>>>>>> fdaaf2e0b1c101b7db7f5d34738ee26a741ddbab
 
   // Additional ApolloClient options
   // apollo: { ... }
@@ -106,4 +119,8 @@ export async function onLogout(apolloClient) {
     // eslint-disable-next-line no-console
     console.log('%cError on cache reset (logout)', 'color: orange;', e.message);
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> fdaaf2e0b1c101b7db7f5d34738ee26a741ddbab
