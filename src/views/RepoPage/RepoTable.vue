@@ -2,16 +2,16 @@
   <cv-data-table-skeleton
     v-if="loading"
     :columns="columns"
-    :title="title"
     :helper-text="helperText"
     :rows="10"
+    :title="title"
   />
   <cv-data-table
     v-else
     :columns="columns"
-    :title="title"
     :helper-text="helperText"
     :pagination="{ numberOfItems: this.totalRows }"
+    :title="title"
     @pagination="$emit('pagination', $event)"
   >
     <template v-slot:data>
@@ -23,9 +23,9 @@
           <template v-if="!cell.url">
             {{ cell }}
           </template>
-          <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
+          <link-list v-else :homepage-url="cell.homepageUrl" :url="cell.url" />
         </cv-data-table-cell>
-        <template v-slot:expandedContent> {{ row.description }} xx </template>
+        <template v-slot:expandedContent> {{ row.description }} xx</template>
       </cv-data-table-row>
     </template>
   </cv-data-table>

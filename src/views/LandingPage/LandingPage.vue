@@ -2,7 +2,7 @@
   <div class="bx--grid bx--grid--full-width landing-page">
     <div class="bx--row landing-page__banner">
       <div class="bx--col-lg-16">
-        <cv-breadcrumb noTrailingSlash aria-label="Page navigation">
+        <cv-breadcrumb aria-label="Page navigation" noTrailingSlash>
           <cv-breadcrumb-item>
             <cv-link href="/">Getting started</cv-link>
           </cv-breadcrumb-item>
@@ -12,7 +12,7 @@
     </div>
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
-        <cv-tabs selected="0" aria-label="Tab navigation">
+        <cv-tabs aria-label="Tab navigation" selected="0">
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -29,9 +29,9 @@
                 </div>
                 <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <img
+                    alt="Carbon illustration"
                     class="landing-page__illo"
                     src="../../assets/tab-illo.png"
-                    alt="Carbon illustration"
                   />
                 </div>
               </div>
@@ -60,29 +60,29 @@
         </cv-tabs>
       </div>
     </div>
-    <info-section heading="The Principles" class="landing-page__r3">
+    <info-section class="landing-page__r3" heading="The Principles">
       <info-card
-        heading="Carbon is Open"
-        body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
         :icon="PersonFavorite32"
+        body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
+        heading="Carbon is Open"
       />
       <info-card
-        heading="Carbon is Modular"
-        body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
         :icon="Application32"
+        body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
+        heading="Carbon is Modular"
       />
       <info-card
-        heading="Carbon is Consistent"
-        body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
         :icon="Globe32"
+        body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
+        heading="Carbon is Consistent"
       />
     </info-section>
   </div>
 </template>
 
 <script>
-import { InfoSection, InfoCard } from '../../components/InfoSection';
-import { Globe32, PersonFavorite32, Application32 } from '@carbon/icons-vue';
+import { InfoCard, InfoSection } from '../../components/InfoSection';
+import { Application32, Globe32, PersonFavorite32 } from '@carbon/icons-vue';
 
 export default {
   name: 'LandingPage',
