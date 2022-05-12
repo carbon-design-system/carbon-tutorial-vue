@@ -1,10 +1,10 @@
 <template>
   <cv-header aria-label="Carbon tutorial">
     <cv-skip-to-content href="#main-content"
-      >Skip to content</cv-skip-to-content
-    >
+      >Skip to content
+    </cv-skip-to-content>
 
-    <cv-header-name to="/" prefix="IBM">Carbon Tutorial</cv-header-name>
+    <cv-header-name prefix="IBM" to="/">Carbon Tutorial</cv-header-name>
 
     <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { Notification20, UserAvatar20, AppSwitcher20 } from '@carbon/icons-vue';
+import { AppSwitcher20, Notification20, UserAvatar20 } from '@carbon/icons-vue';
 
 export default {
   name: 'TutorialHeader',

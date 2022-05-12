@@ -2,7 +2,7 @@
   <div class="bx--grid bx--grid--full-width landing-page">
     <div class="bx--row landing-page__banner">
       <div class="bx--col-lg-16">
-        <cv-breadcrumb noTrailingSlash aria-label="Page navigation">
+        <cv-breadcrumb aria-label="Page navigation" noTrailingSlash>
           <cv-breadcrumb-item>
             <cv-link href="/">Getting started</cv-link>
           </cv-breadcrumb-item>
@@ -12,7 +12,7 @@
     </div>
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
-        <cv-tabs selected="0" aria-label="Tab navigation">
+        <cv-tabs aria-label="Tab navigation" selected="0">
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -29,9 +29,9 @@
                 </div>
                 <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <img
+                    alt="Carbon illustration"
                     class="landing-page__illo"
                     src="../../assets/tab-illo.png"
-                    alt="Carbon illustration"
                   />
                 </div>
               </div>
