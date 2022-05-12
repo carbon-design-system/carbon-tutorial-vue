@@ -4,12 +4,12 @@
       <div class="bx--col-lg-16">
         <repo-table
           :headers="headers"
+          :loading="$apollo.loading"
           :rows="pagedRows"
           :totalRows="rows.length"
-          @pagination="onPagination"
-          title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
-          :loading="$apollo.loading"
+          title="Carbon Repositories"
+          @pagination="onPagination"
         />
       </div>
     </div>
