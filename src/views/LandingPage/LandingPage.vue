@@ -10,9 +10,16 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
         <cv-tabs selected="0" aria-label="Tab navigation">
+=======
+
+    <div class="bx--row landing-page__r2">
+      <div class="bx--col bx--no-gutter">
+        <cv-tabs selected="0" aria-label="Tabs navigation">
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -51,7 +58,11 @@
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
                 <div class="bx--col-lg-16">
+<<<<<<< HEAD
                   Carbon provides styles and components in Vanilla, React,
+=======
+                  Carbon provides styles and components in Vanilla, Vue,
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
                   Angular, and Vue for anyone building on the web.
                 </div>
               </div>
@@ -60,6 +71,10 @@
         </cv-tabs>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
     <div class="bx--row landing-page__r3">
       <div class="bx--col-md-4 bx--col-lg-4">
         <h3 class="landing-page__label">The Principles</h3>

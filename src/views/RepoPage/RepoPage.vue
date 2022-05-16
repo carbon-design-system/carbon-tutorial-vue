@@ -2,6 +2,7 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
+<<<<<<< HEAD
         <repo-table
           :headers="headers"
           :rows="pagedRows"
@@ -10,6 +11,13 @@
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
           :loading="$apollo.loading"
+=======
+        <RepoTable
+          :headers="headers"
+          :rows="rows"
+          title="Carbon Repositories"
+          helperText="A collection of public Carbon repositories."
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
         />
       </div>
     </div>
@@ -17,6 +25,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import gql from 'graphql-tag';
 import RepoTable from './RepoTable';
 
@@ -54,6 +63,10 @@ const REPO_QUERY = gql`
   }
 `;
 
+=======
+import RepoTable from './RepoTable';
+
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
 const headers = [
   {
     key: 'name',
@@ -81,12 +94,46 @@ const headers = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+const rows = [
+  {
+    id: '1',
+    name: 'Repo 1',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links'
+  },
+  {
+    id: '2',
+    name: 'Repo 2',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links'
+  },
+  {
+    id: '3',
+    name: 'Repo 3',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links'
+  }
+];
+
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
 export default {
   name: 'RepoPage',
   components: { RepoTable },
   data() {
     return {
       headers,
+<<<<<<< HEAD
       pageSize: 0,
       pageStart: 0,
       page: 0
@@ -132,3 +179,19 @@ export default {
   }
 };
 </script>
+=======
+      rows
+    };
+  }
+};
+</script>
+
+<style lang="scss">
+@import '../../styles/carbon-utils';
+
+.repo-page .bx--row {
+  padding-top: $spacing-05;
+  padding-bottom: $spacing-05;
+}
+</style>
+>>>>>>> 924f01afd7533cd0136b97ad7175d5c72e258701
