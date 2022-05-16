@@ -155,7 +155,6 @@ export default {
   watch: {
     rows() {
       if (this.organization) {
-        console.log('this.organization');
         console.dir(this.organization.repositories.nodes);
       }
     }
