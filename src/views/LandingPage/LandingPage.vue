@@ -10,9 +10,10 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
+
     <div class="bx--row landing-page__r2">
       <div class="bx--col bx--no-gutter">
-        <cv-tabs selected="0" aria-label="Tab navigation">
+        <cv-tabs selected="0" aria-label="Tabs navigation">
           <cv-tab label="About">
             <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
               <div class="bx--row landing-page__tab-content">
@@ -60,6 +61,7 @@
         </cv-tabs>
       </div>
     </div>
+
     <div class="bx--row landing-page__r3">
       <div class="bx--col-md-4 bx--col-lg-4">
         <h3 class="landing-page__label">The Principles</h3>
