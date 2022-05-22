@@ -44,7 +44,8 @@ export default {
     rows: Array,
     title: String,
     helperText: String,
-    loading: Boolean
+    loading: Boolean,
+    totalRows: Number
   },
   computed: {
     columns() {
@@ -60,7 +61,8 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description
+        description: row.description,
+        id: row.id
       }));
     }
   }
