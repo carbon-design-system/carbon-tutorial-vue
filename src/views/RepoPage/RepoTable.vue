@@ -15,7 +15,7 @@
     @pagination="$emit('pagination', $event)"
   >
     <template v-slot:data>
-      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+      <cv-data-table-row v-for="row in data" :key="row.key">
         <cv-data-table-cell
           v-for="(cell, cellIndex) in row.data"
           :key="`${cellIndex}`"
@@ -25,7 +25,7 @@
           </template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
-        <template v-slot:expandedContent> {{ row.description }} xx </template>
+        <template v-slot:expandedContent> {{ row.description }} </template>
       </cv-data-table-row>
     </template>
   </cv-data-table>
@@ -59,7 +59,8 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description
+        description: row.description,
+        key: row.id
       }));
     }
   }
