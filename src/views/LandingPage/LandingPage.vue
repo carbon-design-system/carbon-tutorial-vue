@@ -83,6 +83,7 @@
 <script>
 import { Globe32, PersonFavorite32, Application32 } from '@carbon/icons-vue';
 import { InfoSection, InfoCard } from '../../components/InfoSection';
+
 export default {
   name: 'LandingPage',
   components: { InfoSection, InfoCard },
