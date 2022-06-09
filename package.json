@@ -13,7 +13,10 @@
   "dependencies": {
     "core-js": "^3.11.0",
     "vue": "^2.6.12",
-    "vue-router": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "@carbon/icons-vue": "^10.49.1",
+    "@carbon/vue": "^2.44.0",
+    "carbon-components": "^10.56.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.12",
