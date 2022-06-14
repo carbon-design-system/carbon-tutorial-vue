@@ -12,7 +12,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'LinkList',
   props: {
@@ -20,12 +19,10 @@ export default {
     homepageUrl: String,
   },
 };
-
 </script>
 
-<style lang="scss">
-.link-list {
-  display: flex;
-}
-
+<style lang="scss" scoped>
+  .link-list {
+    display: flex;
+  }
 </style>
