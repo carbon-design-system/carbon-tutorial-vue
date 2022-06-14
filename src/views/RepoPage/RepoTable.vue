@@ -1,40 +1,27 @@
 <template>
-  <div v-if="loading">Loading...</div>
-    <cv-data-table
-    v-else
-    :columns="columns"
-    :title="title"
-    :helper-text="helperText"
-    :pagination="{ numberOfItems: this.totalRows }"
-    @pagination="$emit('pagination', $event)"
->
-  <cv-data-table-skeleton
-    v-if="loading"
-    :columns="columns"
-    :title="title"
-    :helper-text="helperText"
-    :rows="10"
-  />
-
+  <cv-data-table :columns="columns" :title="title" :helper-text="helperText">
+    <template v-slot:data>
+      <cv-data-table-row v-for="(row, rowIndex) in data" :key="`${rowIndex}`">
+        <cv-data-table-cell
+          v-for="(cell, cellIndex) in row.data"
+          :key="`${cellIndex}`"
+          >{{ cell }}</cv-data-table-cell
+        >
+        <template v-slot:expandedContent> {{ row.description }} xx </template>
+      </cv-data-table-row>
+    </template>
   </cv-data-table>
-
 </template>
 
 <script>
-import LinkList from './LinkList';
-
 export default {
   name: 'RepoTable',
-  components: { LinkList },
   props: {
     headers: Array,
     rows: Array,
     title: String,
-    helperText: String,
-    loading: Boolean,
-    totalRows: Number,
+    helperText: String
   },
-
   computed: {
     columns() {
       return this.headers.map(header => header.header);
@@ -49,7 +36,7 @@ export default {
           row.stars,
           row.links
         ],
-        description: row.description,
+        description: 'Row description'
       }));
     }
   }
