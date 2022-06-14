@@ -2,7 +2,7 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        <!-- {{ this.organization }} -->
+        {{ this.organization }}
         <repo-table :headers="headers" title="Carbon Repositories"
           helperText="A collection of public Carbon repositories." :loading="$apollo.loading" :rows="pagedRows"
           :totalRows="rows.length" @pagination="onPagination" />
