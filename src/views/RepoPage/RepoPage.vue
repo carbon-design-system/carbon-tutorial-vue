@@ -1,9 +1,9 @@
 <template>
-  <div class="home"></div>
+  <div>REPO PAGE</div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+  name: 'RepoPage'
 };
 </script>
