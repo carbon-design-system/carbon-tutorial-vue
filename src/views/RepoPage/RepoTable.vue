@@ -25,7 +25,7 @@
           </template>
           <link-list v-else :url="cell.url" :homepage-url="cell.homepageUrl" />
         </cv-data-table-cell>
-        <template v-slot:expandedContent> {{ row.description }} xx </template>
+        <template v-slot:expandedContent> {{ row.description }} </template>
       </cv-data-table-row>
     </template>
   </cv-data-table>
