@@ -11,10 +11,13 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/grid": "^11.4.0",
     "@carbon/icons-vue": "^10.30.0",
     "@carbon/vue": "^2.37.1",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
+    "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
   },
@@ -67,8 +70,10 @@
       "json",
       "vue"
     ],
-   "setupFiles": ["./tests/setup.js"],
-   "transform": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
