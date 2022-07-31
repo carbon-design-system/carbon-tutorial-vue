@@ -2,17 +2,23 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        <repo-table :headers="headers" :rows="pagedRows" :totalRows="rows.length" @pagination="onPagination"
-          title="Carbon Repositories" helperText="A collection of public Carbon repositories."
-          :loading="$apollo.loading" />
+        <repo-table
+          :headers="headers"
+          :rows="pagedRows"
+          :totalRows="rows.length"
+          @pagination="onPagination"
+          title="Carbon Repositories"
+          helperText="A collection of public Carbon repositories."
+          :loading="$apollo.loading"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import gql from 'graphql-tag';
 import RepoTable from './RepoTable';
+import gql from 'graphql-tag';
 
 const REPO_QUERY = gql`
   query REPO_QUERY {
@@ -48,7 +54,6 @@ const REPO_QUERY = gql`
   }
 `;
 
-
 const headers = [
   {
     key: 'name',
@@ -73,36 +78,6 @@ const headers = [
   {
     key: 'links',
     header: 'Links'
-  }
-];
-
-const rows = [
-  {
-    id: '1',
-    name: 'Repo 1',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
-  },
-  {
-    id: '2',
-    name: 'Repo 2',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
-  },
-  {
-    id: '3',
-    name: 'Repo 3',
-    createdAt: 'Date',
-    updatedAt: 'Date',
-    issueCount: '123',
-    stars: '456',
-    links: 'Links'
   }
 ];
 
@@ -146,13 +121,6 @@ export default {
   },
   apollo: {
     organization: REPO_QUERY
-  },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
-    }
-  },
+  }
 };
 </script>
