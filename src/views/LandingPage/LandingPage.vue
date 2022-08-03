@@ -100,7 +100,7 @@
 
 .landing-page__subheading {
   @include type-style('productive-heading-03');
-  @include font-weight('semibold');
+  @include carbon__font-weight('semibold');
 }
 
 .landing-page__p {
@@ -108,7 +108,7 @@
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
 
-  @include breakpoint-between((320px + 1), md) {
+  @include carbon__breakpoint-between((320px + 1), md) {
     max-width: 75%;
   }
 }
