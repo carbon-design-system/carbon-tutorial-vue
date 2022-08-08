@@ -891,18 +891,25 @@
   "resolved" "https://registry.npmjs.org/@carbon/icon-helpers/-/icon-helpers-10.31.0.tgz"
   "version" "10.31.0"
 
+<<<<<<< HEAD
 "@carbon/icons-vue@10.49.1":
+=======
+"@carbon/icons-vue@^10.49.1", "@carbon/icons-vue@10.49.1":
+>>>>>>> 791c09c01da3b5bdcef483f72bd7e296c4798df1
   "integrity" "sha512-bUomWnlpfuFWOszjBvNlpQiV8CuTIFZnmmuSbxEiXFXBMhAqRctqbtY4ZHKm8tTiuHafCuuY/onad3rrcVLfTA=="
   "resolved" "https://registry.npmjs.org/@carbon/icons-vue/-/icons-vue-10.49.1.tgz"
   "version" "10.49.1"
   dependencies:
     "@carbon/icon-helpers" "^10.29.0"
 
+<<<<<<< HEAD
 "@carbon/icons@^11.6.0":
   "integrity" "sha512-d9X4qJMJY66ICzaD2EmSgNA6W4duJG9ROqs/yEZ/M4lgf9raIIXdrG/dSU9wMy0g10kad+Dx8FPGadzXSFYueQ=="
   "resolved" "https://registry.npmjs.org/@carbon/icons/-/icons-11.6.0.tgz"
   "version" "11.6.0"
 
+=======
+>>>>>>> 791c09c01da3b5bdcef483f72bd7e296c4798df1
 "@carbon/telemetry@^0.1.0", "@carbon/telemetry@0.1.0":
   "integrity" "sha512-kNWt0bkgPwGW0i5h7HFuljbKRXPvIhsKbB+1tEURAYLXoJg9iJLF1eGvWN5iVoFCS2zje4GR3OGOsvvKVe7Hlg=="
   "resolved" "https://registry.npmjs.org/@carbon/telemetry/-/telemetry-0.1.0.tgz"
@@ -8735,18 +8742,30 @@
     "supports-color" "^6.1.0"
 
 "postcss@^8.1.10":
+<<<<<<< HEAD
   "integrity" "sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.16.tgz"
   "version" "8.4.16"
+=======
+  "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
+  "version" "8.4.14"
+>>>>>>> 791c09c01da3b5bdcef483f72bd7e296c4798df1
   dependencies:
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
 
 "postcss@^8.4.14":
+<<<<<<< HEAD
   "integrity" "sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.16.tgz"
   "version" "8.4.16"
+=======
+  "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
+  "version" "8.4.14"
+>>>>>>> 791c09c01da3b5bdcef483f72bd7e296c4798df1
   dependencies:
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
