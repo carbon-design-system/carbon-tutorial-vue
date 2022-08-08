@@ -11,6 +11,9 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@carbon/icons": "^11.6.0",
+    "@carbon/vue": "^2.44.0",
+    "carbon-components": "^10.56.0",
     "core-js": "^3.11.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
@@ -29,7 +32,7 @@
     "eslint-plugin-vue": "^7.9.0",
     "sass": "^1.32.11",
     "sass-loader": "^10.1.1",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.7.8"
   },
   "prettier": {
     "singleQuote": true
@@ -64,7 +67,9 @@
       "json",
       "vue"
     ],
-    "setupFiles": ["./tests/setup.js"],
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
     "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
