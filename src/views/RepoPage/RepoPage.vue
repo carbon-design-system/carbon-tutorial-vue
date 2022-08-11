@@ -121,6 +121,13 @@ export default {
       this.pageStart = val.start;
       this.page = val.page;
     }
+  },
+  watch: {
+    rows() {
+      if (this.organization) {
+        console.dir(this.organization.repositories.nodes);
+      }
+    }
   }
 };
 </script>
