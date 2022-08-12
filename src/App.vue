@@ -3,6 +3,7 @@
     <tutorial-header />
     <cv-content id="#main-content">
       <router-view />
+      <div>test</div>
     </cv-content>
   </div>
 </template>
