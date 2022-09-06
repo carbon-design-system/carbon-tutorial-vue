@@ -7,20 +7,6 @@
   </div>
 </template>
 
-
-<style lang="scss">
-@import "./styles/carbon";
-</style>
-
-<script>
-import { CvButton } from '@carbon/vue';
-export default {
-  components: {
-    CvButton
-  }
-};
-</script>
-
 <script>
 import TutorialHeader from "./components/TutorialHeader";
 
@@ -32,3 +18,6 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import "./styles/carbon";
+</style>
