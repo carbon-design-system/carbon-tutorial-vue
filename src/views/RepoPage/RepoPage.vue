@@ -2,7 +2,6 @@
   <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
     <div class="bx--row repo-page__r1">
       <div class="bx--col-lg-16">
-        {{ this.organization }}
         <repo-table
           :headers="headers"
           :rows="pagedRows"
