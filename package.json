@@ -2,12 +2,16 @@
   "name": "carbon-tutorial-vue",
   "version": "0.1.0",
   "private": true,
+  "engines" : { 
+    "node" : ">=14.0.0"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "ci-check": "yarn format:diff",
+    "format:fix": "prettier --write \"src/**/*.{js,vue,scss}\"",
     "format:diff": "prettier --list-different \"src/**/*.{js,vue,scss}\""
   },
   "dependencies": {
