@@ -19,7 +19,6 @@
 <script>
 import RepoTable from './RepoTable';
 import gql from 'graphql-tag';
-
 const REPO_QUERY = gql`
   query REPO_QUERY {
     # Let's use carbon as our organization
@@ -53,7 +52,6 @@ const REPO_QUERY = gql`
     }
   }
 `;
-
 const headers = [
   {
     key: 'name',
@@ -80,7 +78,6 @@ const headers = [
     header: 'Links'
   }
 ];
-
 export default {
   name: 'RepoPage',
   components: { RepoTable },

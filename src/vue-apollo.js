@@ -9,11 +9,11 @@ import {
 Vue.use(VueApollo);
 
 // Name of the localStorage item
-// Use our access token
 const AUTH_TOKEN = process.env.VUE_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
-// Target github api
-const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
+// Http endpoint
+const httpEndpoint =
+  process.env.VUE_APP_GRAPHQL_HTTP || 'https://api.github.com/graphql';
 
 // Config
 const defaultOptions = {

@@ -33,7 +33,6 @@
 
 <script>
 import LinkList from './LinkList';
-
 export default {
   name: 'RepoTable',
   components: { LinkList },
@@ -68,7 +67,6 @@ export default {
 
 <style lang="scss">
 @import '../../styles/carbon-utils';
-
 .repo-page .bx--row {
   padding-top: $spacing-05;
   padding-bottom: $spacing-05;
