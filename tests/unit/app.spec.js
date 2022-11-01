@@ -9,8 +9,8 @@ describe('Vue Step 2 Tests', () => {
     const wrapper = shallowMount(App, {
       stubs: {
         RouterLink: RouterLinkStub,
-        'router-view': RouterViewStub
-      }
+        'router-view': RouterViewStub,
+      },
     });
   });
 
