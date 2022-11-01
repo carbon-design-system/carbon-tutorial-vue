@@ -53,24 +53,24 @@ const REPO_QUERYMock = {
             issues: { totalCount: 357, __typename: 'IssueConnection' },
             stargazers: {
               totalCount: 3054,
-              __typename: 'StargazerConnection'
+              __typename: 'StargazerConnection',
             },
             releases: {
               totalCount: 640,
               nodes: [{ name: '7.0.0-rc.1', __typename: 'Release' }],
-              __typename: 'ReleaseConnection'
+              __typename: 'ReleaseConnection',
             },
             name: 'carbon',
             updatedAt: '2020-05-27T18:55:53Z',
             createdAt: '2017-03-13T14:23:59Z',
             description: 'A design system built by IBM',
             id: 'MDEwOlJlcG9zaXRvcnk4NDgzNTUzNQ==',
-            __typename: 'Repository'
-          }
-        ]
-      }
-    }
-  }
+            __typename: 'Repository',
+          },
+        ],
+      },
+    },
+  },
 };
 
 describe('Vue Step 3 Tests', () => {
@@ -82,7 +82,7 @@ describe('Vue Step 3 Tests', () => {
   const createComponent = (handlers, data) => {
     requestHandlers = {
       REPO_QUERYHandler: jest.fn().mockResolvedValue(REPO_QUERYMock),
-      ...handlers
+      ...handlers,
     };
 
     mockClient = createMockClient({ resolvers: {} });
@@ -90,7 +90,7 @@ describe('Vue Step 3 Tests', () => {
     mockClient.setRequestHandler(REPO_QUERY, requestHandlers.REPO_QUERYHandler);
 
     apolloProvider = new VueApollo({
-      defaultClient: mockClient
+      defaultClient: mockClient,
     });
 
     wrapper = mount(RepoPage, {
@@ -98,9 +98,9 @@ describe('Vue Step 3 Tests', () => {
       apolloProvider,
       data() {
         return {
-          ...data
+          ...data,
         };
-      }
+      },
     });
   };
 
