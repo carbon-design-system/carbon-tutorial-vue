@@ -4,12 +4,12 @@
       <div class="bx--col-lg-16">
         <repo-table
           :headers="headers"
-          :rows="rows"
+          :rows="pagedRows"
+          :totalRows="rows.length"
+          @pagination="onPagination"
           title="Carbon Repositories"
           helperText="A collection of public Carbon repositories."
           :loading="$apollo.loading"
-          :totalRows="rows.length"
-          @pagination="onPagination"
         />
       </div>
     </div>
@@ -81,6 +81,36 @@ const headers = [
   }
 ];
 
+const rows = [
+  {
+    id: '1',
+    name: 'Repo 1',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links',
+  },
+  {
+    id: '2',
+    name: 'Repo 2',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links',
+  },
+  {
+    id: '3',
+    name: 'Repo 3',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+    issueCount: '123',
+    stars: '456',
+    links: 'Links',
+  },
+];
+
 export default {
   name: 'RepoPage',
   components: { RepoTable },
@@ -93,7 +123,6 @@ export default {
     };
   },
   computed: {
-    //es-lint ignore
     rows() {
       if (!this.organization) {
         return [];
@@ -118,13 +147,6 @@ export default {
       this.pageSize = val.length;
       this.pageStart = val.start;
       this.page = val.page;
-    }
-  },
-  watch: {
-    rows() {
-      if (this.organization) {
-        console.dir(this.organization.repositories.nodes);
-      }
     }
   },
   apollo: {
