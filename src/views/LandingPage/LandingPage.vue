@@ -105,11 +105,11 @@
 }
 
 .landing-page__p {
-  @include type-style('productive-heading-03');
+  @include carbon--type-style('productive-heading-03');
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
 
-  @include breakpoint-between((320px + 1), md) {
+  @include carbon--breakpoint-between((320px + 1), md) {
     max-width: 75%;
   }
 }
@@ -121,6 +121,6 @@
 }
 
 .landing-page__label {
-  @include type-style('heading-01');
+  @include carbon--type-style('heading-01');
 }
 </style>
