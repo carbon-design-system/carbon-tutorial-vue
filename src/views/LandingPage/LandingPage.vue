@@ -87,7 +87,7 @@
 }
 
 .landing-page__heading {
-  @include type-style('productive-heading-05');
+  @include carbon--type-style('productive-heading-05');
 }
 
 .landing-page__r2 {
@@ -100,8 +100,8 @@
 }
 
 .landing-page__subheading {
-  @include type-style('productive-heading-03');
-  @include font-weight('semibold');
+  @include carbon--type-style('productive-heading-03');
+  @include carbon--font-weight('semibold');
 }
 
 .landing-page__p {
