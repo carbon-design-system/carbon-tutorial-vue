@@ -1,7 +1,7 @@
 <template>
-  <div class="cds--grid cds--grid--full-width landing-page">
-    <div class="cds--row landing-page__banner">
-      <div class="cds--col-lg-16">
+  <div class="bx--grid bx--grid--full-width landing-page">
+    <div class="bx--row landing-page__banner">
+      <div class="bx--col-lg-16">
         <cv-breadcrumb noTrailingSlash aria-label="Page navigation">
           <cv-breadcrumb-item>
             <cv-link href="/">Getting started</cv-link>
@@ -10,13 +10,13 @@
         <h1 class="landing-page__heading">Design &amp; build with Carbon</h1>
       </div>
     </div>
-    <div class="cds--row landing-page__r2">
-      <div class="cds--col cds--no-gutter">
+    <div class="bx--row landing-page__r2">
+      <div class="bx--col bx--no-gutter">
         <cv-tabs selected="0" aria-label="Tab navigation">
           <cv-tab label="About">
-            <div class="cds--grid cds--grid--no-gutter cds--grid--full-width">
-              <div class="cds--row landing-page__tab-content">
-                <div class="cds--col-md-4 cds--col-lg-7">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
+              <div class="bx--row landing-page__tab-content">
+                <div class="bx--col-md-4 bx--col-lg-7">
                   <h2 class="landing-page__subheading">What is Carbon?</h2>
                   <p class="landing-page__p">
                     Carbon is IBM’s open-source design system for digital
@@ -27,7 +27,7 @@
                   </p>
                   <cv-button>Learn more</cv-button>
                 </div>
-                <div class="cds--col-md-4 cds--offset-lg-1 cds--col-lg-8">
+                <div class="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                   <img
                     class="landing-page__illo"
                     src="../../assets/tab-illo.png"
@@ -38,9 +38,9 @@
             </div>
           </cv-tab>
           <cv-tab label="Design">
-            <div class="cds--grid cds--grid--no-gutter cds--grid--full-width">
-              <div class="cds--row landing-page__tab-content">
-                <div class="cds--col-lg-16">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
+              <div class="bx--row landing-page__tab-content">
+                <div class="bx--col-lg-16">
                   Rapidly build beautiful and accessible experiences. The Carbon
                   kit contains all resources you need to get started.
                 </div>
@@ -48,9 +48,9 @@
             </div>
           </cv-tab>
           <cv-tab label="Develop">
-            <div class="cds--grid cds--grid--no-gutter cds--grid--full-width">
-              <div class="cds--row landing-page__tab-content">
-                <div class="cds--col-lg-16">
+            <div class="bx--grid bx--grid--no-gutter bx--grid--full-width">
+              <div class="bx--row landing-page__tab-content">
+                <div class="bx--col-lg-16">
                   Carbon provides styles and components in Vanilla, React,
                   Angular, and Vue for anyone building on the web.
                 </div>
@@ -60,13 +60,13 @@
         </cv-tabs>
       </div>
     </div>
-    <div class="cds--row landing-page__r3">
-      <div class="cds--col-md-4 cds--col-lg-4">
+    <div class="bx--row landing-page__r3">
+      <div class="bx--col-md-4 bx--col-lg-4">
         <h3 class="landing-page__label">The Principles</h3>
       </div>
-      <div class="cds--col-md-4 cds--col-lg-4">Carbon is Open</div>
-      <div class="cds--col-md-4 cds--col-lg-4">Carbon is Modular</div>
-      <div class="cds--col-md-4 cds--col-lg-4">Carbon is Consistent</div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
+      <div class="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
     </div>
   </div>
 </template>
