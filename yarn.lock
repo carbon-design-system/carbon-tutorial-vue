@@ -998,10 +998,17 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
-"@carbon/icon-helpers@^10.37.0", "@carbon/icon-helpers@^10.43.1":
+"@carbon/icon-helpers@^10.16.0", "@carbon/icon-helpers@^10.37.0":
   version "10.44.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.44.0.tgz#4308806bf903310d68240325a53ce400ef7dc9af"
   integrity sha512-8gvP8Qr2pNspIUPiQRQQUB9gdklLxfs7JDIz4a/PUzon7IcVielpl08blh2IjpbDr/cZSje5fwn3CAInCKNb1g==
+
+"@carbon/icons-vue@10.30.0":
+  version "10.30.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.30.0.tgz#8de78929016d5f7e9e56df2e4483db5dbe6cf991"
+  integrity sha512-79JVIK+hVugoQfybawF9L9iahO28Zy5leAuu0Lbv+Co894Y1KGhaUWGj4CJI2AkCW3NyjOiDcRIyM14DPvTQUw==
+  dependencies:
+    "@carbon/icon-helpers" "^10.16.0"
 
 "@carbon/icons-vue@10.63.0":
   version "10.63.0"
@@ -1009,13 +1016,6 @@
   integrity sha512-JLvq0gYc6S25kOy4JvyGe6jykJezfngsUoTX18nSauE4T5Ikho7osQw/uXzsJNqPlk7HksnNrkrj142omO1PRA==
   dependencies:
     "@carbon/icon-helpers" "^10.37.0"
-
-"@carbon/icons-vue@^10.72.1":
-  version "10.72.1"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-vue/-/icons-vue-10.72.1.tgz#5efef6a08a61be5dba659e7b9a810b13e4012a70"
-  integrity sha512-GTqlqBC0b141HgkYzQwOKG/G9Fg1pfEFR3bvL0owewYkyR8GAapuc7T/KjROVz4BNhIKhsXTJDYWpxmvw2AcLQ==
-  dependencies:
-    "@carbon/icon-helpers" "^10.43.1"
 
 "@carbon/telemetry@0.1.0", "@carbon/telemetry@^0.1.0":
   version "0.1.0"

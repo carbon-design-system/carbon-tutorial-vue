@@ -1,4 +1,3 @@
 <template>
-    <div>LANDING PAGE</div>
+  <div>LANDING PAGE</div>
 </template>
-  
