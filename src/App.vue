@@ -1,3 +1,7 @@
+<style lang="scss">
+@import './styles/carbon';
+</style>
+
 <template>
   <div id="app">
     <tutorial-header />
@@ -8,16 +12,12 @@
 </template>
 
 <script>
-import TutorialHeader from './components/TutorialHeader';
+import TutorialHeader from "./components/TutorialHeader";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    TutorialHeader
-  }
+    TutorialHeader,
+  },
 };
 </script>
-
-<style lang="scss">
-@import './styles/carbon';
-</style>

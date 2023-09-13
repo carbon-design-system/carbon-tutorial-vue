@@ -2,6 +2,7 @@
   "name": "carbon-tutorial-vue",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,18 +12,20 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@carbon/icons-vue": "^10.30.0",
-    "@carbon/vue": "^2.37.1",
-    "carbon-components": "^10.33.0",
+    "@carbon/grid": "^11.19.0",
+    "@carbon/icons-vue": "^10.72.1",
+    "@carbon/vue": "^2.45.1",
+    "carbon-components": "^10.58.10",
     "core-js": "^3.11.0",
+    "package-lock.json": "^1.0.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
-    "@vue/cli-plugin-unit-jest": "^4.5.12",
-    "@vue/cli-service": "^4.5.12",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-unit-jest": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "1.1.4",
     "babel-eslint": "^10.1.0",
@@ -67,8 +70,10 @@
       "json",
       "vue"
     ],
-   "setupFiles": ["./tests/setup.js"],
-   "transform": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.jsx?$": "babel-jest"
