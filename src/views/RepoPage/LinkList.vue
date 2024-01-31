@@ -3,6 +3,7 @@
     <li>
       <cv-link :href="url">GitHub</cv-link>
     </li>
+
     <li v-if="homepageUrl">
       <span>&nbsp;|&nbsp;</span>
       <cv-link :href="homepageUrl">Homepage</cv-link>
@@ -20,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .link-list {
   display: flex;
 }
