@@ -886,6 +886,14 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
+"@carbon/grid@^10.30.0":
+  version "10.43.2"
+  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.43.2.tgz#129d6ea99e885f9345e41b56dacd9288fba476c6"
+  integrity sha512-chhjz7cNl7TdKJ1MVhpXlNwtuKmdgWYygQFLShv1FnY9atMYv42hguGG289TZgPOuMpgYLyA9VOCS4IDVjC/1A==
+  dependencies:
+    "@carbon/import-once" "^10.7.0"
+    "@carbon/layout" "^10.37.2"
+
 "@carbon/icon-helpers@^10.16.0", "@carbon/icon-helpers@^10.9.0":
   version "10.16.0"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-10.16.0.tgz#66f20b9bba49c6ec4c956b8e9e7ec65bdf40da8f"
@@ -904,6 +912,16 @@
   integrity sha512-79JVIK+hVugoQfybawF9L9iahO28Zy5leAuu0Lbv+Co894Y1KGhaUWGj4CJI2AkCW3NyjOiDcRIyM14DPvTQUw==
   dependencies:
     "@carbon/icon-helpers" "^10.16.0"
+
+"@carbon/import-once@^10.7.0":
+  version "10.7.0"
+  resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.7.0.tgz#3e66e1308cad78272e2d9d9ea3741dd073860263"
+  integrity sha512-KoqbfzGKjO89iUPabN6zNpXpcjxgQYgpHmesZ/DXc/zeV0PyHrnAOC8Q3J0cRPf1zYpGRHN2Tbw1ttTjonzbjg==
+
+"@carbon/layout@^10.37.2":
+  version "10.37.2"
+  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.37.2.tgz#2d7918220ee449d2e8101d8074e5cb7f6ccaaaa1"
+  integrity sha512-PRw9yxbMWy2ovAkIkIDxSkVVR7lYfXUBIRO8lD/nw+X+jLDh+cIIIsB5YHA5VpOYCx9iQr2g9dRmoNgCmOVkrg==
 
 "@carbon/telemetry@0.0.0-alpha.6", "@carbon/telemetry@^0.0.0-alpha.6":
   version "0.0.0-alpha.6"
