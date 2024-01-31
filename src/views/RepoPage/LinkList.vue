@@ -3,7 +3,6 @@
     <li>
       <cv-link :href="url">GitHub</cv-link>
     </li>
-
     <li v-if="homepageUrl">
       <span>&nbsp;|&nbsp;</span>
       <cv-link :href="homepageUrl">Homepage</cv-link>
